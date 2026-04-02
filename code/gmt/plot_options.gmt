@@ -1,0 +1,371 @@
+#!/usr/bin/env bash
+# Note: gmt_utils.gmt must be sourced before this file (sets REPO_ROOT, contour_dir, etc.)
+#source GMT_subs.gmt
+
+#OVERLAYS#
+#------------------------------------------------------------------------------------------#
+function PLOT_PLATES () {
+  local pen=$1
+  gmt plot -W${pen} ${plate}
+}
+
+function SV_TRACK () {
+
+  local d=$1
+  local data=$2
+  local radius=$3
+  local out=$4
+  
+  echo "$tag-svel/ $data  histogram"
+  dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+  awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${sol}/${dvs} | gmt gmtselect $Rsel -fg > svel_select.$tmp
+
+  gmt blockmean -I0.5 $Rsel $data | awk '{print $1, $2}' > data.bm.$tmp
+  gmt gmtselect svel_select.$tmp -Cdata.bm.$tmp${radius} -fg > $out
+
+}
+
+#function PLOT_HIST () {
+#}
+function BASEMAP () {
+
+  local base=$1
+  local s=$2
+  local d=$3
+  local res=$4
+
+  sol="$REPO_ROOT/data/seismic_model"
+  echo "${tag}-- make basemap grd $base at ${d} km"
+
+    case $base in
+    topo)
+      cpt=$scales/meyers.cpt
+      #cpt=gray
+      illu=""
+      ingrd="@earth_relief_01m -I+a0"
+      ;;
+    svel)
+      cpt=`gmt makecpt -T-${s}/${s}/0.05 -D -Z -C$tomocpt`
+      #AVG_DVS $depth ${sol} m.out.$tmp ${s}
+      dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+      awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${sol}/${dvs} |\
+        gmt xyz2grd -I0.75 -Rg -Gm.${d}.grd.$tmp
+      gmt grdsample m.$d.grd.$tmp -I${res} -Gm.out.$tmp
+      ingrd=m.out.$tmp
+      illu=""
+      ;;
+    contour)
+      echo "$tag$tag --set contour"
+      cpt=`gmt makecpt -D -Cgold,white,lightblue,cornflowerblue,blue,purple -T-10,-1,2,5.5,6.5,7.5,10`
+      dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+      awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${sol}/${dvs} |\
+        gmt xyz2grd -I0.75 -Rg -Gm.${d}.grd.$tmp
+      gmt grdsample m.$d.grd.$tmp -I${res} -Gm.out.$tmp
+      #gmt grdsample etopo_satlantic.grd -I${res} $Rres -Gillum.grd.$tmp -fig
+      #illu="-Iillum.grd.$tmp"
+      illu=""
+      #ingrd=m.out.$tmp
+      ;;
+  esac
+}
+
+function AVG_DVS() {
+  local dep=$1    #depth
+  local pth=$2
+  local grd=$3
+  local s=$4    #saturation
+
+  #loop over depths
+  ii=0
+  for d in ${dep}; do
+    echo "${tag}--${ii}) calculate lithospheric average in ${d} km"
+    #ref=`awk -v a=${d} '($1==a) {print $1,$2}' ${ref_path} | awk '{printf "%.2f", $2}'`
+    dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+    awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${pth}/${dvs} | gmt xyz2grd -I0.75 -Rg -Gm.${d}.grd.$tmp
+
+    if [ $ii -gt 0 ]; then
+      gmt grdmath m.${d}.grd.$tmp m.grd.$tmp  ADD 2 DIV = m.grd.$tmp
+     # refavg=$( echo "(${ref} + ${refavg})/2" | bc -l | awk '{printf "%.2f", $0}')
+    else
+      cp m.${d}.grd.$tmp m.grd.$tmp
+      #refavg="${ref}"
+    fi
+
+    ii=$(( ii+1 ))
+  done
+gmt grdsample m.grd.$tmp -I${res} -G$grd
+#gmt makecpt -T-${s}/${s}/0.01 -D -Z -C$tomocpt
+}
+
+function SLAB2(){
+  idep=$1
+  line=$2
+  #mndep=$1
+ # mxdep=$2
+  #fill=$3
+  echo "  plot slab contour"
+  mxdep=$(( $idep+2 ))
+  mndep=$(( $idep-2 ))
+  #slabtk1=-W2p,black
+  #slabtk2=-W0.5p,white,--
+  slab_dir="$gmt_BM/contours/slab2.0/Slab2Distribute_Mar2018"
+  #scpt=$(gmt makecpt -T$mndep/$mxdep/50 -Crainbow -Z)
+  #gmt makecpt -T-700/0/50 -Crainbow -Z -D
+
+  #gmt grdcontour $slab_dir/sam_slab2_dep_02.23.18.grd -L-$mxdep/-$mndep -W$fill -C5
+  #gmt grdcontour $slab_dir/sam_slab2_dep_02.23.18.grd -L-$mxdep/-$mndep -C -W1p+c
+  gmt grdcontour $slab_dir/sam_slab2_dep_02.23.18.grd -L-$mxdep/-$mndep -C5 -W$line
+  #gmt grdcontour $slab_dir/car_slab2_dep_02.24.18.grd -L-$mxdep/-$mndep -W$fill -C5
+  #gmt grdcontour $slab_dir/car_slab2_dep_02.24.18.grd -L$mndep/$mxdep -C5 $slabtk2
+  #gmt grdcontour $slab_dir/cam_slab2_dep_02.24.18.grd -L-$mxdep/-$mndep  $fill -W1p+c
+  #gmt grdcontour $slab_dir/cam_slab2_dep_02.24.18.grd -L-$mxdep/-$mndep  -W$fill -C5
+  #gmt grdcontour $slab_dir/cam_slab2_dep_02.24.18.grd -L$mndep/$mxdep -C5 $slabtk2
+}
+
+function SEIS(){
+  dep=$1
+  #mndep=$1
+  #mxdep=$2
+  echo "  plot seismicity"
+  seis_dir="${gmt_BM}/data/seismicity/USGS/seis.yxz"; ker=10
+  scpt=$(gmt makecpt -T-50/700/10 -D -Crainbow -Z -I)
+  #scpt=$(gmt makecpt -T$mndep/$mxdep/50 -Crainbow -Z -I)
+  #gmt makecpt -T-50/700/10 -D -Crainbow -Z -I
+  awk -v a=$ker -v b=$dep '($3>100) && ($4>5) {if($3>=(b-a) && $3<=(b+a)) print $2,$1,$3,($4**3)*0.0005 }' ${seis_dir} | gmt plot -Sc -W0.25p,black -C$scpt
+  #awk '($3>70) && ($4>5) {print $2,$1,$3,($4**3)*0.0003 }' ${seis_dir} | gmt plot -Sc -W0.1p,black -C$scpt
+}
+
+function LIP(){
+  liprovince=$1
+  echo $tag"~~overlay LIPs and Oceanic Plateaus"
+  gmt gmtselect $contour_dir/oceanic_features.gmt -R"-70/-5/-56/13.5" | gmt plot $R -W0.5p,red -GP300/7:Bred27F- -l"Seamounts"
+  case ${liprovince} in
+    fill) atrb="-GP300/7:Bgray27F- -W1p";;
+    #fill) atrb="-Gsienna -W0.5p,sienna";;
+    line) atrb="-W2p"; atrb2="-W0.8p,white";;
+  esac
+  i=0
+  for lip in camp_outline.txt serra_geral_outline.txt ; do
+      if [ $i == 0 ]; then
+        gmt plot $contour_dir/$lip $atrb -l"Flood\nBasalt\nProvinces"
+      else
+        gmt plot $contour_dir/$lip $atrb
+      fi
+      ((i++))
+  done
+}
+#------------------------------------------------------------------------------------------#
+function PATAGONIA(){
+  case ${liprovince} in
+    #fill) atrb="-GP300/7:Bgray27F- -W1p";;
+    fill) atrb="-Gchocolate -W1p,chocolate";;
+    line) atrb="-W2p"; atrb2="-W0.8p,white";;
+  esac
+  i=0
+  for lip in somuncura_kay2007.txt triple_junction_kay2007.txt \
+    payenia_kay2007.txt pali_aike_kay2007.txt \
+    canquel_kay2007.txt; do
+      if [ $i == 0 ]; then
+        gmt plot $contour_dir/$lip $atrb -l"Patagonia\nIgneous\nProvinces"
+      else
+        gmt plot $contour_dir/$lip $atrb
+      fi
+      ((i++))
+  done
+}
+#------------------------------------------------------------------------------------------#
+function LABEL(){
+  awk '{print $1,$2,$3}' $contour_dir/lip_ages.txt | gmt text -F+f6p,AvantGarde-Demi,black -Gwhite
+  awk '{print $1,$2,$3}' $folder/hotspots/hotspot_catalogue.xy | gmt text -F+f8p,Helvetica-Bold,white
+  awk '{print $1,$2,$3}' $contour_dir/lip_names.txt | gmt text -F+f8p,Helvetica-Bold
+}
+#------------------------------------------------------------------------------------------#
+function FLOWTHICK(){
+  echo $tag"~~overlay LIPs lava flow thickness"
+  i=0
+  for lip in camp_outline.txt serra_geral_outline.txt \
+    somuncura_kay2007.txt triple_junction_kay2007.txt \
+    payenia_kay2007.txt pali_aike_kay2007.txt \
+    canquel_kay2007.txt; do
+        if [ $i == 0 ]; then
+          gmt plot $contour_dir/$lip -W2p,red -l"LIPs"
+        else
+          gmt plot $contour_dir/$lip -W2p,red
+        fi
+        ((i++))
+  done
+  gmt contour $folder/flood_basalts/parana_contour_zalan1987.txt -W1p,red -C"501,900,1300,1500" -A"900,1500," -l"Basalt Thickness"
+  gmt contour $folder/flood_basalts/camp_demin_all.txt -W1p,red -C"301,500,700" -A"500,700,"
+}
+#------------------------------------------------------------------------------------------#
+function DYKE(){
+  gmt plot $folder/dikes/dikes_all_pessano2021.txt -W1p -l"Dykes"
+  gmt plot $folder/dikes/dikes_camp_pessano2021.txt -W0.8p,green -l"Dykes CAMP"
+  gmt plot $folder/dikes/dikes_equamp_pessano2021.txt -W0.8p,yellow -l"Dykes EQUAMP"
+  gmt plot $folder/dikes/dikes_parana_pessano2021.txt -W0.8p,cyan -l"Dykes Paraná"
+}
+#------------------------------------------------------------------------------------------#
+function MAG(){
+  lipsel=$1
+  maxage=$2
+  sym=$3
+  lin=$4
+  echo $tag"~~overlay SA magmatism locations"
+  if [ ${lipsel} == "overwrite" ]; then
+    echo $tag$tag"~~overwrite locations inside LIPs"
+    #select data points inside and around polygon with age dif from lip
+    awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d50k -fg > in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -fg >> in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt gmtselect -L$contour_dir/camp_outline.txt+d50k -fg >> in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt gmtselect -F$contour_dir/camp_outline.txt -fg >> in_pol.txt
+    gmt plot in_pol.txt $sym -W0.4p -Cages.cpt.$tmp
+    #select all data points outside the LIP polygons and 10km around
+    awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt gmtselect -F$contour_dir/camp_outline.txt -If -fg \
+      | gmt gmtselect -L$contour_dir/camp_outline.txt+d10k -Il -fg \
+      | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d10k -Il -fg \
+      | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -If -fg \
+      | gmt plot $sym -W0.4p -Cages.cpt.$tmp
+  elif [ ${lipsel} == "yes" ]; then
+    echo $tag$tag"~~plot select mag locations outside LIPs"
+    #awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | \
+    #  gmt plot -fg -St5p -W0.4p -Gblack
+    gmt plot in_pol.txt $sym -W0.4p -Cages.cpt.$tmp
+    #select all data points outside the LIP polygons and 10km around
+    awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      |  gmt gmtselect -F$contour_dir/camp_outline.txt -If -fg \
+      |  gmt gmtselect -L$contour_dir/camp_outline.txt+d10k -Il -fg \
+      | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d10k -Il -fg \
+      | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -If -fg \
+      | gmt plot $sym -W0.4p -Cages.cpt.$tmp
+  else
+    awk -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt \
+      | gmt plot $sym -W0.4p -fg -Cages.cpt.$tmp
+  fi
+  #gmt psscale -DjTR+w4/0.2c+h -Cages.cpt.$tmp -F+gwhite+p -Bx50+l"Ages [Ma]"
+}
+#------------------------------------------------------------------------------------------#
+function HOT(){
+  model=$1
+  modname=$2
+  line=$3
+  echo $tag"~~overlay hotspots and hotspot tracks"
+  ii=-1
+  minage=200
+  for tr in $model; do
+    ((ii++))
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2}' $tr | gmt plot -W$line",.."
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+  minage=130
+  for tr in $model; do
+    ((ii++))
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2}' $tr | gmt plot -W$line -l"$modname"
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+}
+#------------------------------------------------------------------------------------------#
+function HOTSPOTS(){
+  gmt plot -Sd0.4 -W0.7p -Gyellow $folder/hotspots/hotspots_whittaker2015.xy -l"Hotspots"
+  #echo "-27.7806 5.3337" | gmt plot -Sd0.2 -W0.7p -Gyellow
+}
+#------------------------------------------------------------------------------------------#
+function TRISTAN(){
+  model=$1
+  echo $tag"~~overlay hotspots and hotspot tracks"
+  ii=-1
+  minage=200
+  maxage=0
+  echo "-14.4201 -34.5095" | gmt plot -Sd0.4 -W0.7p -Gmagenta
+  for tr in $model; do
+    ((ii++))
+    awk -v mi=$minage -v ma=$maxage -v count=$ii '($3<mi) && ($3>ma) {print $1,$2}' $tr | gmt plot -W1.5p,black
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2}' $tr | gmt plot -W1p,magenta
+    awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+  minage=130
+  maxage=0
+  for tr in $model; do
+    ((ii++))
+    awk -v mi=$minage -v ma=$maxage -v count=$ii '($3<mi) && ($3>ma) {print $1,$2}' $tr | gmt plot -W1.5p,black
+    awk -v mi=$minage -v ma=$maxage -v count=$ii '($3<mi) && ($3>ma) {print $1,$2}' $tr | gmt plot -W0.5p,magenta
+    awk -v mi=$minage -v ma=$maxage -v count=$ii '($3<mi) && ($3>ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+}
+#------------------------------------------------------------------------------------------#
+function CRATON() {
+  pen=$1
+  fill=$2
+  echo "    --Add cratons"
+
+  #-- Inferred Craton Limits
+  i=0
+  for craton in $contour_dir/cratons/Sao_Luiz_Craton2.txt \
+    $contour_dir/cratons/outer_layer.txt $contour_dir/cratons/SFC_bru.gmt \
+    $contour_dir/cratons/Luiz_Alves_Craton.txt  \
+    $contour_dir/cratons/Sao_Luiz_Craton.txt $contour_dir/cratons/Sao_Luiz_Craton2.txt; do
+    
+    if [ $fill == "empty" ]; then
+      if [ $i == 0 ]; then
+      gmt plot $craton -W${pen}
+      else
+      gmt plot $craton -W${pen}
+      fi
+    else
+      if [ $i == 0 ]; then
+        gmt plot $craton -W${pen} -G$fill
+      else
+        gmt plot $craton -W${pen} -G$fill
+      fi
+    fi
+    ((i++))
+  done
+}
+
+function INFCRATON() {
+  pen=$1
+  fill=$2
+  echo "    --Add inferred cratons"
+
+  #-- Inferred Craton Limits
+  i=0
+  for craton in $contour_dir/cratons/Parnaiba_block.txt \
+    $contour_dir/cratons/Paranapanema.txt \
+    $contour_dir/cratons/Rio_de_la_Plata_Craton.txt; do
+    
+  if [ $fill != "empty" ]; then
+      if [ $i == 0 ]; then
+      gmt plot $craton -W${pen} -G$fill
+      else
+      gmt plot $craton -W${pen} -G$fill
+      fi
+    else
+      if [ $i == 0 ]; then
+        gmt plot $craton -W${pen}
+      else
+        gmt plot $craton -W${pen}
+      fi
+    fi
+    ((i++))
+  done
+}
+
+function ANDES_PROVINCES() {
+  #pen=$1
+  #fill=$2
+  
+  #for prov in $contour_dir/andes/*.xy; do
+  gmt plot $contour_dir/andes/Altiplano.xy -W0.5p -Gpalegreen4
+  gmt plot $contour_dir/andes/Eastern_Cordillera.xy -W0.5p -Ggold
+  gmt plot $contour_dir/andes/Interandes.xy -W0.5p -Glightblue
+  gmt plot $contour_dir/andes/Patagonian_Cordillera.xy -W0.5p -Gpurple
+  gmt plot $contour_dir/andes/Puna.xy -W0.5p -Gred
+  gmt plot $contour_dir/andes/Sierras_Pampeanas.xy -W0.5p -Ggreen
+
+  #done
+
+}

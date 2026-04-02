@@ -1,0 +1,267 @@
+#!/usr/local/bin/zsh
+
+#- Script including a plethora of gmt utilities to ease up plotting.
+#  it is designed to be sourced at the beginning of the gmt script.
+#  All following functions assume that the target ps file is defined
+#  by a variable called $ps
+
+#------------------------------------------------#
+#-- set unique suffix to temp files
+tmp=`echo $$_$(date +%Y%m%d%H%M%S)`
+trap 'rm ./*${tmp} && exit' 0 1 2 15
+
+#------------------------------------------------#
+#- GMT Defaults
+gmt set FONT_LABEL                    8p
+gmt set FONT_TAG                      8p
+gmt set FONT_ANNOT_PRIMARY            8p
+gmt set FONT_ANNOT_SECONDARY          8p
+gmt set FORMAT_GEO_MAP                D
+gmt set MAP_FRAME_TYPE                plain
+gmt set PS_MEDIA                      A4
+gmt set MAP_FRAME_PEN                 1p
+gmt set PS_LINE_JOIN                  ROUND
+gmt set PS_LINE_CAP                   ROUND
+
+#------------------------------------------------#
+#- Repository root (auto-detected from this script's location)
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/../.." && pwd)"
+
+#- common folder directories and files
+contour_dir="$REPO_ROOT/data/contours"
+cpt_dir="$REPO_ROOT/code/gmt/cpt"
+inv_dir="$REPO_ROOT/data/seismic_model"
+ak135="$inv_dir"
+tomocpt="${cpt_dir}/bry-bp2_ELv5.cpt"
+bird="$REPO_ROOT/data/plate_boundaries/bird2003.txt"
+plate="$REPO_ROOT/data/plate_boundaries/nuvel1.txt"
+etopo="@earth_relief_01m"
+tag="    "
+
+#------------------------------------------------#
+#- functions
+function SET_REGION () {
+
+  if [ ! -z  "$1" ]; then
+    case $1 in
+      1)    fs="9"; echo "-set figure size to $1 column";;
+      1.5)  fs="14";echo "-set figure size to $1 columns";;
+      2)  fs="19";  echo "-set figure size to $1 columns";;
+      *)  fs=$1;    echo "-set figure size to $1 cm"
+    esac
+  else
+    echo "-set figure size to $1 cm"
+    fs="14"
+  fi
+
+  case ${region} in
+    amazonia)        J="-JQ-60/-17/$fs";      R="-R-72/-40/-20/10";     B="-Ba10";;
+    amazonia2)       J="-JQ-60/-17/$fs";      R="-R-75/-45/-21/10";     B="-Ba10";;
+    brasil)          J="-JQ-60/-17/$fs";      R="-R-75/-34/-36/10";     B="-Ba10";;
+    brasiliano)      J="-JQ-60/-17/$fs";      R="-R-61/-34/-35/-3";     B="-Ba10";;
+    brasiliano2)     J="-JQ-60/-17/$fs";      R="-R-58/-34/-29/-3";     B="-Ba10";;
+    sfc)             J="-JQ-60/-17/$fs";      R="-R-52/-35/-25/-5";     B="-Ba5";;
+    cratons)         J="-JQ-60/-17/$fs";      R="-R-75/-32/-39/10";     B="-Ba10";;
+    global)          J="-JN-60/16/$fs";       R="-Rg";                  B="-Bwsne";;
+    latin_america)   J="-JQ-70/-17/$fs";      R="-R-120/-25/-60/30";    B="-Bwsne";;
+    parana0)         J="-JQ-60/-17/$fs";      R="-R-61/-43/-35/-13";     B="-Ba5";;        
+    parana)          J="-JQ-60/-17/$fs";      R="-R-58/-45/-29/-14";     B="-Ba5";;        
+    parnaiba)        J="-JQ-60/-17/$fs";      R="-R-53/-38/-15/2";     B="-Ba5";;        
+    rlp)             J="-JQ-60/-17/$fs";      R="-R-69/-48/-44/-22";     B="-Ba5";;  
+    rlp2)             J="-JQ-60/-17/$fs";      R="-R-67/-48/-44/-22";     B="-Ba5";;  
+    sa_slab)        J="-JQ-70/-17/$fs";      R="-R-90/-55/-55.5/13.5"; B="-Ba10";;
+    south_america)  J="-JQ-60/-17/$fs";       R="-R-95/-23/-56/14";   B="-Ba15";;
+    south_america2)  J="-JQ-60/-17/$fs";       R="-R-95/-30/-56/14";   B="-Ba10";;
+    south_atlantic)  J="-JQ-60/-17/$fs";       R="-R-95/-5/-56/14";   B="-Ba10";;
+
+  esac
+}
+
+function CHECKFILE () {
+  [ ! -f ${1} ] && echo "file ${1} doesn't exist, exit" && exit
+}
+
+function TICKS(){
+  #	TICKS <on|off>
+  if [ ${1} == "on" ]; then
+    gmt gmtset MAP_TICK_LENGTH 0.1c
+  elif [ ${1} == "off" ]; then
+    gmt gmtset MAP_TICK_LENGTH 0c
+  fi
+}
+
+function ABSPATH() {
+  #- get absolute path to directory.
+  echo "$(cd "$(dirname "$1")"; pwd)/$(basename "$1")"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

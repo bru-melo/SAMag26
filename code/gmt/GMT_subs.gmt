@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+tag="    "
+
+function AVG_DVS() {
+  dep=$1    #depth
+  path=$2
+  grd=$3
+  s=$4    #saturation
+
+  #loop over depths
+  ii=0
+  for d in ${dep}; do
+    echo "${tag}--${ii}) calculate lithospheric average in ${d} km"
+    #ref=`awk -v a=${d} '($1==a) {print $1,$2}' ${ref_path} | awk '{printf "%.2f", $2}'`
+    dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+    awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${path}/${dvs} | gmt xyz2grd -I0.75 -Rg -Gm.${d}.grd.$tmp
+
+    if [ $ii -gt 0 ]; then
+      gmt grdmath m.${d}.grd.$tmp m.grd.$tmp  ADD 2 DIV = m.grd.$tmp
+     # refavg=$( echo "(${ref} + ${refavg})/2" | bc -l | awk '{printf "%.2f", $0}')
+    else
+      cp m.${d}.grd.$tmp m.grd.$tmp
+      #refavg="${ref}"
+    fi
+
+    ii=$(( ii+1 ))
+  done
+#gmt grdsample m.grd.$tmp -I${res} -G$grd
+#gmt makecpt -T-${s}/${s}/0.01 -D -Z -C$tomocpt
+
+}
+
+function MAX_DVS() {
+  dep=$1    #depth
+  path=$2 
+  grd=$3
+ 
+  ii=0 
+  for d in ${dep}; do
+    echo "${tag}--${ii}) calculate lithospheric max in ${d} km"
+    dvs=`echo dvsd$(echo ${d} | awk '{printf("%04d",$1)}')`
+    awk '{if($3=="NaN") print $1,$2,$3; else print $1, $2, $3/$4*100}' ${path}/${dvs} | gmt xyz2grd -I0.75 -Rg -Gm.${d}.grd.$tmp
+
+    if [ $ii -gt 0 ]; then
+      #gmt grdmath m.avg.grd.$tmp m.${d}.grd.$tmp  ADD 2 DIV = m.max.grd.$tmp
+      gmt grdmath m.${d}.grd.$tmp m.max.grd.$tmp MAX = m.max.grd.$tmp
+    else
+      #cp m.${d}.grd.$tmp m.avg.grd.$tmp
+      cp m.${d}.grd.$tmp m.max.grd.$tmp
+    fi
+
+    ii=$(( ii+1 ))
+  done
+gmt grdsample m.max.grd.$tmp -I$res -G$grd
+
+}
+
+function PLOT_CONTOUR(){
+  cclrvin=(${cclrin})
+
+  jj=0
+  gmt coast -G$basecolor -S$basecolor $coastline -A3000 ${R} ${J} ${B}
+  for c in $cvalues; do
+    #-- find contours in specific range
+    #-- and saves to files craton_$mt_BM2021.gmt and craton_$mt_BM2021.gmt
+    cdvsmin=$( echo "$c - .1" | bc -l )
+    cdvsmax=$( echo "$c + .1" | bc -l )
+
+    if [ $save == "1" ]; then
+      echo "        --plot $c %dVs contour and save to file"
+      gmt grdcontour -Q50 -Dcontour.${c}dvs.txt m.max.res.$tmp -L${cdvsmin}/${cdvsmax} -C0.5 $Rres
+      gmt plot contour.${c}dvs.txt -G${cclrvin[$jj]} -L
+    else
+      echo "        --plot $c %dVs contour in ${cclrvin[$jj]}"
+      gmt grdcontour -Q50 -Dcraton.$tmp m.max.res.$tmp -L${cdvsmin}/${cdvsmax} -C0.5 $Rres
+      #gmt plot craton.$tmp -G${cclrvin[$jj]} $R -L -JQ?
+      gmt plot craton.$tmp -G${cclrvin[$jj]} $R -L
+    fi
+    jj=$(( jj+1 ))
+  done
+}
+
+function CHANGE_REF(){
+  local dip=$1    #depth
+  local in=$2    #model
+  local ri=$3 #initial ref path
+  local rf=$4 #final ref path
+  local out=$5
+
+  ref1=`awk -v a=${dip} '($1==a) {print $1,$2}' ${ri} | awk '{printf "%.2f", $2}'`
+  ref2=`awk -v a=${dip} '($1==a) {print $1,$2}' ${rf} | awk '{printf "%.2f", $2}'`
+  awk -v f=${ref2} -v i=${ref1} '($3!=0) && (NR>3) {print $2, $1, (((f/i+0.0000001)*($3+100))-100)}' ${in} > $out.txt
+  gmt xyz2grd $out.txt -Rg -I3 -G$out.grd
+  cp $out.grd m.grd.$tmp
+}

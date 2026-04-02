@@ -1,0 +1,11 @@
+-60 0 CAMP DeMin2003
+-44.5 -9.5 Maranhão Merle2011
+-44.5 -16 P-I-AP-SM
+-62 -30 Paraná\nCBF
+-60 -20 Tarabuco
+-60 -11 Anari-Tapirapuá
+#-62 -36 Payenia
+#-61 -40 Somuncura
+#-63 -44 Canquel
+#-60 -47 Triple\nJunction
+#-65 -50 Pali\nAike

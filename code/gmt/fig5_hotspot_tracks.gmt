@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/gmt_utils.gmt"
+source "$SCRIPT_DIR/GMT_subs.gmt"
+source "$SCRIPT_DIR/plot_options.gmt"
+
+USAGE () {
+cat << EOM
+program: `basename $0`
+author: Bruna Melo 2023
+purpose: geo and tectonic SA map
+    synthax: `basename $0` +<options>
+
+    options:
+    -h      ~> prints this help
+    -R      ~> def [south_atlantic]; region to plot
+    -O      ~> def [mag_locations]; output map name
+    -B      ~> baselayer [topo/svel/contour]
+    -Q      ~> resolution
+EOM
+}
+
+#===============================================================#
+#-- set defaults & input values
+#===============================================================#
+region="south_atlantic"
+out="tracks_new"
+maxage="200"
+base="contour"
+res=0.02
+depth=110
+s=10
+folder="$REPO_ROOT/data"
+sol="$REPO_ROOT/data/seismic_model"
+tag="    "
+
+#-- set options
+while getopts hR:O:l:stfdnB:Q:i OPT; do
+    case "${OPT}" in
+        h) USAGE; exit;;
+        R) region=`echo ${OPTARG} | tr '[:upper:]' '[:lower:]'`;;
+        O) out=`echo ${OPTARG}`;;
+        B) base=`echo ${OPTARG}`;;
+        Q) res=`echo ${OPTARG}`;;
+        \?) echo "Option "$OPT" not recognized...";echo ""; echo ""; USAGE; exit;;
+    esac
+done
+
+#-- set maps
+TICKS on
+coastline=-W0.4,gray40
+platepen=1.5p,green
+gmt makecpt -T0/200/25 -Cjet -D > ages.cpt.$tmp
+
+#===============================================================#
+#-- begin map
+#===============================================================#
+
+gmt begin $out png
+  case $base in 
+    topo)
+      cpt=$scales/meyers.cpt
+      cpt=gray
+      illu=""
+      ingrd="@earth_relief_01m -I+a0"
+      ;;
+    svel)
+      cpt=`gmt makecpt -T-${s}/${s}/0.01 -D -Z -C$tomocpt`
+      AVG_DVS $depth ${sol} m.out.$tmp ${s}
+      ingrd=m.out.$tmp
+      illu=""
+      ;;
+    contour)
+      #cpt=`gmt makecpt -D -Cgold,white,lightblue,cornflowerblue,blue,purple -T-10,-1,2,5,5.5,6.5,10`
+      cpt=`gmt makecpt -D -Cgold,white,lightblue,cornflowerblue,blue,purple -T-10,-1,2,5.5,6.5,7.5,10`
+      gmt grdsample etopo_satlantic.grd -I${res} $Rres -Gillum.grd.$tmp -fig
+      illu="-Iillum.grd.$tmp"
+      AVG_DVS $depth ${sol} m.out.$tmp ${s}
+      ingrd=m.out.$tmp
+      ;;
+  esac
+
+    #SOUTH ATLANTIC
+    # R="-R-82/-7/-56/14"
+    B="-Ba10"
+    R="-R-70/-15/-35/10"
+    echo "-60 -15" | gmt plot -W0.1 -St0.4 -Gwhite -l"Igneous\nRocks" $R -JQ10 $B
+    echo "-60 -15" | gmt plot -W0.1 -Sc0.3 -Gwhite -l"Reconstruction\nTime"
+    # gmt grdimage $ingrd $illu -C$cpt
+    # gmt coast $coastline -A3000 -Dh
+    # PLOT_PLATES $platepen
+    # LIP "fill"
+    # HOTSPOTS
+    # HOT "$folder/motion_paths/motion_path_output_Muller2016.xy" "Hotspot\nTrack" "1p,black"
+    # MAG "yes" "200" "-St4p" "-W0.1p"
+    echo "$depth km depth" | gmt text $R -N -F+f12p+cTL -D-0.2/0.5
+    gmt grdimage $R $ingrd $illu -C$cpt
+    gmt coast $coastline -A3000 -Dh
+    DYKE
+    FLOWTHICK
+    HOT "$folder/motion_paths/motion_path_TrindadeMuller2016_0.00Ma.xy" "Trindade Path" "chocolate3"
+    HOT "$folder/motion_paths/motion_path_FernandoMuller2016_0.00Ma.xy" "Fernando Path" "darkbrown"
+    HOT "$folder/motion_paths/motion_path_AscensionMuller2016_0.00Ma.xy" "Ascension Path" "magenta4"
+    HOT "$folder/motion_paths/motion_path_TristanMuller2016_0.00Ma.xy" "Tristan Path" "black"
+    HOTSPOTS
+    MAG "yes" "200" "-St5p" "-W0.1p"
+    #echo "Paraná Track" | gmt text $R -N -F+f8p,Helvetica-Bold+cTL -D-0/0.3
+    gmt psscale -DjTR+w3/0.2c+h -F+gwhite+p1p -Cages.cpt.$tmp -Bx50+l"Ages [Ma]"  --FONT=12p
+
+    #echo " " | gmt legend -DjBR+l1.5 -X+4 -F+gwhite+p1p --FONT_ANNOT=6p -S0.6 -M
+    #gmt psscale -DJBC+w4c/0.15c+o-4/0.7 -S+x"dVs [%]" -C$cpt -L -B+t"110 km"
+    #gmt legend -DjTR+l1.5 -F+gwhite+p1p --FONT_ANNOT=6p -S0.6
+    #FERNANDO
+    # R="-R-75/-30/-11/8"
+    # gmt grdimage $ingrd $illu $R -JQ10 -X10.9 -Y5.5  -By5 -Bx10 -C$cpt
+    # gmt coast $coastline -A3000 -Dh
+    # FLOWTHICK
+    # HOTSPOTS
+    # HOT "$folder/motion_paths/motion_path_FernandoMuller2016_0.00Ma.xy" "Fernando" "1p,black"
+    # MAG "yes" "200" "-St6p" "-W0.3p"
+    # echo "Fernando Track" | gmt text $R -N -F+f8p,Helvetica-Bold+cTL -D-0/0.3
+    #gmt legend -DjTR+l1.5 -F+gwhite+p1p --FONT_ANNOT=6p -S0.6
+    
+    #ASCENSION
+    # R="-R-60/-15/-14/4"
+    # gmt grdimage $ingrd $illu $R -JQ10 -Y-5.5 -By5 -Bx10 -C$cpt
+    # gmt coast $coastline -A3000 -Dh
+    # LIP "fill"
+    # HOT "$folder/motion_paths/motion_path_AscensionMuller2016_0.00Ma.xy" "Ascension" "1p,black"
+    # MAG "yes" "200" "-St6p" "-W0.3p"
+    # echo "Ascension Track" | gmt text $R -N -F+f8p,Helvetica-Bold+cTL -D-0/0.3
+
+    # #PARANA
+    # R="-R-60/-35/-31/-15"
+    # gmt grdimage $ingrd $illu $R -JQ10 -Y-5.5 -By5 -Bx10 -C$cpt
+    # gmt coast $coastline -A3000 -Dh
+    # FLOWTHICK
+    # HOTSPOTS
+    # HOT "$folder/motion_paths/motion_path_TrindadeMuller2016_0.00Ma.xy" "Trindade" "1p,black"
+    # MAG "yes" "200" "-St6p" "-W0.3p"
+    # echo "Paraná Track" | gmt text $R -N -F+f8p,Helvetica-Bold+cTL -D-0/0.3
+
+    echo " " | gmt legend -DjBR+l1.5 -F+gwhite+p1p --FONT_ANNOT=6p -S0.6 -M
+    gmt psscale -DJBC+w6c/0.2c+o0/0.8+h -S+x"dVs [%]" -C$cpt -L --FONT=10p
+    #gmt legend -DjTR+l1.5 -F+gwhite+p1p --FONT_ANNOT=6p -S0.6
+gmt end show

@@ -1,0 +1,11 @@
+.DS_Store
+gmt.history
+gmt.conf
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+plate-model-repo/
+.venv/
+figures/
+*.grd
+*.$tmp

@@ -1,0 +1,61 @@
+Alpha_6,Kamafugite,79,3.1,Rb/Sr,phlogopite,18°31′10.24′′S,46°48′16.67′′W,50
+Alpha_9,Kamafugite,80.1,4.6,U/Pb,perovskite,18°31′22.26′′S,46°46′4.68′′W,50
+Amorinópolis,Kamafugite,72.4,1.3,K/Ar,whole_rock,16°41′30.00′′S,51°02′15.38′′W,51 
+Araxá,Carbonatite-Glimmerite,77.4,1.0,K/Ar,phlogopite,19°40′15.82′′S,46°56′51.67′′W,52 
+Campos_basin_offshore,Gabbro,81,5,K/Ar,n.a.,22°19′41.25′′S,40°08′42.60′′W,53 
+Carmo_do_Parnaíba,Carbonatite-kimberlite-lamproite-kamafugitic,83.6,1.4,K/Ar,phlogopite,19°01′54.10′′S,46°17′41.21′′W,43 
+Catalão_I,Magnetitite,81,4,U/Pb,baddeleyite,18°08′4.84′′S,47°48′37.06′′W,54 
+Catalão_II,Phlogopite-picrite,82,3,U/Pb,perovskite,18°02′51.40′′S,47°52′34.03′′W,55 
+Dourados_19,Kimberlite,76.9,4.1,U/Pb,perovskite,18°51′50.25′′S,47°03′42.71′′W,50 
+Esperança,Kimberlite,79.6,1.2,U/Pb,zircon,19°58′53.00′′S,45°57′13.00′′W,56 
+Indaiá,Kimberlite,80,5,U/Pb,perovskite,18°32′47.21′′S,47°27′34.05′′W,55 
+Iporá,Syenite-gabbro-piroxenite,82.9,3.1,K/Ar,biotite,16°26′S,51°02′′′W,52 
+Japecanga_6,Kamafugite,84.5,0.9,Rb/Sr,phlogopite,18°24′48.26′′S,47°21′39.85′′W,50
+Joana_2,Kamafugite,78.9,6.9,U/Pb,perovskite,20°03′18.33′′S,46°53′57.70′′W,50
+Joana_5,Kamafugite,80.1,1.2,U/Pb,zircon,20°03′18.96′′S,46°53′56.40′′W,56,
+Joana_6,Kamafugite,79.2,1.2,U/Pb,zircon,20°03′12.25′′S,46°54′6.65′′W,56 
+Lemes,Kimberlite,84,2,U/Pb,perovskite,18°11′48.19′′S,47°34′42.16′′W,55 
+Limeira,Kimberlite,91,6,U/Pb,perovskite,18°30′49.18′′S,47°31′27.57′′W,55 
+Limpeza_18,Kimberlite,79.9,3.2,U/Pb,perovskite,18°28′51.42′′S,46°47′53.20′′W,50 
+Malaquias,Kamafugite-sub_volcanic_phonolite,79,2,U/Pb,perovskite,18°26′13.77′′S,46°18′09.73′′W,55 
+Mata_da_Corda,Kamafugite,86.6,5.2,U/Pb,perovskite,18°55′S,46°13′W,57 
+Montes_Claros_de_Goiás,Essexite-gabbro-syenite,88.7,5.7,K/Ar,biotite,16°04′S,51°23′W,52 
+Pântano,Kimberlite,83,2,U/Pb,perovskite,18°28′11.80′′S,46°47′21.08′′W,55
+Paranaíba,14,Kamafugite,79.2,5.6,U/Pb,perovskite,18°51′18.95′′S,46°14′25.87′′W,50 
+Perdizes_2,Kimberlite,87.2,3.0,U/Pb,perovskite,18°33′2.25′′S,47°28′1.77′′W,50 
+Perdizes_3,Kimberlite,79,4,U/Pb,perovskite,18°34′15.62′′S,47°27′27.78′′W,55 
+Poço_Verde,Kimberlite,86,1.2,U/Pb,zircon,18°23′22.77′′S,47°11′41.83′′W,56 
+Poços_de_Caldas,Tinguaite-phonolite-nepheline-syenite-pyroclastic_rocks,86.7,0.4,Ar/Ar,phlogopite,21°51′12.23′′S,46°35′21.69′′W,58
+Ponta_do_Morro,Granite-quartz-monzonite-syenite-nordmarkite,84,6,Rb/Sr,whole_rock_(syenite),16°16′41.20′′S,55°41′41.67′′W,59
+Ponte_Nova,Gabbro-clinopyroxenite,87.6,1.3 K/Ar,biotite,22°47′21.24′′S,45°45′10.19′′W,60 
+Poxoréu,Basalt-syenite-monzonite-granite,83.9,0.4,Ar/Ar,whole_rock,15°58′33.25′′S,53°58′14.12′′W,34 
+Presidente_Olegário,Kamafugite,79,1,U/Pb,perovskite,18°24′15.74′′S,46°28′32.43′′W,55 
+Presidente_Olegário,3,Kamafugite,83.9,5.2,U/Pb,perovskite,18°25′51.96′′S,46°25′35.49′′W,50 
+Rio_Preto_2,Kamafugite,88.0,4.4,U/Pb,perovskite,18°17′25.62′′S,47°23′40.70′′W,50 
+Rio_Verde_3,Kamafugite,88.24,0.56,Ar/Ar,phlogopite,17°03′20′′S,51°09′W,50
+Salitre,Bebedourite-phonolite,82.5,5.7,K/Ar,biotite,19°02′S,46°46′W,52 
+Santa_Fé,Essexite-missourite-lamprophire-malignite,86.7,1.8,K/Ar,biotite,15°43′S,51°08′W,52 
+Santo_Antônio_da_Barra,Kamafugite,sub-volcanic-phonolite,77.9,6.8,U/Pb,perovskite,17°35′S,50°40′W,57 
+Serra_Negra,Peridotite,83.5,n.a.,K/Ar,biotite,18°55′S,46°50′W,52
+Serra_do_Bueno,Katungite-mafurite-ugandite-(kamafugitic-rocks),90,4,Ar/Ar,whole_rock,19°43′49.60′′S,46°00′01.79′′W,61 
+Tapira,Phonolite-jacupiranguite-bebedourite,87.2,1.2,K/Ar,biotite,19°52′41.71′′S,46°51′5.68′′W,52 
+Três_Ranchos,Kimberlite,87,3,U/Pb,perovskite,18°20′19.67′′S,47°51′34.05′′W,55 
+Três_Ranchos_4,Kimberlite,81.6,2.7,Rb/Sr,phlogopite,18°18′50.66′′S,47°49′15.95′′W,50 
+Três_Ranchos,27 Kimberlite,81.1,6.6,U/Pb,perovskite,18°26′26.21′′S,47°49′27.83′′W,50
+Três_Ranchos,78,Kimberlite,88.3,1.0,Ar/Ar,phlogopite,18°15′43.19′′S,47°40′40.80′′W,50
+
+
+References:
+34.Gibson, S. A., Thompson, R. N., Weska, R. K., Dickin, A. P. & Leonardos, O. H. Late Cretaceous rift-related upwelling and melting of the Trindade starting mantle plume head beneath western Brazil. Contrib. to Mineral. Petrol. 126, 303–314 (1997).
+50.Felgate, R. M. The Petrogenesis of Brazilian kimberlites and kamafugites intruded along the 125° lineament - Improved geochemical and geochronological constraints on magmatism in Rondonia and the Alto Paranaiba igneous province. (The University of Melbourne, 2014). 
+51. Danni, J. C. & Gaspar, J. C. Química do Katungito de Amorinópolis - Goiás: Contribuição ao estudo do magmatismo kamafugítico. Geochim. Bras. 8, 119–134 (1994). 
+52.Sonoki, I. K. & Garda, G. M. Idades K-Ar de rochas alcalinas do Brasil meridional e Paraguai oriental: compilação e adaptação às novas constantes de decaimento. Bol. IG-USP. Série Científica 19, 63–85 (1988). 
+53.Almeida, F. F. M. de, Carneiro, C. d. R. & Mizusaki, A. M. P. Correlação do magmatismo das bacias da margem continental brasileira com o das áreas emersas adjacentes. Rev. Bras. Geociências 26, 125–138 (1996). 
+54. Guarino, V. et al. U–Pb ages, geochemistry, C–O–Nd–Sr–Hf isotopes and petrogenesis of the Catalão II carbonatitic complex (Alto Paranaíba Igneous Province, Brazil): implications for regional-scale heterogeneities in the Brazilian carbonatite associations. Int. J. Earth Sci. https://doi.org/10.1007/s00531-016-1402-4 (2017). 
+55. Guarino, V. et al. U-Pb ages, Sr-Nd- isotope geochemistry, and petrogenesis of kimberlites, kamafugites and phlogopite-picrites of the Alto Paranaíba Igneous Province, Brazil. Chem. Geol, https://doi.org/10.1016/j.chemgeo.2012.06.016 (2013).
+56.Davis, G. L. The ages and uranium contents of zircons from kimberlites and associated rocks. Carnegie Inst. Washingt. Yearb. 76, (631–635 (1977).
+57. Sgarbi, P. B. A., Heaman, L. M. & Gaspar, J. C. U-Pb perovskite ages for brazilian kamafugitic rocks: Further support for a temporal link to a mantle plume hotspot track. J. South Am. Earth Sci, https://doi.org/10.1016/j.jsames.2003.12.005 (2004). 
+58.Vlach, S. R. F., Ulbrich, H. H. G. J., Ulbrich, M. N. C. & Vasconcelos, P. M. P. Melanite-bearing nepheline syenite fragments and 40Ar/39Ar age of phlogopite megacrysts in conduit breccia from the Poços de Caldas Alkaline Massif (MG/SP), and implications. Brazilian J. Geol. 48, 391–402 (2018). 
+59. Del’Arco, J. O. et al. Projeto Radambrasil: Folha SE21 Corumbá e parte da folha SE 20, geologia, geomorfologia, pedologia, vegetacão e uso potencial da terra (1982). 
+60. Azzone, R. G., Ruberti, E., Rojas, G. E. E. & De Barros Gomes, C. Geologia e geocronologia do maciço alcalino máfico- ultramáfico Ponte Nova (SP-MG). Geol. USP - Ser. Cient. 9, 23–46 (2009). 
+61.Gibson, S. A. et al . The Serra do Bueno potassic diatreme: a possible hypabyssal equivalent of the ultramafic alkaline volcanics in the late Cretaceous Alto Paranaiba Igneous Province, SE Brazil. Mineral. Mag. 58, 357–383 (1994).

@@ -1,0 +1,1190 @@
+﻿1,Mitzic,Gabon,11.2756,0.89414,Zircon,U-Th-Pb,2848
+2,Mekone-01,Gabon,11.61195,0.45386,Amphibole,Ar-Ar,2500
+3,Messogho-02,Gabon,11.47773,0.58045,Phlogopite,Ar-Ar,2235
+4,Turkey-01,Australia,120.652,-28.8757,Phlogopite / Biotite,Rb-Sr,2100
+5,Melita-01,Australia,121.1911,-29.4955,Phlogopite,Ar-Ar,2052
+6,Melrose_AB02,Australia,121.721,-28.175,Zircon,U-Th-Pb,2032
+7,Mekone-02,Gabon,11.65412,0.47105,Phlogopite,Ar-Ar,2029
+8,Akwatia,Ghana,-1,6.5,Rutile,U-Th-Pb,2029
+9,Placer_Anom_1,Australia,122.5173,-28.8895,Phlogopite / Biotite,Rb-Sr,2010
+10,Amie-02,Gabon,11.5296,0.63411,Amphibole,Ar-Ar,2000
+11,Ayolo,Gabon,11.49565,0.59381,Amphibole,Ar-Ar,2000
+12,Kimozero-01,Russia,35.1124,62.3829,Zircon,U-Th-Pb,1986
+13,Kimozero,Russia,35.1124,62.3829,Zircon,U-Th-Pb,1919
+14,Mileura-03,Australia,116.0766,-27.0938,Phlogopite,Ar-Ar,1900
+15,Lac_Castignon-02,Canada,-68.76704,56.41953,Zircon,U-Th-Pb,1880
+16,Lac_Castignon-01,Canada,-68.81321,56.48383,Whole Rock,K-Ar,1873
+17,Aboun-03,Gabon,11.12496,0.89521,Phlogopite,Ar-Ar,1850
+18,Owens,Canada,-82.52083,49.44104,Phlogopite,K-Ar,1842
+19,Zero,South Africa,23.721454,-27.282172,Perovskite,U-Th-Pb,1835
+20,Shchorskaya,Russia,33.6607,48.3913,Phlogopite,Ar-Ar,1743
+21,Helpmekaar_Gr,South Africa,23.597349,-27.551555,Perovskite,U-Th-Pb,1705
+22,Bathlaros,South Africa,23.317042,-27.29467,Whole Rock + Mineral,Rb-Sr,1695
+23,Elston-01,South Africa,23.621,-27.219,Perovskite,U-Th-Pb,1674
+24,Elston-01,South Africa,23.621,-27.219,Phlogopite / Biotite,Rb-Sr,1674
+25,Brockman_Creek-01,Australia,119.9752,-21.3708,Kelyphite after Garnet,Ar-Ar,1662
+26,Bathlaros,South Africa,23.317042,-27.29467,Perovskite,U-Th-Pb,1647
+27,Zero,South Africa,23.721454,-27.282172,Phlogopite,Ar-Ar,1643
+28,Jianjiagou-01,China,111.041196,37.447878,Phlogopite,Ar-Ar,1635
+29,White_Ladies,South Africa,23.866,-27.268,Perovskite,U-Th-Pb,1626
+30,Yuzuican-05,China,113.35,39.64,Phlogopite,Rb-Sr,1500
+31,Mochudi-01,Botswana,26.398,-24.3882,Phlogopite / Biotite,Rb-Sr,1390
+32,Mosomane-02,Botswana,25.8778,-24.1071,Phlogopite,Ar-Ar,1386
+33,Martins_Drift-02,Botswana,27.8627,-22.743,Phlogopite / Biotite,Ar-Ar,1364
+34,Kotakonda,India,77.681451,16.773254,Phlogopite / Biotite,K-Ar,1363
+35,Martins_Drift-04,Botswana,27.897699,-22.702999,Phlogopite / Biotite,Rb-Sr,1352
+36,Martins_Drift-04,Botswana,27.8978,-22.7022,Phlogopite / Biotite,Rb-Sr,1352
+37,Sloan-01,USA,-105.4533,40.8433,Phlogopite / Biotite,K-Ar,1350
+38,Martins_Drift-02,Botswana,27.8627,-22.743,Phlogopite / Biotite,Rb-Sr,1333
+39,Martins_Drift-03,Botswana,27.883499,-22.7041,Phlogopite / Biotite,Rb-Sr,1333
+40,Martins_Drift-04,Botswana,27.897699,-22.702999,Phlogopite / Biotite,Rb-Sr,1333
+41,Helpmekaar_Gr,South Africa,23.597349,-27.551555,Perovskite,U-Th-Pb,1303
+42,Martins_Drift-02,Botswana,27.8627,-22.743,Phlogopite / Biotite,Rb-Sr,1287
+43,Ngulube-01,South Africa,28.0116,-21.4831,Zircon,U-Th-Pb,1217
+44,Basureddipalle,India,77.591609,16.725714,Perovskite,U-Th-Pb,1200
+45,Nemag_Lake,Canada,-81.25353,46.35894,Phlogopite / Biotite,K-Ar,1196
+46,Goudini,South Africa,26.2,-25.2833,Whole Rock,Sm-Nd,1190
+47,Mantyjarvi,Finland,28.7034,63.0866,Phlogopite,Ar-Ar,1186
+48,Himlapur,India,77.327089,16.848025,Phlogopite,Ar-Ar,1180
+49,Premier,South Africa,28.5153,-25.6736,Clinopyroxene,Rb-Sr,1180
+50,Gollapalle West,India,77.6333,14.5139,Phlogopite,U-Th-Pb,1167
+51,Wadagera,India,77.234607,16.659367,Phlogopite,Ar-Ar,1160
+52,Himlapur,India,77.327089,16.848025,Phlogopite,Rb-Sr,1159.5
+53,Chintalampalle,India,77.46443,15.0466,Phlogopite,Ar-Ar,1157
+54,Maddur,India,77.59595,16.839433,Perovskite,U-Th-Pb,1156
+55,Mwenezi-01,South Africa,30.6425,-21.5942,Phlogopite / Biotite,Rb-Sr,1156
+56,National,South Africa,28.5247,-25.7583,Phlogopite / Biotite,Rb-Sr,1155
+57,Premier,South Africa,28.5153,-25.6736,Perovskite,U-Th-Pb,1154
+58,Wajrakarur-02,India,77.2,14.9,Phlogopite / Biotite,K-Ar,1153
+59,Salvador-01,Brazil,-42.1938,-12.0133,Phlogopite,Rb-Sr,1152
+60,Premier,South Africa,28.5153,-25.6736,Perovskite,U-Th-Pb,1151
+61,Premier,South Africa,28.5153,-25.6736,Perovskite,U-Th-Pb,1150
+62,Itanana,Tanzania,32.9037,-4.1837,Phlogopite,Ar-Ar,1149
+63,National,South Africa,28.5247,-25.7583,Perovskite,U-Th-Pb,1148.5
+64,Marathon_Dykes,Canada,-86.36328,48.7137,Perovskite,U-Th-Pb,1144
+65,Kotakonda,India,77.68145,16.773253,Phlogopite,Ar-Ar,1144
+66,Kim0046,India,77.109988,16.826057,Phlogopite,Ar-Ar,1143
+67,Kalix_Group,Sweden,23.1667,65.8667,Phlogopite / Biotite,K-Ar,1142
+68,Perapalli,India,77.503061,16.770924,Perovskite,U-Th-Pb,1141
+69,Basureddipalle,India,77.591609,16.725714,Perovskite,U-Th-Pb,1140
+70,Kim0046,India,77.109988,16.826057,Phlogopite,Rb-Sr,1139.9
+71,Chigicherla-02,India,77.67978,14.52627,Perovskite,U-Th-Pb,1131.2
+72,Timber_Creek-04,Australia,130.4798,-15.7433,Spinel,Ar-Ar,1130
+73,Nazarapur,India,77.399389,16.826915,Phlogopite,Ar-Ar,1129
+74,Mwenezi-01,South Africa,30.6425,-21.5942,Perovskite,U-Th-Pb,1129
+75,Wajrakurur_East,India,77.40445,15.02285,Perovskite,U-Th-Pb,1128.5
+76,Gollapalle_East,India,77.63612,14.51882,Perovskite,U-Th-Pb,1128
+77,Wadagera,India,77.234607,16.659367,Phlogopite,Rb-Sr,1128
+78,Gaddisugur,India,77.117867,16.664657,Phlogopite,Ar-Ar,1126.6
+79,Gaddisugur,India,77.117867,16.664657,Phlogopite,Rb-Sr,1125
+80,Kotakonda,India,77.68145,16.77325,Perovskite,U-Th-Pb,1125
+81,Venkatampalli-07,India,77.3708,14.9333,Perovskite,U-Th-Pb,1125
+82,Wajrakurur_East,India,77.40445,15.02285,Perovskite,U-Th-Pb,1124
+83,Kyle_Lake,Canada,-85.4041,52.46339,Phlogopite,Rb-Sr,1123
+84,Narayanpet-01,India,77.497269,16.770465,Perovskite,U-Th-Pb,1123
+85,Belagera,India,77.117358,16.945027,Phlogopite,Rb-Sr,1120
+86,Gollapalle_West,India,77.62129,14.51547,Perovskite,U-Th-Pb,1120
+87,Tummatapalle,India,77.30205,14.84144,Perovskite,U-Th-Pb,1117
+88,Wajrakarur-01,India,77.38725,15.033661,Whole Rock + Mineral,Rb-Sr,1116
+89,Mwenezi-05,South Africa,30.6486,-21.5777,Perovskite,U-Th-Pb,1115
+90,Bubiki,Tanzania,33.3429,-3.3759,Phlogopite,Ar-Ar,1115
+91,Muligiripalle-05,India,77.3083,14.85,Phlogopite,Ar-Ar,1113
+92,Mwenezi-04,South Africa,30.6516,-21.5752,Perovskite,U-Th-Pb,1112
+93,Tummatapalle,India,77.30205,14.84144,Phlogopite,Rb-Sr,1111
+94,Sekonomata,Mali,-11.175,13.0083,Phlogopite / Biotite,Rb-Sr,1110
+95,Himlapur,India,77.327089,16.848025,Phlogopite,Ar-Ar,1109
+96,Kalyandurg-03,India,76.96425,14.56546,Perovskite,U-Th-Pb,1109
+97,Tummatapalle,India,77.30205,14.84144,Phlogopite,Ar-Ar,1105
+98,Songwa-02,Tanzania,33.5377,-3.5242,Phlogopite,Ar-Ar,1105
+99,Gollapalle_East,India,77.63612,14.51882,Perovskite,U-Th-Pb,1102.5
+100,Gollapalle_West,India,77.62129,14.51547,Perovskite,U-Th-Pb,1101.2
+101,Bachelor_Lake,Canada,-76.14491,49.49819,Phlogopite / Biotite,K-Ar,1100
+102,551_081_X0001,India,77.399279,16.822005,Phlogopite,Ar-Ar,1098
+103,551_081_X0099,India,77.421079,16.833665,Phlogopite,Ar-Ar,1098
+104,Bewanahalli,India,77.314849,16.840265,Phlogopite,Ar-Ar,1098
+105,Domargidda,India,77.4986,16.8181,Phlogopite,Ar-Ar,1098
+106,Goudagera_Tanda,India,77.234607,16.659367,Phlogopite,Ar-Ar,1098
+107,Gurmatkal,India,77.4333,16.8417,Phlogopite,Ar-Ar,1098
+108,Lattavaram-03,India,77.2833,14.925,Perovskite,U-Th-Pb,1098
+109,Mudalabad,India,77.50391,16.79588,Phlogopite,Rb-Sr,1098
+110,Nazarapur,India,77.399389,16.826915,Phlogopite,Rb-Sr,1098
+111,Putak,India,77.456809,16.820275,Phlogopite,Rb-Sr,1098
+112,Sajanapur,India,77.4917,16.825,Phlogopite,Rb-Sr,1098
+113,Shivapur,India,77.273789,16.863085,Phlogopite,Rb-Sr,1098
+114,Udimilgidda,India,77.475569,16.818055,Phlogopite,Rb-Sr,1098
+115,Yagapur,India,77.094068,16.909787,Phlogopite,Rb-Sr,1098
+116,Yampahad,India,77.278829,16.849485,Phlogopite,Rb-Sr,1098
+117,Bubiki,Tanzania,33.3429,-3.3759,Phlogopite,Rb-Sr,1097
+118,Gollapalle East,India,77.63612,14.51882,Phlogopite,Rb-Sr,1094.2
+119,Wajrakarur-02,India,77.2,14.9,Phlogopite,Rb-Sr,1094
+120,Muligiripalle-05,India,77.3083,14.85,Phlogopite,Rb-Sr,1093
+121,Siddanapalle_Tanda,India,77.55427,16.19094,Zircon,U-Th-Pb,1093
+122,Siddanapalle_Tanda,India,77.55427,16.19094,Perovskite,U-Th-Pb,1093
+123,Kottakunta,India,77.3708,15.0264,Phlogopite,Rb-Sr,1092
+124,Anumapalle,India,77.504569,14.98968,Phlogopite,Rb-Sr,1091
+125,Chintalampalle,India,77.4611,15.0389,Phlogopite,Rb-Sr,1091
+126,Dibbasani,India,77.4708,14.9861,Phlogopite,Rb-Sr,1091
+127,Lambadithanda,India,77.2917,14.9208,Phlogopite,Rb-Sr,1091
+128,Venkatampalli-07,India,77.3708,14.9333,Phlogopite,Rb-Sr,1091
+129,Wajrakarur-01,India,77.38725,15.03366,Phlogopite,Rb-Sr,1091
+130,Dead_Horse_Creek,Canada,-86.67367,48.83751,Phlogopite,Rb-Sr,1085
+131,Maddur,India,77.595951,16.839434,Zircon,U-Th-Pb,1085
+132,Abhangapur,India,77.6333,16.7639,Zircon,U-Th-Pb,1084
+133,Bommanpahad,India,77.5833,16.7528,Zircon,U-Th-Pb,1084
+134,Duppatghat,India,77.6889,16.8139,Zircon,U-Th-Pb,1084
+135,Gokapasalwad,India,77.604071,16.950634,Zircon,U-Th-Pb,1084
+136,Kazipur,India,77.579901,16.868464,Zircon,U-Th-Pb,1084
+137,Koilkonda,India,77.575941,16.781904,Zircon,U-Th-Pb,1084
+138,Kotakonda,India,77.68145,16.77325,Phlogopite,Rb-Sr,1084
+139,Maddur-02,India,77.643901,16.834834,Zircon,U-Th-Pb,1084
+140,Maddur-03,India,77.6306,16.8306,Zircon,U-Th-Pb,1084
+141,Maddur-04,India,77.630951,16.830914,Zircon,U-Th-Pb,1084
+142,Mominapur,India,77.626801,16.803814,Zircon,U-Th-Pb,1084
+143,Narayanpet-01,India,77.497269,16.770465,Zircon,U-Th-Pb,1084
+144,Perapalli,India,77.503061,16.770924,Zircon,U-Th-Pb,1084
+145,Ramannapalle,India,77.6944,16.7708,Zircon,U-Th-Pb,1084
+146,SW_Maddur,India,77.650501,16.834904,Zircon,U-Th-Pb,1084
+147,Vinjamur,India,77.6861,16.7639,Zircon,U-Th-Pb,1084
+148,Itanana,Tanzania,32.9037,-4.1837,Perovskite,U-Th-Pb,1083
+149,Muligiripalle-05,India,77.3083,14.85,Perovskite,U-Th-Pb,1079
+150,Premier,South Africa,28.5153,-25.6736,Perovskite,U-Th-Pb,1078
+151,Kyle-05,Canada,-85.257604,53.07604,Perovskite,U-Th-Pb,1076.2
+152,551_081_X0004,India,77.409129,16.828705,Phlogopite,Ar-Ar,1052
+153,Phillips_Range,Australia,126.125,-16.9,Clinopyroxene,Ar-Ar,1000
+154,Le_Tac,Canada,-76.141,49.42466,Phlogopite,Ar-Ar,1000
+155,Badgerow,Canada,-81.7351,46.6422,Zircon,U-Th-Pb,975
+156,Lattavaram-03,India,77.2833,14.925,Phlogopite,K-Ar,968
+157,Lattavaram-04,India,77.2917,14.942,Phlogopite,Sm-Nd,940
+158,Jungel-01,India,82.7833,24.525,Whole Rock,K-Ar,919
+159,Triangle-05,South Africa,31.08847,-21.204943,Kelyphite after Garnet,Ar-Ar,886
+160,Norseman-01,Australia,121.8722,-32.2544,Phlogopite / Biotite,Rb-Sr,849
+161,Weasua-K1,Liberia,-10.478253,7.296504,Phlogopite,Ar-Ar,841
+162,Bow_Hill,Australia,128.2167,-16.6333,Phlogopite,K-Ar,815
+163,Mbujimayi-01,Congo,23.6076,-6.1671,Clinopyroxene,Ar-Ar,801
+164,Pteropus-01,Australia,127.4281,-14.63,Zircon,U-Th-Pb,800
+165,Skerring,Australia,127.3539,-14.1116,Zircon,U-Th-Pb,800
+166,Ashmore-01,Australia,127.2924,-14.2372,Phlogopite,Ar-Ar,799
+167,Schuller-01,South Africa,28.530302,-25.760881,Perovskite,U-Th-Pb,799
+168,Dow-02,USA,-88.163,46.0494,Phlogopite / Biotite,Rb-Sr,793
+169,Weasua-K2,Liberia,-10.478579,7.312889,Phlogopite,Ar-Ar,791
+170,Vader,Canada,-78.5633,52.90068,Phlogopite,Ar-Ar,790
+171,Seppelt-01,Australia,127.3849,-14.435,Phlogopite / Biotite,Rb-Sr,784
+172,Kalettomanpuro,Finland,29.4118,65.5161,Perovskite,U-Th-Pb,754
+173,Prospect-01,South Africa,28.891683,-19.789783,Phlogopite,Ar-Ar,750
+174,Brauna-11,Brazil,-39.4013,-10.9166,Kelyphite after Garnet,Ar-Ar,726
+175,Guaniamo-01,Venezuela,-65.8155,6.3627,Phlogopite,Rb-Sr,711.6
+176,Kolissen-01,Gabon,10.6878,-0.77614,Phlogopite,Ar-Ar,708
+177,Brauna-15,Brazil,-39.4,-10.9241,Phlogopite,Ar-Ar,690
+178,Brauna-03,Brazil,-39.4238,-10.9016,Phlogopite / Biotite,Rb-Sr,682
+179,Amon,Canada,-80.215843,70.696097,Rutile,U-Th-Pb,672.7
+180,Mwenezi-02,South Africa,30.6475,-21.5793,Phlogopite,Ar-Ar,670
+181,Leningradskaya,Russia,112.6767,66.3087,Zircon,U-Th-Pb,670
+182,Isuli,Tanzania,33.7666,-5.2833,GAR,Ar-Ar,667
+183,Baffin-01,Canada,-80.063409,70.501524,Phlogopite,Ar-Ar,655
+184,Gerle_Gold,Canada,-109.3461,63.3697,Kelyphite after Garnet,Ar-Ar,650
+185,Kgalagadi-02,Botswana,22.0205,-24.8995,Perovskite,U-Th-Pb,647
+186,Brauna-07,Brazil,-39.4088,-10.9069,Perovskite,U-Th-Pb,641.7
+187,Dartmouth,South Africa,28.319102,-22.999366,Perovskite,U-Th-Pb,634
+188,Renard-01,Canada,-72.197522,52.822961,Perovskite,U-Th-Pb,631.6
+189,Venetia-02,South Africa,29.316432,-22.432107,Perovskite,U-Th-Pb,631
+190,Chicken_Park-01,USA,-105.5344,40.8664,Perovskite,U-Th-Pb,614.5
+191,Anuri,Canada,-112.993941,66.557162,Phlogopite,Rb-Sr,613
+192,Kobato,Mali,-11.1417,12.9875,Phlogopite / Biotite,Rb-Sr,600
+193,Wessels,South Africa,28.967308,-19.811397,Phlogopite,Ar-Ar,600
+194,George_Creek,USA,-105.7014,40.8908,Phlogopite,Rb-Sr,600
+195,Lomonovskaya,Russia,41.0673,65.3678,Clinopyroxene,Ar-Ar,591
+196,George,Canada,-109.70854,64.70535,Phlogopite / Biotite,Ar-Ar,590
+197,Kgalagadi-04,Botswana,22.615,-24.5842,Phlogopite / Biotite,Rb-Sr,589
+198,Sarfartoq-464611,Greenland,-52.173025,66.517464,Perovskite,U-Th-Pb,587.4
+199,Sarfanguaqland-01,Greenland,-53.4389,66.8583,Phlogopite / Biotite,Rb-Sr,587
+200,Sarfartoq-265849,Greenland,-50.4787,66.71451,Perovskite,U-Th-Pb,585.6
+201,Kgalagadi-07,Botswana,22.2164,-24.9314,Perovskite,U-Th-Pb,585
+202,Sarfartoq-464633,Greenland,-51.402072,66.691873,Perovskite,U-Th-Pb,585
+203,Torngat-01,Canada,-65.11748,59.47747,Perovskite,U-Th-Pb,584
+204,66V230,Greenland,-51.271,66.531,Whole Rock,K-Ar,584
+205,Beitbridge-01,South Africa,29.8808,-22.17,Perovskite,U-Th-Pb,583
+206,Sarfartoq-444206,Greenland,-51.277233,66.702756,Perovskite,U-Th-Pb,581.2
+207,Sarfartoq-491807,Greenland,-51.1809,66.301985,Perovskite,U-Th-Pb,580.7
+208,Sarfartoq-491803,Greenland,-51.17703,66.301576,Perovskite,U-Th-Pb,579.5
+209,Sarfartoq-491912,Greenland,-51.839667,66.405794,Perovskite,U-Th-Pb,578.9
+210,Sarfartoq-477423,Greenland,-51.848249,66.405014,Perovskite,U-Th-Pb,578.7
+211,Sarfartoq-472522,Greenland,-51.306065,66.201345,Perovskite,U-Th-Pb,575.2
+212,USouth Africa,Canada,-113.36772,63.46607,Phlogopite,Ar-Ar,574
+213,Venetia-01,South Africa,29.3214,-22.434,Perovskite,U-Th-Pb,572
+214,Sarfartoq-444269,Greenland,-50.809295,66.174839,Perovskite,U-Th-Pb,571.4
+215,Aillik Bay,Canada,-59.1698,55.22023,Phlogopite / Biotite,K-Ar,570
+216,Kgalagadi-04,Botswana,22.615,-24.5842,Perovskite,U-Th-Pb,568
+217,Chicoutimi,Canada,-71.24841,48.46632,Whole Rock,K-Ar,568
+218,Luikonlahti,Finland,28.7088,62.9431,Perovskite,U-Th-Pb,567
+219,Sarfartoq-444201,Greenland,-51.214485,66.80865,Perovskite,U-Th-Pb,565.9
+220,Sarfartoq-464645,Greenland,-52.16332,66.743371,Perovskite,U-Th-Pb,565.6
+221,Sarfartoq-472519,Greenland,-51.983543,66.374251,Perovskite,U-Th-Pb,561.9
+222,Sarfartoq-483815,Greenland,-50.71418,66.387985,Perovskite,U-Th-Pb,551.1
+223,Indicator_Lake,Canada,-72.39706,51.97688,Perovskite,U-Th-Pb,550.9
+224,Abloviak-01,Canada,-65.13667,59.465,Phlogopite,Ar-Ar,550
+225,Abloviak-02,Canada,-65.18417,59.44375,Phlogopite,Ar-Ar,550
+226,Mbizi-02,South Africa,31.0695,-21.1683,Phlogopite,Ar-Ar,550
+227,Grib,Russia,41.4263,65.5066,Phlogopite,Ar-Ar,550
+228,Hearne,Canada,-109.22687,63.43061,Phlogopite,Ar-Ar,549
+229,Venetia-13,South Africa,29.3252,-22.4341,Perovskite,U-Th-Pb,549
+230,Qilaluqag-01,Canada,-86.139937,66.560385,Perovskite,U-Th-Pb,546
+231,Tuzo,Canada,-109.19962,63.44174,Phlogopite,Ar-Ar,542
+232,Mbizi-02,South Africa,31.0695,-21.1683,Clinopyroxene,Ar-Ar,542
+233,Avike,Sweden,17.5,62.88,Phlogopite,K-Ar,542
+234,Vredenhof-03,Namibia,18.8597,-27.6233,Phlogopite / Biotite,Rb-Sr,541
+235,Colossus,South Africa,28.876239,-19.791167,Perovskite,U-Th-Pb,540
+236,Venetia-01,South Africa,29.3214,-22.434,Perovskite,U-Th-Pb,540
+237,5034 (Gahcho Kue),Canada,-109.2082,63.43537,Phlogopite / Biotite,Rb-Sr,539
+238,Sese-01,South Africa,30.6705,-20.5006,Phlogopite / Biotite,Rb-Sr,538
+239,Ondermatje-01,Namibia,19.4375,-28.3625,Perovskite,U-Th-Pb,537.6
+240,Naset,Sweden,17.4694,62.4625,Phlogopite / Biotite,K-Ar,537
+241,Mwenezi-01,South Africa,30.6425,-21.5942,Clinopyroxene,Ar-Ar,536
+242,Kikerk_Lake-01,Canada,-113.21469,67.13947,Phlogopite / Biotite,Ar-Ar,535
+243,Opus-06,Canada,-84.279334,72.229496,Phlogopite,Ar-Ar,535
+244,Beitbridge-01,South Africa,29.8808,-22.17,Clinopyroxene,Ar-Ar,535
+245,Beitbridge-01,South Africa,29.8808,-22.17,Phlogopite,Ar-Ar,535
+246,Venetia-04,South Africa,29.329032,-22.435007,Whole Rock + Mineral,Rb-Sr,533
+247,Kgalagadi-05,Botswana,22.092199,-24.9867,Perovskite,U-Th-Pb,531
+248,Tesla,Canada,-109.2122,63.4454,Phlogopite,Ar-Ar,531
+249,AV-1,Canada,-83.390028,69.283497,Perovskite,U-Th-Pb,530
+250,AV-2,Canada,-83.299431,69.269235,Perovskite,U-Th-Pb,530
+251,Colossus,South Africa,28.876239,-19.791167,Phlogopite,Ar-Ar,529
+252,Mooikloof,South Africa,28.258,-22.946569,Phlogopite / Biotite,Rb-Sr,528
+253,Ondermatje-01,Namibia,19.4375,-28.3625,Phlogopite / Biotite,Rb-Sr,525
+254,Venetia-03,South Africa,29.313032,-22.429407,Perovskite,U-Th-Pb,525
+255,Uitkomst-04,Namibia,18.9106,-27.7161,Phlogopite / Biotite,Ar-Ar,524
+256,Snap_Lake,Canada,-110.8565,63.608118,Phlogopite / Biotite,Rb-Sr,523
+257,Lynx_Dyke,Canada,-72.231282,52.819206,Ilmenite,U-Th-Pb,522
+258,Mooikloof,South Africa,28.2583,-22.9458,Perovskite,U-Th-Pb,522
+259,Venetia-07,South Africa,29.317032,-22.435607,Perovskite,U-Th-Pb,522
+260,Mooikloof,South Africa,28.2583,-22.9458,Perovskite,U-Th-Pb,521
+261,Mooikloof,South Africa,28.2583,-22.9458,Phlogopite / Biotite,Rb-Sr,520
+262,Venetia-01,South Africa,29.321132,-22.434807,Phlogopite / Biotite,Ar-Ar,519
+263,Uitkomst-05,Namibia,18.9175,-27.7089,Phlogopite / Biotite,Ar-Ar,514
+264,Martins_Drift-08,Botswana,28.0788,-22.650999,Clinopyroxene,Ar-Ar,513
+265,The_Oaks,South Africa,28.318602,-22.954369,Kelyphite after Garnet,Ar-Ar,512
+266,Venetia-01,South Africa,29.3214,-22.434,Phlogopite / Biotite,Rb-Sr,511
+267,Sikwane-01,Botswana,26.4436,-24.501,Phlogopite,Ar-Ar,509
+268,The_Oaks,South Africa,28.318602,-22.954369,Phlogopite / Biotite,Rb-Sr,509
+269,The_Oaks,South Africa,28.318602,-22.954369,Phlogopite / Biotite,Rb-Sr,508
+270,Ondermatje-01,Namibia,19.4375,-28.3625,Phlogopite / Biotite,Rb-Sr,507
+271,The_Oaks,South Africa,28.318602,-22.954369,Phlogopite / Biotite,Ar-Ar,507
+272,Colossus,South Africa,28.876239,-19.791167,Phlogopite / Biotite,Rb-Sr,502
+273,Colossus,South Africa,28.876239,-19.791167,Phlogopite / Biotite,Rb-Sr,502
+274,Martins_Drift-08,Botswana,28.0789,-22.6502,Phlogopite,Ar-Ar,500
+275,Kent,Canada,-113.66028,64.20248,Phlogopite / Biotite,Rb-Sr,500
+276,Grunau_SW16,Namibia,18.2,-27.95,Whole Rock,K-Ar,500
+277,Dartmouth,South Africa,28.319102,-22.999366,Phlogopite / Biotite,Rb-Sr,500
+278,Murowa,South Africa,30.3983,-20.4749,Zircon,U-Th-Pb,500
+279,Pengjiabang_Group,China,113,31.3333,Whole Rock,K-Ar,493
+280,The_Oaks,South Africa,28.3189,-22.9536,Phlogopite / Biotite,Rb-Sr,493
+281,Pomorskaya,Russia,41.0849,65.3476,Perovskite,U-Th-Pb,490
+282,Amakinskaya,Russia,113.774,62.4369,Zircon,Fission Track,486
+283,Hongqi-01,China,117.781,35.6682,Phlogopite / Biotite,Rb-Sr,482
+284,Shengli-01,China,117.778,35.6568,Perovskite,U-Th-Pb,480.6
+285,Wolverine_North,Canada,-113.60254,64.2194,Kelyphite after Garnet,Ar-Ar,480
+286,Fuxian-50,China,121.808,39.5205,Baddeleyite,U-Th-Pb,479.6
+287,Fuxian-01,China,121.773,39.5556,Whole Rock + Mineral,K-Ar,475
+288,Shengli-02,China,117.779,35.6585,Phlogopite / Biotite,Rb-Sr,475
+289,Podsnezhnaya,Russia,119.2976,70.2278,Zircon,Fission Track,475
+290,Shengli-01,China,117.778,35.6568,Phlogopite / Biotite,Rb-Sr,474
+291,Cleve-03,Australia,136.5375,-33.5583,Phlogopite / Biotite,Rb-Sr,470
+292,CL25,Canada,-110.15822,63.570439,Zircon,U-Th-Pb,470
+293,Knife_Lake,Canada,-113.152883,67.01286,Zircon,U-Th-Pb,467
+294,Fuxian-50,China,121.808,39.5205,Perovskite,U-Th-Pb,465
+295,Fuxian-51,China,121.816,39.5227,Phlogopite / Biotite,Rb-Sr,463
+296,Fuxian-42,China,121.869,39.6581,Phlogopite,Ar-Ar,462
+297,Jean,Canada,-113.69101,63.70822,Phlogopite / Biotite,Ar-Ar,461
+298,Hongqi-06,China,117.914,35.815,Phlogopite,Ar-Ar,460
+299,Fuxian-50,China,121.808,39.5205,Phlogopite,Ar-Ar,458
+300,Cross_Lake,Canada,-113.29473,63.55704,Zircon,U-Th-Pb,450.4
+301,Rich,Canada,-113.73111,63.69148,Kelyphite after Garnet,Ar-Ar,448
+302,Shenchong_(Ya_Qui),China,108.3,26.95,Whole Rock,K-Ar,446
+303,Drybones_Bay,Canada,-113.80564,62.13837,Zircon,U-Th-Pb,441.4
+304,Jericho-01,Namibia,19.7819,-28.3153,Perovskite,U-Th-Pb,440
+305,Mountain_Diatreme,Canada,-129.50134,64.23105,Phlogopite,K-Ar,437
+306,Orion,Canada,-113.29149,63.51669,Zircon,U-Th-Pb,435.4
+307,XXIII_Sezda_KPSS,Russia,113.7886,62.4505,Zircon,Fission Track,433
+308,Aerogeologicheskaya,Russia,119.049,69.1069,Phlogopite / Biotite,Rb-Sr,432
+309,Mbizi-02,South Africa,31.0695,-21.1683,Kelyphite after Garnet,Ar-Ar,431
+310,Anomaly-05,Russia,116.5154,69.0249,Zircon,U-Th-Pb,430
+311,Flogopitovaya,Russia,119.6353,69.8,Phlogopite / Biotite,Rb-Sr,428
+312,Anomaly-152,Russia,117.2793,69.0344,Zircon,U-Th-Pb,420
+313,Babye_Leto,Russia,116.8042,69.1258,Zircon,U-Th-Pb,420
+314,Ukukit,Russia,116.9091,68.7957,Zircon,U-Th-Pb,420
+315,Perevalnaya_II,Russia,117.1696,68.4571,Phlogopite / Biotite,Rb-Sr,405
+316,Estes_Park_Dykes,USA,-105.5186,40.3289,Phlogopite / Biotite,Rb-Sr,404
+317,Vostok-06,Russia,119.9369,70.0771,Phlogopite / Biotite,Rb-Sr,400
+318,Belka,Russia,120.0244,70.0004,Phlogopite / Biotite,Rb-Sr,397
+319,Tayozhnaya,Russia,113.7478,62.3726,Zircon,Fission Track,397
+320,Kidwell-26,USA,-90.2014,37.7439,Phlogopite / Biotite,K-Ar,397
+321,Operyayuschaya,Russia,119.9807,69.9914,Phlogopite / Biotite,Rb-Sr,394
+322,Onverwag-01,Namibia,18.1481,-27.7017,Whole Rock,K-Ar,392
+323,Letnyaya_Z,Russia,112.7255,66.4149,Zircon,Fission Track,392
+324,HP_Pipe,Canada,-116.96274,51.70222,Phlogopite / Biotite,Rb-Sr,391
+325,Pionerskaya,Russia,41.0533,65.3271,Clinopyroxene,Ar-Ar,390
+326,Avon,USA,-90.3153,37.8178,Phlogopite / Biotite,K-Ar,388
+327,Nemagnitnaya,Russia,119.3289,70.2166,Zircon,Fission Track,387
+328,Jaibara-01,Brazil,-46.6367,-1.9597,Phlogopite,Ar-Ar,385
+329,Kollektivnaya,Russia,111.4462,66.1969,Zircon,Fission Track,385
+330,Kidwell-31,USA,-90.1981,37.7347,Phlogopite / Biotite,K-Ar,385
+331,Yuzhnaya,Russia,37.9292,47.5899,Whole Rock + Mineral,Rb-Sr,384.7
+332,Vovolaspynskaya-01,Russia,37.89,47.5982,Whole Rock + Mineral,Rb-Sr,383.3
+333,Launfal,Australia,136.3437,-16.8563,Phlogopite / Biotite,Ar-Ar,382
+334,Palomides,Australia,136.3446,-16.8493,Phlogopite / Biotite,Ar-Ar,382
+335,Snezhinka,Russia,116.8798,68.3648,Phlogopite / Biotite,Rb-Sr,381
+336,Turisticheskaya,Russia,117.5,70,Phlogopite / Biotite,Rb-Sr,381
+337,Ector,Australia,136.3284,-16.8067,Phlogopite / Biotite,Ar-Ar,380
+338,Botuobinskaya,Russia,116.95,65.15,Phlogopite,Ar-Ar,380
+339,Nyurbinskaya,Russia,116.9726,65.2102,Phlogopite,Ar-Ar,380
+340,Operatorskaya-02,Russia,119.999,70.0254,Phlogopite / Biotite,Rb-Sr,380
+341,Excalibur,Australia,136.3404,-16.8587,Phlogopite / Biotite,Ar-Ar,377
+342,Chomur,Russia,116.7477,68.2982,Zircon,Fission Track,377
+343,Operatorskaya-01,Russia,119.9837,70.0039,Phlogopite / Biotite,Rb-Sr,377
+344,Schaffer-03,USA,-105.47,41.0056,Zircon,Fission Track,377
+345,Perm,Russia,112.5705,70.3324,Phlogopite / Biotite,Rb-Sr,376
+346,Kosmos,Russia,119.905,70.0066,Phlogopite / Biotite,Rb-Sr,375
+347,Perevalnaya_III,Russia,117.1706,68.4442,Phlogopite / Biotite,Rb-Sr,375
+348,Rassvet,Russia,117.5,68,Zircon,Fission Track,374
+349,Udachnaya,Russia,112.3147,66.4445,Phlogopite / Biotite,Rb-Sr,373
+350,Grib,Russia,41.4263,65.5066,Phlogopite / Biotite,Rb-Sr,372
+351,Zagadochnaya-1&2,Russia,112.2136,66.2193,Zircon,Fission Track,370
+352,Internatsionalnaya,Russia,113.7185,62.4535,Zircon,Fission Track,368
+353,Svetlaya,Russia,111.463,66.2001,Zircon,Fission Track,368
+354,Hardie,South Africa,20.7889,-32.5128,Perovskite,U-Th-Pb,367
+355,Mir,Russia,114.0217,62.53,Phlogopite / Biotite,Rb-Sr,367
+356,Udachnaya,Russia,112.3147,66.4445,Perovskite,U-Th-Pb,367
+357,Vympel,Russia,113.8053,68.6985,Zircon,Fission Track,367
+358,Iskorka,Russia,111.3768,66.1888,Zircon,Fission Track,363
+359,325_Let_Yakutii,Russia,114.7151,67.1915,Zircon,Fission Track,362
+360,Suvenir,Russia,111.5034,65.901,Perovskite,U-Th-Pb,362
+361,Amakinskaya,Russia,113.774,62.4369,Rutile,U-Th-Pb,361
+362,Emu-01,Australia,136.3542,-16.7727,Phlogopite / Biotite,K-Ar,360
+363,Aerosyomochnaya,Russia,112.4057,66.345,Perovskite,U-Th-Pb,359
+364,Poiskovaya-01,Russia,120.9993,70.6318,Perovskite,U-Th-Pb,359
+365,Dachnaya,Russia,113.985,62.4687,Zircon,Fission Track,358
+366,Druzhba,Russia,116.1529,68.1877,Perovskite,U-Th-Pb,358
+367,Yubileynaya,Russia,111.2196,66.0092,Zircon,U-Th-Pb,358
+368,Komsomolskaya,Russia,111.6936,66.0203,Phlogopite,Rb-Sr,357
+369,Polyarnaya,Russia,112.5014,66.4466,Perovskite,U-Th-Pb,357
+370,Tayozhnaya,Russia,113.7478,62.3726,Titanite,U-Th-Pb,357
+371,Zarnitsa,Russia,112.6688,66.4365,Perovskite,U-Th-Pb,356.8
+372,Yubileynaya,Russia,111.2196,66.0092,Perovskite,U-Th-Pb,356
+373,Dalnaya,Russia,112.4818,66.2337,Perovskite,U-Th-Pb,355
+374,Novinka,Russia,114.67,67.2013,Perovskite,U-Th-Pb,355
+375,Sytykanskaya,Russia,111.6758,66.1782,Perovskite,U-Th-Pb,349
+376,Svetlaya,Russia,116.7594,68.2832,Zircon,U-Th-Pb,344
+377,Malvina,Russia,119.3246,70.1467,Phlogopite / Biotite,Rb-Sr,341
+378,Udachnaya,Russia,112.3147,66.4445,Phlogopite / Biotite,Rb-Sr,339
+379,Ospika,Canada,-123.75083,56.41852,Phlogopite / Biotite,Rb-Sr,334
+380,Pero,Russia,119.3463,70.137,Phlogopite / Biotite,Rb-Sr,332
+381,Hartebeesfontein,South Africa,29.3193,-24.2214,Clinopyroxene,Ar-Ar,330
+382,Mastakhskaya,Russia,112.6112,66.4159,Zircon,Fission Track,329
+383,Bezymyannaya-01,Russia,120.6363,70.0051,Phlogopite / Biotite,Rb-Sr,326
+384,Iron_Mountain-53,USA,-105.2067,41.6497,Phlogopite / Biotite,Rb-Sr,326
+385,Karpinsky-I,Russia,41.0225,65.3025,Kelyphite after Garnet,Ar-Ar,323
+386,6_14K1,Congo,14.8917,-5.8208,Zircon,U-Th-Pb,322
+387,6_14K2,Congo,14.9083,-5.7667,Zircon,U-Th-Pb,322
+388,Grabwasser-02,Namibia,18.2653,-27.6492,Whole Rock,K-Ar,317
+389,Nakop,Namibia,19.95,-28.0667,Perovskite,U-Th-Pb,314
+390,Karpinsky-II,Russia,41.0318,65.3048,Clinopyroxene,Ar-Ar,305
+391,Snow_Goose,Canada,-110.1415,70.541995,Kelyphite after Garnet,Ar-Ar,300
+392,Hicks_Dome_Plug,USA,-88.3667,37.5344,Amphibole,K-Ar,288
+393,Golden_Plover,Canada,-109.123889,70.193355,Phlogopite,Ar-Ar,286
+394,Ison_Creek_West,USA,-82.9833,38.1,Phlogopite / Biotite,K-Ar,286
+395,Longspur,Canada,-109.108501,70.188941,Phlogopite,Ar-Ar,276
+396,Ison_Creek_East,USA,-83,38.1167,Phlogopite / Biotite,K-Ar,270
+397,Concordo-01,Brazil,-60.6288,-13.1333,Perovskite,U-Th-Pb,267.8
+398,White_Cliffs-01,Australia,142.6278,-30.7306,Whole Rock + Mineral,Rb-Sr,260
+399,Jacare-01,Brazil,-58.9905,-14.9627,Phlogopite,Ar-Ar,258.5
+400,Snowy_Owl,Canada,-109.145304,70.198493,Phlogopite,Ar-Ar,257
+401,Phalarope,Canada,-109.02131,70.184736,Phlogopite,Ar-Ar,256
+402,191X084,Angola,17.08915,-11.18863,Zircon,U-Th-Pb,252
+403,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,252
+404,Rosiclare_Dykes,USA,-88.3333,37.4417,Amphibole,K-Ar,252
+405,King_Eider,Canada,-109.853599,70.728122,Phlogopite / Biotite,Rb-Sr,251
+406,191X103,Angola,17.09192,-11.18418,Zircon,U-Th-Pb,250
+407,Jwaneng-02,Botswana,24.7014,-24.5233,Zircon,U-Th-Pb,250
+408,Jwaneng-02,Botswana,24.7014,-24.5233,Perovskite,U-Th-Pb,250
+409,Jwaneng-07,Botswana,24.77,-24.5483,Phlogopite / Biotite,Rb-Sr,250
+410,Jwaneng-02,Botswana,24.7014,-24.5233,Perovskite,U-Th-Pb,249
+411,Turnstone,Canada,-109.921304,70.766087,Kelyphite after Garnet,Ar-Ar,247
+412,Lubia-08 (191/X030),Angola,17.184898,-11.1157,Kelyphite after Garnet,Ar-Ar,245
+413,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,245
+414,Jaibara-02,Brazil,-46.6349,-1.9615,Phlogopite / Biotite,Ar-Ar,245
+415,Ulakhan_Luchakan,Russia,115.0936,68.9666,Perovskite,U-Th-Pb,245
+416,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,244
+417,Jwaneng-02,Botswana,24.7014,-24.5233,Phlogopite / Biotite,Rb-Sr,243.7
+418,Jwaneng-07,Botswana,24.77,-24.5483,Phlogopite / Biotite,Rb-Sr,242
+419,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,241
+420,Cross-01,Canada,-114.99736,50.08749,Whole Rock + Mineral,Rb-Sr,241
+421,Cosmo-03,Brazil,-60.6238,-11.7852,Phlogopite,Rb-Sr,240.4
+422,Lubia-06 191/(X032),Angola,17.17912,-11.136,Kelyphite after Garnet,Ar-Ar,239
+423,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,239
+424,Jaibara-01,Brazil,-46.6367,-1.9597,Phlogopite,Rb-Sr,238.6
+425,191X035,Angola,17.188408,-11.110251,Zircon,U-Th-Pb,238
+426,Packsaddle-01,Australia,133.9056,-14.8958,Phlogopite / Biotite,Rb-Sr,238
+427,Universiteitskaya,Russia,113.8292,68.7327,Zircon,Fission Track,238
+428,Cosmo-01,Brazil,-60.6147,-11.74,Phlogopite,Ar-Ar,237
+429,Cosmo-17,Brazil,-60.5944,-11.8408,Perovskite,U-Th-Pb,237
+430,191X141,Angola,17.143074,-11.236233,Zircon,U-Th-Pb,236
+431,LUBIA,Angola,17.15589,-11.19265,Zircon,U-Th-Pb,236
+432,Mbueto-06 (191/X135),Angola,17.08417,-11.18795,Zircon,U-Th-Pb,236
+433,Jielingkou-01,China,119.256134,40.183089,Phlogopite,Ar-Ar,236
+434,Pozdnyaya,Russia,112.5,70,Zircon,Fission Track,236
+435,Pike_River-02,Canada,-81.91783,50.32182,Perovskite,U-Th-Pb,235.6
+436,191X104,Angola,17.08413,-11.19157,Zircon,U-Th-Pb,235
+437,GP173N,Botswana,24.194024,-23.084963,Phlogopite,Ar-Ar,235
+438,Jwaneng-02,Botswana,24.7014,-24.5233,Zircon,U-Th-Pb,235
+439,Mbueto-04 (191/X100),Angola,17.09121,-11.19376,Zircon,U-Th-Pb,233
+440,Jwaneng-02,Botswana,24.7014,-24.5233,Clinopyroxene,Ar-Ar,233
+441,191X139,Angola,17.1256,-11.1434,Zircon,U-Th-Pb,229
+442,Dyuimovochka-2,Russia,,,Perovskite,U-Th-Pb,229
+443,KD568,Canada,-91.117596,63.174743,Perovskite,U-Th-Pb,227
+444,Cosmo-01,Brazil,-60.6147,-11.74,Phlogopite,Rb-Sr,226.6
+445,FWR005-2,Canada,,,Perovskite,U-Th-Pb,225
+446,KD230,Canada,-91.01,63.13,Perovskite,U-Th-Pb,224
+447,Khatyryk-3,Russia,,,Perovskite,U-Th-Pb,224
+448,Malo_Kuonamskaya,Russia,113.4576,68.9067,Zircon,Fission Track,223
+449,191X008,Angola,17.1274,-11.2047,Zircon,U-Th-Pb,222
+450,KD209,Canada,-90.978073,63.181524,Phlogopite / Biotite,Rb-Sr,222
+451,Lubia-10 (191/X142),Angola,17.14507,-11.16548,Zircon,U-Th-Pb,221
+452,Mbueto-05 (191/X101),Angola,17.086121,-11.195739,Zircon,U-Th-Pb,221
+453,Thankane-01,Botswana,23.9968,-24.8115,Phlogopite,Ar-Ar,220
+454,KD5168,Canada,,,Phlogopite / Biotite,Rb-Sr,219
+455,191/X148,Angola,17.118434,-11.155274,Zircon,U-Th-Pb,216
+456,Moana-02,Brazil,-41.8102,-6.8833,Zircon,Fission Track,216
+457,FWR005-1,Canada,,,Perovskite,U-Th-Pb,216
+458,October,Canada,-91.403857,62.879697,Phlogopite,Rb-Sr,214
+459,Palmietgat_Central,South Africa,28.3769,-25.1053,Phlogopite / Biotite,Ar-Ar,210
+460,Jacare-01,Brazil,-58.9905,-14.9627,Phlogopite,Rb-Sr,209
+461,Moana-01,Brazil,-41.92,-6.8389,Phlogopite / Biotite,Rb-Sr,209
+462,Jwaneng-01,Botswana,24.8086,-24.6478,Zircon,Fission Track,206
+463,Jwaneng-02,Botswana,24.7014,-24.5233,Zircon,U-Th-Pb,206
+464,Jwaneng-07,Botswana,24.77,-24.5483,Zircon,U-Th-Pb,205
+465,CD07,Canada,-91.3,62.91,Phlogopite / Biotite,Rb-Sr,204
+466,Ontevreden,South Africa,26.7417,-25.41,Phlogopite,Ar-Ar,204
+467,Dokolwayo-02,Swaziland,31.6381,-26.1353,Phlogopite / Biotite,Rb-Sr,203
+468,CD17,Canada,,,Phlogopite / Biotite,Rb-Sr,202
+469,Malgas,South Africa,29.2388,-24.5006,Clinopyroxene,Ar-Ar,200
+470,X096,South Africa,26.6741,-24.6066,Phlogopite,Ar-Ar,200
+471,CD06,Canada,-91.34,62.94,Phlogopite / Biotite,Rb-Sr,199
+472,CD01,Canada,-91.34,62.94,Perovskite,U-Th-Pb,198
+473,KD5821,Canada,-90.836315,63.337216,Phlogopite / Biotite,Rb-Sr,197
+474,K-L,Canada,-91.922993,62.972727,Perovskite,U-Th-Pb,196.2
+475,KD501,Canada,,,Phlogopite / Biotite,Rb-Sr,196
+476,CD21,Canada,-90.85,63.06,Phlogopite / Biotite,Rb-Sr,195
+477,Clarkton,South Africa,29.3578,-30.0061,Zircon,U-Th-Pb,194
+478,S1-dyke,Russia,,,Perovskite,U-Th-Pb,193
+479,S1-stock,Russia,,,Perovskite,U-Th-Pb,193
+480,CD24,Canada,-90.88,63.19,Perovskite,U-Th-Pb,191
+481,KD217,Canada,-90.99,63.14,Perovskite,U-Th-Pb,191
+482,KD5108,Canada,-91.012719,63.13459,Phlogopite / Biotite,Rb-Sr,189
+483,KD636,Canada,,,Perovskite,U-Th-Pb,188
+484,Evrika,Russia,112.5526,66.4062,Phlogopite / Biotite,Rb-Sr,186
+485,Lake_Ellen,USA,-88.1035,46.1031,Phlogopite,Rb-Sr,186
+486,CD13,Canada,-90.74,63.03,Phlogopite / Biotite,Rb-Sr,185
+487,KD573,Canada,,,Perovskite,U-Th-Pb,185
+488,CD03,Canada,-91.35,62.99,Phlogopite / Biotite,Rb-Sr,184
+489,KD597,Canada,-91.72,63.15,Phlogopite / Biotite,Rb-Sr,183
+490,KD900,Canada,-91.015006,63.134942,Phlogopite / Biotite,Rb-Sr,183
+491,Cosmo-04,Brazil,-60.6238,-11.7852,Phlogopite,Ar-Ar,182
+492,CD02,Canada,-91.35,62.99,Phlogopite / Biotite,Rb-Sr,181
+493,Markt_Gr,South Africa,22.3652,-30.2555,Phlogopite / Biotite,Ar-Ar,181
+494,Cosmo-03,Brazil,-60.6238,-11.7852,Phlogopite,Ar-Ar,180
+495,Uniform,Canada,-83.913601,52.879115,Perovskite,U-Th-Pb,180
+496,Charlie,Canada,-83.933389,52.85872,Perovskite,U-Th-Pb,179.9
+497,Marondera-01,South Africa,31.39,-17.9013,Amphibole,Ar-Ar,179
+498,Droogfontein-01,South Africa,22.26919,-31.64742,Phlogopite / Biotite,Rb-Sr,178
+499,Macfadyen-01,Canada,-83.95413,52.88295,Perovskite,U-Th-Pb,177.2
+500,Cleve-01,Australia,136.5223,-33.5978,Perovskite,U-Th-Pb,177
+501,Ditshegwane-02,Botswana,24.930499,-24.218162,Phlogopite / Biotite,Rb-Sr,177
+502,Muskox,Canada,-111.78325,65.95674,Kelyphite after Garnet,Ar-Ar,177
+503,Orapa_AK1,Botswana,25.37,-21.3078,Clinopyroxene,Ar-Ar,176
+504,Varty_Lake,Canada,-76.8274,44.40542,Perovskite,U-Th-Pb,176
+505,Ithaca_Group,USA,-77,42.5,Whole Rock,K-Ar,176
+506,Bravo,Canada,-83.93949,52.864978,Perovskite,U-Th-Pb,175.7
+507,Jwaneng-20,Botswana,24.943165,-24.302053,Zircon,U-Th-Pb,175
+508,CD12,Canada,,,Phlogopite / Biotite,Rb-Sr,175
+509,Loki,Canada,-111.945724,66.115167,Phlogopite,Ar-Ar,175
+510,Traira-01,Brazil,-60.9227,-8.95,Zircon,Fission Track,174
+511,Voyageur,Canada,-111.875058,66.062685,Kelyphite after Garnet,Ar-Ar,174
+512,Terowie_Gorge,Australia,139.0083,-33.1681,Phlogopite / Biotite,K-Ar,173
+513,CD09,Canada,-91.35,62.94,Perovskite,U-Th-Pb,173
+514,Picton,Canada,-77.12634,44.04897,Phlogopite / Biotite,K-Ar,173
+515,Walloway-01,Australia,138.5847,-32.6083,Whole Rock + Mineral,Rb-Sr,172
+516,Jericho,Canada,-111.478682,65.995845,Phlogopite,Rb-Sr,172
+517,KD244,Canada,-91.029555,63.210672,Perovskite,U-Th-Pb,171
+518,Marichka,Russia,117.5,70,Zircon,Fission Track,171
+519,Orroroo-03,Australia,138.5889,-32.5681,Zircon,U-Th-Pb,170
+520,Orroroo-05,Australia,138.6083,-32.5528,Zircon,U-Th-Pb,170
+521,Ditshegwane-02,Botswana,24.930499,-24.218162,Perovskite,U-Th-Pb,170
+522,Kgare-01,Botswana,24.8829,-24.3454,Phlogopite,Ar-Ar,170
+523,KD637,Canada,,,Perovskite,U-Th-Pb,170
+524,Peregrine,Canada,-112.33272,66.1588,Phlogopite,Ar-Ar,170
+525,Montichellitovaya,Russia,117.5,70,Perovskite,U-Th-Pb,170
+526,Rush,Canada,-111.94295,65.97477,Phlogopite / Biotite,Ar-Ar,169
+527,Ditshegwane-02,Botswana,24.930499,-24.218162,Phlogopite,Ar-Ar,168
+528,Palmietgat_Central,South Africa,28.3769,-25.1053,Perovskite,U-Th-Pb,165
+529,Irina,Russia,121.1351,70.7726,Zircon,Fission Track,165
+530,Tandem-01,Canada,-65.107733,59.362,Perovskite,U-Th-Pb,164.7
+531,Tikiusaaq-488548,Greenland,-49.60899,64.03706,Perovskite,U-Th-Pb,163.1
+532,Slyudyanka,Russia,120.7761,70.6891,Perovskite,U-Th-Pb,161
+533,Tikiusaaq-488546,Greenland,-49.573082,64.02457,Perovskite,U-Th-Pb,161
+534,Frischgewaagd,South Africa,29.3399,-24.2328,Phlogopite,Ar-Ar,160
+535,Otkrytaya,Russia,121.1158,70.5114,Perovskite,U-Th-Pb,160
+536,Ruslovaya,Russia,120.5702,70.5267,Phlogopite / Biotite,Rb-Sr,160
+537,Tikiusaaq-488520,Greenland,-49.873808,64.10581,Perovskite,U-Th-Pb,159.6
+538,Alfie_Creek-02,Canada,-79.88704,48.21613,Zircon,U-Th-Pb,159
+539,Klipfontein-03,South Africa,24.0972,-28.4041,Whole Rock + Mineral,Rb-Sr,159
+540,Velikan-02,Russia,120.5648,70.544,Perovskite,U-Th-Pb,159
+541,Kirkland_Lake,Canada,-79.93399,48.14807,Perovskite,U-Th-Pb,158
+542,Victor,Canada,-83.883106,52.820813,Zircon,U-Th-Pb,158
+543,Palmietgat_West,South Africa,28.367198,-25.106723,Perovskite,U-Th-Pb,158
+544,Zhila,Russia,121.4022,70.5823,Zircon,Fission Track,158
+545,Palmietgat_Central,South Africa,28.3769,-25.1053,Phlogopite,Ar-Ar,157
+546,X081,South Africa,26.7554,-24.5686,Phlogopite,Ar-Ar,157
+547,Dyanga,Russia,121.417,70.5414,Phlogopite,Rb-Sr,157
+548,Pyatnitsa,Russia,120.726,70.6696,Zircon,Fission Track,157
+549,A4,Canada,-110.56114,64.46717,Perovskite,U-Th-Pb,156.9
+550,CH-29,Canada,-66.56490311,64.49408198,Perovskite,U-Th-Pb,156.7
+551,A1,Canada,-79.87783,48.25336,Phlogopite,Rb-Sr,156
+552,Alfie_Creek-01,Canada,-79.88147,48.22049,Perovskite,U-Th-Pb,156
+553,CH-31,Canada,-66.30810511,64.22240612,Perovskite,U-Th-Pb,156
+554,Clifford_Township,Canada,-79.80198,48.27919,Perovskite,U-Th-Pb,156
+555,Golf,Canada,-83.825125,52.91698,Phlogopite / Biotite,Rb-Sr,156
+556,Nickila_Lake,Canada,-79.92503,48.28375,Perovskite,U-Th-Pb,156
+557,Bourou-10,Guinea,-9.3127,8.8208,Phlogopite,Ar-Ar,156
+558,CH-13,Canada,-65.95924999,64.27447537,Perovskite,U-Th-Pb,155.9
+559,Morissette_Creek,Canada,-79.91554,48.20754,Perovskite,U-Th-Pb,155.6
+560,South_Wabi_Creek-01,Canada,-79.72031,47.47854,Perovskite,U-Th-Pb,155.4
+561,Lundy-02,Canada,-79.89163,47.52334,Perovskite,U-Th-Pb,155.3
+562,Marsfontein-M1,South Africa,29.2921,-24.2404,Phlogopite,Ar-Ar,155.1
+563,Nelson_Lake,Canada,-79.8817,48.23437,Perovskite,U-Th-Pb,155
+564,Droujba-01,Guinea,-9.0525,8.5781,Phlogopite,Ar-Ar,155
+565,Portland_Point_Quarry,USA,-76.5183,42.5333,Phlogopite,K-Ar,155
+566,86X039,Angola,20.8134,-8.4204,Phlogopite,Rb-Sr,154
+567,Rex-01,Mauritania,-8.8834,22.7668,Apatite,U-Th-Pb,154
+568,Muza,Russia,121.1477,70.7892,Zircon,Fission Track,154
+569,"Dyke-3, Power plant",USA,-74.733333,43.018889,Phlogopite / Biotite,K-Ar,154
+570,Seed,Canada,-79.76648,47.45513,Perovskite,U-Th-Pb,153.7
+571,BKF1,Canada,-79.68363,47.44286,Perovskite,U-Th-Pb,153.6
+572,Zeekoegat-01,South Africa,27.391569,-25.252811,Perovskite,U-Th-Pb,153
+573,Tokur,Russia,121.1464,70.7804,Zircon,Fission Track,153
+574,CH-39,Canada,-66.24803326,64.23728329,Perovskite,U-Th-Pb,152.8
+575,Diamond_Lake-02,Canada,-79.75788,48.11649,Perovskite,U-Th-Pb,152.6
+576,CH-30,Canada,-66.26522194,64.1261961,Perovskite,U-Th-Pb,152.1
+577,Guibord,Canada,-80.19558,48.46821,Perovskite,U-Th-Pb,152.1
+578,South_Wabi_Creek-03,Canada,-79.7065,47.47447,Phlogopite / Biotite,Rb-Sr,152
+579,Mzongwana,South Africa,29,-30.1111,Phlogopite / Biotite,Rb-Sr,152
+580,Obnazhyonnaya,Russia,120.5271,70.5327,Phlogopite / Biotite,Rb-Sr,152
+581,Polyarnaya,Russia,112.5014,66.4466,Phlogopite / Biotite,Rb-Sr,152
+582,CH-41,Canada,-66.1352725,64.32054223,Perovskite,U-Th-Pb,151.8
+583,Upper_Canada_Mine,Canada,-79.84004,48.14145,Phlogopite,K-Ar,151
+584,CH-16,Canada,-66.02273893,64.20354985,Perovskite,U-Th-Pb,150.6
+585,CH-22,Canada,-66.5227981,64.35414811,Perovskite,U-Th-Pb,150.5
+586,CH-48,Canada,-66.11728167,64.25283914,Perovskite,U-Th-Pb,150.4
+587,Canastra-01,Brazil,-46.5502,-20.3411,Kelyphite after Garnet,Ar-Ar,150
+588,Ramatselisos_Gate,Lesotho,28.9425,-30.0425,Zircon,U-Th-Pb,150
+589,Khrizolitovaya,Russia,117.5,70,Zircon,Fission Track,150
+590,Manneheim_Dyke,USA,-77,42.5,Phlogopite / Biotite,K-Ar,150
+591,Masontown,USA,-79.9667,39.9667,Phlogopite,Ar-Ar,150
+592,Q1,Canada,-65.803753,64.70356,Perovskite,U-Th-Pb,149.8
+593,CH-5,Canada,-66.556433,64.255239,Perovskite,U-Th-Pb,149.5
+594,CH-33,Canada,-66.23362403,64.37799796,Perovskite,U-Th-Pb,149.1
+595,X061,South Africa,27.5024,-24.186,Phlogopite,Ar-Ar,149
+596,Murun-01,Russia,119.088751,58.35453,Phlogopite / Biotite,Rb-Sr,149
+597,Q2,Canada,-65.794279,64.663498,Perovskite,U-Th-Pb,148.1
+598,Montichellitovaya,Russia,117.5,70,Perovskite,U-Th-Pb,148
+599,CH-37,Canada,-66.20357967,64.3159216,Perovskite,U-Th-Pb,147.7
+600,CH-2,Canada,-66.3464395,64.2781534,Perovskite,U-Th-Pb,147.5
+601,Glenwood_Creek_dyke,USA,-76.5467,42.4936,Perovskite,U-Th-Pb,147.5
+602,CH-40,Canada,-66.0724563,64.32778671,Perovskite,U-Th-Pb,147.3
+603,CH-42,Canada,-66.11756553,64.25757566,Perovskite,U-Th-Pb,147.3
+604,Slyudyanka,Russia,120.7761,70.6891,Zircon,Fission Track,147
+605,CH-46,Canada,-66.35041074,64.23767532,Perovskite,U-Th-Pb,146.4
+606,CH-1,Canada,-66.33409176,64.26499804,Perovskite,U-Th-Pb,146.3
+607,Tajibo-01,Bolivia,-59.7788,-18.1955,Zircon,U-Th-Pb,146
+608,Koidu_Pipe-02,South Africa,-10.965,8.6333,Phlogopite,Ar-Ar,146
+609,Markt_Gr,South Africa,22.3652,-30.2555,Perovskite,U-Th-Pb,146
+610,Cascadilla,USA,-76.4883,42.4442,Whole Rock,K-Ar,146
+611,Ithaca_Reservoir,USA,-76.453,42.4102,Phlogopite,Rb-Sr,146
+612,Williams_Brook_Dyke,USA,-76.5239,42.4583,Perovskite,U-Th-Pb,146
+613,Garrison-01,Canada,-79.95282,48.47693,Perovskite,U-Th-Pb,145.9
+614,CH-32,Canada,-66.15980891,64.15095264,Perovskite,U-Th-Pb,145.6
+615,CH-6,Canada,-66.52961576,64.32174635,Perovskite,U-Th-Pb,145.4
+616,CH-7,Canada,-66.3537966,64.25053956,Perovskite,U-Th-Pb,145.2
+617,AC1,Angola,19.904,-9.877,Perovskite,U-Th-Pb,145
+618,CH-45,Canada,-66.35215478,64.24244303,Perovskite,U-Th-Pb,144.8
+619,CH-11,Canada,-66.2180684,64.2269664,Perovskite,U-Th-Pb,144.5
+620,104X037,Angola,20.564344,-8.532551,Zircon,U-Th-Pb,144
+621,86X179,Angola,20.6725,-8.3778,Zircon,U-Th-Pb,144
+622,CH-3,Canada,-66.1091478,64.220605,Perovskite,U-Th-Pb,143.5
+623,CH-14,Canada,-66.1985567,64.17995241,Perovskite,U-Th-Pb,143.4
+624,CH-4,Canada,-66.37887189,64.26284359,Perovskite,U-Th-Pb,143.4
+625,CH-8,Canada,-66.3859479,64.2511326,Perovskite,U-Th-Pb,143.4
+626,Koidu_Pipe-01,South Africa,-10.9722,8.6311,Phlogopite,Ar-Ar,143
+627,Melton_Wold,South Africa,22.7397,-31.5019,Perovskite,U-Th-Pb,143
+628,BKC31,Canada,-79.75855,47.48981,Perovskite,U-Th-Pb,141.9
+629,CH-21,Canada,-66.2034038,64.1630481,Perovskite,U-Th-Pb,141.4
+630,86X371,Angola,20.99769,-8.46313,Perovskite,U-Th-Pb,141
+631,Ludlowville_Dykes,USA,-76.535,42.5522,Phlogopite / Biotite,Rb-Sr,141
+632,Ile_Bizard-01,Canada,-73.90896,45.50629,Perovskite,U-Th-Pb,140
+633,Skietkop,South Africa,22.8072,-31.4992,Perovskite,U-Th-Pb,140
+634,Tongu_Panguma_Dykes,South Africa,-11.0833,8.2167,Phlogopite,K-Ar,140
+635,Frontegnac_Creek_Dykes,USA,-76.6367,42.55,Whole Rock,K-Ar,140
+636,TX3,Mozambique,35.020581,-12.558349,Phlogopite,Rb-Sr,139.7
+637,TX3,Mozambique,35.020174,-12.55809,Phlogopite,Rb-Sr,139.2
+638,CH-43,Canada,-66.1976127,64.1848614,Perovskite,U-Th-Pb,139.1
+639,Catoca,Angola,20.3022,-9.4039,Zircon,U-Th-Pb,139
+640,Moana-02,Brazil,-41.8102,-6.8833,Phlogopite,Rb-Sr,139
+641,Banankoro-11,Guinea,-9.3133,9.168,Phlogopite,Ar-Ar,139
+642,Taaiboschkuil,South Africa,26.5544,-25.1767,Phlogopite / Biotite,Ar-Ar,139
+643,Opap,Canada,-79.7419,47.46061,Perovskite,U-Th-Pb,138.8
+644,86X179,Angola,20.6725,-8.3778,Zircon,U-Th-Pb,138.5
+645,CH-15,Canada,-66.20200642,64.18192498,Perovskite,U-Th-Pb,138.4
+646,121X015,Angola,20.3702,-9.4193,Zircon,U-Th-Pb,138
+647,86X059,Angola,20.6893,-8.374,Zircon,U-Th-Pb,138
+648,Syferfontein,South Africa,26.5005,-25.8122,Phlogopite / Biotite,Rb-Sr,138
+649,86X281,Angola,20.56244,-8.26351,Perovskite,U-Th-Pb,137
+650,86X017,Angola,20.6786,-8.3775,Perovskite,U-Th-Pb,136
+651,86X129,Angola,20.7682,-8.345,Zircon,U-Th-Pb,136
+652,AC139,Angola,19.943,-9.91,Perovskite,U-Th-Pb,136
+653,Nova_Lisboa-01,Angola,15.7728,-12.3431,Zircon,U-Th-Pb,136
+654,Rietfontein,South Africa,26.8361,-26.7417,Perovskite,U-Th-Pb,135.3
+655,121X007,Angola,20.3771,-9.4063,Zircon,U-Th-Pb,135
+656,86X114,Angola,20.6458,-8.2166,Zircon,U-Th-Pb,135
+657,86X157,Angola,20.7478,-8.4007,Zircon,U-Th-Pb,135
+658,Camutue_West,Angola,20.8104,-8.4266,Kelyphite after Garnet,Ar-Ar,135
+659,86X311,Angola,20.52398,-8.27775,Zircon,U-Th-Pb,134.9
+660,86X005,Angola,20.77813,-8.1944,Perovskite,U-Th-Pb,134
+661,86X104,Angola,20.5853,-8.1464,Zircon,U-Th-Pb,134
+662,86X319,Angola,20.69746,-8.36653,Perovskite,U-Th-Pb,134
+663,Nova_Lisboa-17,Angola,15.8292,-12.566667,Zircon,U-Th-Pb,134
+664,Val_Do_Queve,Angola,15.833333,-12.566667,Zircon,U-Th-Pb,134
+665,Glinkers,Canada,-79.79,47.4674,Perovskite,U-Th-Pb,133.9
+666,86X078,Angola,20.6423,-8.223,Zircon,U-Th-Pb,133.6
+667,86X311,Angola,20.52398,-8.27775,Zircon,U-Th-Pb,133.5
+668,86X014,Angola,20.6617,-8.3499,Zircon,U-Th-Pb,133.2
+669,86X059,Angola,20.6893,-8.374,Zircon,U-Th-Pb,133
+670,86X102,Angola,20.6494,-8.2397,Zircon,U-Th-Pb,133
+671,86X338,Angola,20.780111,-8.193859,Zircon,U-Th-Pb,133
+672,Caixepa,Angola,20.8214,-8.4118,Phlogopite / Biotite,Rb-Sr,133
+673,Catoca,Angola,20.3022,-9.4039,Phlogopite / Biotite,Rb-Sr,133
+674,Nova_Lisboa-01,Angola,15.7728,-12.3431,Zircon,Fission Track,133
+675,104X083,Angola,20.55877,-8.535705,Zircon,U-Th-Pb,132.1
+676,86X042,Angola,20.98014,-8.45747,Perovskite,U-Th-Pb,132
+677,86X177,Angola,20.6792,-8.2275,Zircon,U-Th-Pb,132
+678,86X017,Angola,20.6786,-8.3775,Zircon,U-Th-Pb,131.4
+679,86X314,Angola,20.711704,-8.371119,Zircon,U-Th-Pb,131.2
+680,103X014,Angola,20.45137,-8.55687,Zircon,U-Th-Pb,131
+681,121X005,Angola,20.2999,-9.4175,Phlogopite,Ar-Ar,131
+682,86X060,Angola,20.7048,-8.3671,Zircon,U-Th-Pb,130
+683,86X075,Angola,20.636,-8.3535,Kelyphite after Garnet,Ar-Ar,130
+684,De_Wit_Dyke,USA,-76.0733,42.9744,Whole Rock,K-Ar,130
+685,86X014,Angola,20.6617,-8.3499,Phlogopite,Rb-Sr,129
+686,86X016,Angola,20.695,-8.3667,Perovskite,U-Th-Pb,129
+687,86X075,Angola,20.636,-8.3535,Phlogopite,Rb-Sr,129
+688,86X192,Angola,20.7242,-8.2853,Zircon,U-Th-Pb,129
+689,86X323,Angola,20.691638,-8.370311,Zircon,U-Th-Pb,129
+690,De_Paarl,South Africa,26.7722,-24.9111,Phlogopite / Biotite,Rb-Sr,129
+691,Velikan-01,Russia,120.5531,70.5409,Perovskite,U-Th-Pb,128
+692,Euclid_Ave_Dyke,USA,-77,42.5,Whole Rock,K-Ar,128
+693,86X176,Angola,20.68509,-8.23326,Zircon,U-Th-Pb,127.6
+694,121X005,Angola,20.2999,-9.4175,Kelyphite after Garnet,Ar-Ar,127
+695,Baladou-01,Guinea,-9.56161,8.98105,Phlogopite,Ar-Ar,127
+696,Border,Canada,-79.51606,47.64732,Phlogopite,Rb-Sr,126.6
+697,86X361,Angola,20.724957,-8.353435,Zircon,U-Th-Pb,126.4
+698,121X015,Angola,20.3702,-9.4193,Kelyphite after Garnet,Ar-Ar,126
+699,86X323,Angola,20.691638,-8.370311,Zircon,U-Th-Pb,126
+700,86X323,Angola,20.69165,-8.37022,Perovskite,U-Th-Pb,126
+701,Rapides_Des_Quinze,Canada,-79.36562,47.56768,Phlogopite / Biotite,Rb-Sr,126
+702,86X448,Angola,20.723017,-8.415195,Zircon,U-Th-Pb,125.8
+703,Troika,Canada,-79.50955,47.64229,Phlogopite,Rb-Sr,125
+704,Molodo,Russia,117.5,70,Zircon,Fission Track,125
+705,Clintonville_Dyke,USA,-76.3436,42.9344,Whole Rock,K-Ar,125
+706,86X361,Angola,20.724957,-8.353435,Zircon,U-Th-Pb,124.2
+707,121X007,Angola,20.3771,-9.4063,Kelyphite after Garnet,Ar-Ar,124
+708,Catoca,Angola,20.3022,-9.4039,Zircon,U-Th-Pb,124
+709,86X019,Angola,20.7863,-8.3629,Kelyphite after Garnet,Ar-Ar,122
+710,Batovi-02,Brazil,-54.1,-13.5333,Zircon,U-Th-Pb,122
+711,Welgevonden-01,South Africa,22.9114,-30.09,Whole Rock + Mineral,Rb-Sr,122
+712,Mount_Meredith_1,Antarctica,67.75,-71.21,Perovskite,U-Th-Pb,122
+713,Tchiunzo,Angola,20.313133,-9.182331,Zircon,U-Th-Pb,121.2
+714,86X367,Angola,20.76377,-8.39504,Zircon,U-Th-Pb,120.1
+715,86X002,Angola,20.6654,-8.2194,Kelyphite after Garnet,Ar-Ar,120
+716,86X003,Angola,20.696,-8.2239,Kelyphite after Garnet,Ar-Ar,120
+717,Ullawara-01,Australia,116.0899,-23.4908,Kelyphite after Garnet,Ar-Ar,120
+718,Tshibwe,Congo,23.3635,-6.2869,Phlogopite,Ar-Ar,120
+719,Bon_Ami,South Africa,25.19679,-29.320056,Perovskite,U-Th-Pb,120
+720,Taughannock_Creek-03,USA,-76.6133,42.5333,Phlogopite,K-Ar,120
+721,86X063,Angola,20.7483,-8.1822,Zircon,U-Th-Pb,119
+722,Jonkerwater-01,South Africa,22.6361,-30.1778,Whole Rock + Mineral,Rb-Sr,119
+723,Rosario-06,Brazil,-54.9619,-30.3425,Perovskite,U-Th-Pb,118
+724,Sucesso-01,Brazil,-46.423,-18.9872,Phlogopite / Biotite,Rb-Sr,118
+725,Jonkerwater-01,South Africa,22.6361,-30.1778,Perovskite,U-Th-Pb,118
+726,Middlewater-01,South Africa,22.7544,-30.1694,Whole Rock + Mineral,Rb-Sr,118
+727,Catoca,Angola,20.3022,-9.4039,Zircon,U-Th-Pb,117.9
+728,86X068,Angola,20.7867,-8.1999,Kelyphite after Garnet,Ar-Ar,117
+729,Kalkput,South Africa,22.7639,-30.4478,Zircon,U-Th-Pb,117
+730,Mayeng-01,South Africa,24.6361,-28.15,Phlogopite,Rb-Sr,117
+731,Shylock,South Africa,27.060459,-25.547791,Perovskite,U-Th-Pb,117
+732,Mount_Meredith_1,Antarctica,67.75,-71.21,Phlogopite,Ar-Ar,117
+733,AC254,Angola,19.893,-9.989,Phlogopite / Biotite,Rb-Sr,116
+734,Berseba_Reserve-12,Namibia,17.6778,-25.6792,Whole Rock,K-Ar,116
+735,Sweetput_Soutput_Gr,South Africa,23.5042,-30.2506,Whole Rock + Mineral,Rb-Sr,116
+736,Mpulis_Well,South Africa,24.6861,-28.1514,Perovskite,U-Th-Pb,115
+737,Bala,USA,-96.9225,39.3052,Apatite,Fission Track,115
+738,Rock-01,Brazil,-46.2002,-20.2736,Kelyphite after Garnet,Ar-Ar,114
+739,Witberg,South Africa,22.3454,-29.1852,Phlogopite / Biotite,Rb-Sr,114
+740,136X018,Angola,18.63098,-9.64596,Phlogopite / Biotite,Rb-Sr,113
+741,AC197,Angola,19.89,-9.981,Zircon,U-Th-Pb,113
+742,AC55,Angola,19.92,-9.977,Zircon,U-Th-Pb,113
+743,Dutoitspan-01,South Africa,24.7989,-28.7604,Phlogopite / Biotite,Rb-Sr,112
+744,Longlands,South Africa,24.3889,-28.4267,Zircon,U-Th-Pb,112
+745,Stockdale,USA,-96.7244,39.3414,Apatite,Fission Track,112
+746,Letlhakane_DK1,Botswana,25.6897,-21.5194,Perovskite,U-Th-Pb,111
+747,Koffiefontein,South Africa,24.9925,-29.4168,Perovskite,U-Th-Pb,111
+748,Camafuca_Camazambo,Angola,20.515,-8.4473,Clinopyroxene,Ar-Ar,110
+749,Japecanga-01,Brazil,-47.34,-18.393,Phlogopite / Biotite,Rb-Sr,109
+750,Eendekuil,South Africa,20.9364,-32.2447,Phlogopite / Biotite,Rb-Sr,109
+751,Morester_NE,South Africa,24.5136,-28.1681,Perovskite,U-Th-Pb,108.7
+752,Letlhakane_DK1,Botswana,25.6897,-21.5194,Perovskite,U-Th-Pb,108.5
+753,86X014,Angola,20.6617,-8.3499,Kelyphite after Garnet,Ar-Ar,108
+754,Letlhakane_DK2,Botswana,25.6961,-21.5233,Perovskite,U-Th-Pb,106
+755,Georgia,Canada,-93.96468,72.85241,Perovskite,U-Th-Pb,105
+756,Ebenhaezer,South Africa,24.988083,-29.40945,Perovskite,U-Th-Pb,105
+757,Koppieskraal-03,South Africa,18.460185,-29.947795,Perovskite,U-Th-Pb,105
+758,Canastra-08,Brazil,-46.745,-20.3552,Phlogopite,Ar-Ar,104
+759,Tembani_Ranch,South Africa,31.7478,-28.6339,Perovskite,U-Th-Pb,104
+760,Leonardville,USA,-96.8614,39.3283,Whole Rock + Mineral,Rb-Sr,104
+761,Star,Canada,-104.77005,53.22399,Perovskite,U-Th-Pb,103.9
+762,Emtilombo,South Africa,31.5417,-28.85,Perovskite,U-Th-Pb,103
+763,Pampoenpoort_Gr,South Africa,22.7156,-31.1017,Whole Rock + Mineral,Rb-Sr,103
+764,Letlhakane_DK1,Botswana,25.6897,-21.5194,Perovskite,U-Th-Pb,102.6
+765,Uintjiesberg_Gr,South Africa,22.5392,-30.8183,Zircon,U-Th-Pb,102
+766,X085,South Africa,24.0236,-28.4583,Perovskite,U-Th-Pb,102
+767,Khutse-01,Botswana,24.3908,-23.3042,Perovskite,U-Th-Pb,101.2
+768,Tunraq,Canada,-92.01266,73.35224,Phlogopite / Biotite,Rb-Sr,101
+769,Uranerz-145,Canada,-104.81112,53.26886,Perovskite,U-Th-Pb,101
+770,Uranerz-148,Canada,-104.8224,53.28706,Phlogopite / Biotite,Rb-Sr,101
+771,Uranerz-168,Canada,-104.87493,53.39014,Perovskite,U-Th-Pb,101
+772,Uranerz-226,Canada,-104.90493,53.40054,Perovskite,U-Th-Pb,101
+773,Klein_Arendskraal,South Africa,24.6186,-30.3317,Perovskite,U-Th-Pb,101
+774,Uintjiesberg_Gr,South Africa,22.5392,-30.8183,Whole Rock + Mineral,Rb-Sr,101
+775,Ebenhaezer,South Africa,24.988083,-29.40945,Perovskite,U-Th-Pb,100.5
+776,Tres_Ranchos-078,Brazil,-47.6775,-18.2613,Perovskite,U-Th-Pb,100.3
+777,Orapa_BK10,Botswana,25.5704,-21.4034,Zircon,U-Th-Pb,100
+778,Nikos,Canada,-90.980338,73.460655,Perovskite,U-Th-Pb,100
+779,Uranerz-101,Canada,-104.83153,53.20506,Perovskite,U-Th-Pb,100
+780,Uranerz-141,Canada,-104.80114,53.26003,Perovskite,U-Th-Pb,100
+781,X085,South Africa,24.023958,-28.461102,Perovskite,U-Th-Pb,100
+782,Kaalvallei_Gr,South Africa,26.82881,-28.03544,Perovskite,U-Th-Pb,99.7
+783,Orapa_BK9,Botswana,25.5369,-21.3117,Whole Rock + Mineral,Rb-Sr,99
+784,Amayersuk-01,Canada,-91.973372,73.349858,Perovskite,U-Th-Pb,99
+785,Batty-01,Canada,-92.017356,73.341768,Perovskite,U-Th-Pb,99
+786,Elwin,Canada,-90.99275,73.511817,Perovskite,U-Th-Pb,99
+787,Ham,Canada,-92.183276,73.559657,Perovskite,U-Th-Pb,99
+788,Tunraq,Canada,-92.013086,73.352888,Perovskite,U-Th-Pb,99
+789,Uranerz-140,Canada,-104.79114,53.25611,Phlogopite / Biotite,Rb-Sr,99
+790,Uranerz-181,Canada,-105.06926,53.57245,Perovskite,U-Th-Pb,99
+791,Palmietgat_Central,South Africa,28.3769,-25.1053,Perovskite,U-Th-Pb,99
+792,Tres_Ranchos-078,Brazil,-47.6775,-18.2613,Perovskite,U-Th-Pb,98.7
+793,Orapa_BK10,Botswana,25.5704,-21.4034,Zircon,U-Th-Pb,98
+794,Inugpasugsuk-02,Canada,-91.9808,73.35273,Perovskite,U-Th-Pb,98
+795,Jos_Dyke,Canada,-92.98438,73.32639,Perovskite,U-Th-Pb,98
+796,Uranerz-121,Canada,-104.78523,53.28576,Perovskite,U-Th-Pb,98
+797,Orapa_AK20,Botswana,25.410299,-21.3291,Zircon,U-Th-Pb,97.3
+798,Batty-01,Canada,-92.01693,73.34112,Perovskite,U-Th-Pb,97
+799,Mbujimayi-04,Congo,23.5904,-6.1671,Kelyphite after Garnet,Ar-Ar,97
+800,Klipfontein-07,South Africa,24.981,-29.3959,Perovskite,U-Th-Pb,97
+801,Uintjiesberg_Gr,South Africa,22.5392,-30.8183,Perovskite,U-Th-Pb,96.9
+802,Orapa_BK1,Botswana,25.6145,-21.2792,Perovskite,U-Th-Pb,96.8
+803,Orapa_BK12,Botswana,25.5292,-21.305099,Perovskite,U-Th-Pb,96.5
+804,Orapa_AK8,Botswana,25.431595,-21.405946,Zircon,U-Th-Pb,96
+805,Elwin,Canada,-90.99241,73.51116,Perovskite,U-Th-Pb,96
+806,Peuyuk-01,Canada,-94.088638,73.129004,Perovskite,U-Th-Pb,96
+807,Uranerz-116,Canada,-104.81533,53.23745,Whole Rock + Mineral,Rb-Sr,96
+808,Witpoort,South Africa,26.6181,-26.7528,Perovskite,U-Th-Pb,95.5
+809,Orapa_AK1,Botswana,25.37,-21.3078,Clinopyroxene,Ar-Ar,95
+810,Limeira-08,Brazil,-46.9266,-19.3144,Phlogopite / Biotite,Rb-Sr,95
+811,Tres_Ranchos-002,Brazil,-47.7869,-18.4555,Phlogopite / Biotite,Rb-Sr,95
+812,Uranerz-118,Canada,-104.86559,53.26999,Perovskite,U-Th-Pb,95
+813,Uranerz-120,Canada,-104.83715,53.29605,Phlogopite,Rb-Sr,95
+814,Uranerz-169,Canada,-104.9117,53.40913,Phlogopite / Biotite,Rb-Sr,95
+815,Goedgevonden,South Africa,26.7556,-26.6736,Perovskite,U-Th-Pb,95
+816,Koidu_Yengema_Dykes,South Africa,-10.9833,8.6333,Phlogopite / Biotite,Rb-Sr,95
+817,Winkler,USA,-96.8203,39.49,Phlogopite,K-Ar,95
+818,Jagersfontein,South Africa,25.419,-29.7623,Perovskite,U-Th-Pb,94.8
+819,Matsoku,Lesotho,28.738,-29.067,Perovskite,U-Th-Pb,94.7
+820,Letlhakane_DK1,Botswana,25.6897,-21.5194,Perovskite,U-Th-Pb,94.4
+821,Go136,Botswana,24.718,-22.586,Perovskite,U-Th-Pb,94.3
+822,Bluegum,South Africa,26.93464,-28.03131,Perovskite,U-Th-Pb,94.3
+823,Gope-02,Botswana,24.6259,-22.5898,Zircon,U-Th-Pb,94
+824,Orapa_BK9,Botswana,25.5369,-21.3117,Perovskite,U-Th-Pb,94
+825,Perdizes-04,Brazil,-47.4669,-18.5602,Perovskite,U-Th-Pb,94
+826,Peuyuk-01,Canada,-94.08804,73.12837,Perovskite,U-Th-Pb,94
+827,Shellbrook,Canada,-106.11242,53.39732,Phlogopite / Biotite,Rb-Sr,94
+828,Kao,Lesotho,28.63,-29.026,Perovskite,U-Th-Pb,94
+829,Leicester,South Africa,24.6528,-28.3708,Zircon,U-Th-Pb,94
+830,Orapa_BK7,Botswana,25.583617,-21.350498,Zircon,U-Th-Pb,93.8
+831,Juina-03,Brazil,-58.9702,-11.6166,Zircon,U-Th-Pb,93.6
+832,Lipelaneng_Area,Lesotho,29,-28.75,Perovskite,U-Th-Pb,93.6
+833,Pandrea (Juina),Brazil,-58.9702,-11.6166,Zircon,U-Th-Pb,93.6
+834,Leicester,South Africa,24.6528,-28.3708,Perovskite,U-Th-Pb,93.2
+835,Acuri-01,Brazil,-59.1547,-11.3555,Perovskite,U-Th-Pb,93.1
+836,Letlhakane_DK1,Botswana,25.6897,-21.5194,Whole Rock + Mineral,Rb-Sr,93
+837,Orapa_AK1,Botswana,25.37,-21.3078,Phlogopite / Biotite,Rb-Sr,93
+838,Orapa_AK1,Botswana,25.37,-21.3078,Zircon,U-Th-Pb,93
+839,Orapa_AK6,Botswana,25.4703,-21.4956,Zircon,U-Th-Pb,93
+840,Orapa_AK6,Botswana,25.4703,-21.4956,Zircon,U-Th-Pb,93
+841,Ngopetsoeu,Lesotho,27.6359,-29.2955,Perovskite,U-Th-Pb,92.2
+842,Orapa_AK1,Botswana,25.37,-21.3078,Perovskite,U-Th-Pb,92.1
+843,Orapa_AK1,Botswana,25.37,-21.3078,Zircon,Fission Track,92
+844,Orapa_AK8,Botswana,25.431595,-21.405946,Zircon,U-Th-Pb,92
+845,Orapa_BK4,Botswana,25.629114,-21.306158,Zircon,U-Th-Pb,92
+846,Letseng_La_Terae_Satellite,Lesotho,28.867,-29.006,Perovskite,U-Th-Pb,92
+847,Kaalvallei_Gr,South Africa,26.82881,-28.03544,Zircon,U-Th-Pb,92
+848,Kaalvallei_Gr,South Africa,26.82881,-28.03544,Zircon,U-Pb,92
+849,Palmietfontein-01,South Africa,26.9558,-25.3058,Zircon,U-Th-Pb,92
+850,Wolfkraal-01,South Africa,18.50408,-30.999637,Perovskite,U-Th-Pb,92
+851,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,91.5
+852,Liqhobong,Lesotho,28.622,-28.985,Perovskite,U-Th-Pb,91.2
+853,Tres_Ranchos-004,Brazil,-47.8214,-18.3139,Perovskite,U-Th-Pb,91.1
+854,Gope-02,Botswana,24.6259,-22.5898,Perovskite,U-Th-Pb,91
+855,Letseng_La_Terae_Satellite,Lesotho,28.867,-29.006,Zircon,U-Th-Pb,91
+856,Elbrinxen,South Africa,27.071555,-26.879406,Perovskite,U-Th-Pb,91
+857,Jaagfontein-01,South Africa,24.2594,-31.0047,Phlogopite / Biotite,Rb-Sr,91
+858,Jagersfontein,South Africa,25.419,-29.7623,Phlogopite / Biotite,Ar-Ar,91
+859,Rietfontein,South Africa,26.8361,-26.7417,Whole Rock + Mineral,Rb-Sr,91
+860,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,91
+861,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,91
+862,Limeira,Brazil,-47.48333,-18.5,Perovskite,U-Th-Pb,91
+863,X088,South Africa,24.031459,-28.428204,Perovskite,U-Th-Pb,90.5
+864,Koffiefontein,South Africa,24.9925,-29.4168,Zircon,U-Th-Pb,90.4
+865,Orapa_BK1,Botswana,25.6145,-21.2792,Zircon,U-Th-Pb,90.3
+866,Monastery,South Africa,27.4222,-28.8111,Phlogopite / Biotite,K-Ar,90
+867,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,90
+868,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,90
+869,Boschkop,South Africa,24.764872,-30.420294,Perovskite,U-Th-Pb,89.6
+870,Canabrava_X270,Brazil,-46.340962,-18.86562,Perovskite,U-Th-Pb,89.5
+871,Barkly Commonage-02,South Africa,24.483,-28.532,Zircon,U-Th-Pb,89.1
+872,Kao,Lesotho,28.63,-29.026,Whole Rock,U-Th-Pb,89
+873,Thabo_Putsoa-01,Lesotho,28.662,-28.914,Perovskite,U-Th-Pb,89
+874,Vaal_Dam-01,South Africa,28.2781,-26.8914,Phlogopite / Biotite,Rb-Sr,89
+875,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,89
+876,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,89
+877,Dixonville,USA,-79.0333,40.6667,Whole Rock + Mineral,Rb-Sr,89
+878,Kao,Lesotho,28.63,-29.026,Perovskite,U-Th-Pb,88.8
+879,Monastery,South Africa,27.4222,-28.8111,Perovskite,U-Th-Pb,88.6
+880,X087,South Africa,24.047859,-28.435104,Perovskite,U-Th-Pb,88.5
+881,Monastery,South Africa,27.4222,-28.8111,Zircon,U-Th-Pb,88.43
+882,Perdizes-02,Brazil,-47.4666,-18.55,Phlogopite,Rb-Sr,88.4
+883,Monastery,South Africa,27.4222,-28.8111,Phlogopite,Rb-Sr,88.1
+884,Orapa_AK6,Botswana,25.4703,-21.4956,Zircon,U-Th-Pb,88
+885,Alpha-01,Brazil,-46.7769,-18.4755,Perovskite,U-Th-Pb,88
+886,Rio_Preto-02,Brazil,-47.3955,-18.2905,Perovskite,U-Th-Pb,88
+887,Rio_Preto-02,Brazil,-47.3955,-18.2905,Phlogopite,Ar-Ar,88
+888,Tres_Ranchos-078,Brazil,-47.6775,-18.2613,Phlogopite / Biotite,Rb-Sr,88
+889,BH229,Canada,-115.118,56.811,Perovskite,U-Th-Pb,88
+890,Ham,Canada,-92.18283,73.559,Perovskite,U-Th-Pb,88
+891,K14,Canada,-115.72103,56.89814,Perovskite,U-Th-Pb,88
+892,K5A,Canada,-115.708484,56.815762,Perovskite,U-Th-Pb,88
+893,Benfontein,South Africa,24.83591,-28.81856,Perovskite,U-Th-Pb,88
+894,De_Beers,South Africa,24.7764,-28.7389,Phlogopite / Biotite,Rb-Sr,88
+895,Dutoitspan-01,South Africa,24.7989,-28.7604,Phlogopite / Biotite,Rb-Sr,88
+896,President_Steyn,South Africa,26.79184,-28.02684,Phlogopite / Biotite,Rb-Sr,88
+897,Tres_Ranchos-078,Brazil,-47.6775,-18.2613,Phlogopite,Rb-Sr,87.7
+898,Kikao-03,Botswana,24.0504,-23.154699,Perovskite,U-Th-Pb,87.5
+899,Buffelsboutfontein,South Africa,25.559259,-29.837958,Perovskite,U-Th-Pb,87.5
+900,Go136,Botswana,24.718,-22.586,Perovskite,U-Th-Pb,87.4
+901,Tres_Ranchos-072,Brazil,-47.6975,-18.2694,Phlogopite / Biotite,Ar-Ar,87.4
+902,Tres_Ranchos-073,Brazil,-47.6911,-18.2561,Phlogopite / Biotite,Ar-Ar,87.3
+903,De_Beers,South Africa,24.7764,-28.7389,Perovskite,U-Th-Pb,87.3
+904,Alpha-09,Brazil,-46.7675,-18.5222,Phlogopite,Rb-Sr,87.2
+905,Perdizes-02,Brazil,-47.4666,-18.55,Perovskite,U-Th-Pb,87.2
+906,Rio_Verde-03,Brazil,-51.1675,-17.3433,Phlogopite,Ar-Ar,87.2
+907,Gope-25,Botswana,24.7675,-22.6252,Phlogopite / Biotite,Rb-Sr,87
+908,Malagong_Sills,Botswana,21.5333,-26.7833,Perovskite,U-Th-Pb,87
+909,Okwa-01,Botswana,21.5191,-22.5947,Phlogopite / Biotite,Rb-Sr,87
+910,Orapa_AK1,Botswana,25.37,-21.3078,Zircon,Fission Track,87
+911,Alpha-08,Brazil,-46.795,-18.5108,Phlogopite / Biotite,Rb-Sr,87
+912,Tres_Ranchos-014,Brazil,-47.8466,-18.3269,Perovskite,U-Th-Pb,87
+913,K5,Canada,-115.70723,56.8158,Perovskite,U-Th-Pb,87
+914,Mothae,Lesotho,28.834,-28.971,Zircon,U-Th-Pb,87
+915,Kamfersdam_Gr,South Africa,24.72525,-28.69196,Zircon,U-Th-Pb,87
+916,Kimberley,South Africa,24.7525,-28.7406,Phlogopite / Biotite,Rb-Sr,87
+917,Wesselton,South Africa,24.8298,-28.7697,Perovskite,U-Th-Pb,87
+918,Rio_Preto-02,Brazil,-47.3955,-18.2905,Phlogopite,Rb-Sr,86.8
+919,Free_State_Saaiplaas,South Africa,26.83615,-28.03539,Whole Rock + Mineral,Rb-Sr,86.5
+920,Orapa_AK4,Botswana,25.411501,-21.2934,Zircon,U-Th-Pb,86.4
+921,Gope-25,Botswana,24.7675,-22.6252,Perovskite,U-Th-Pb,86
+922,Poco_Verde-01,Brazil,-47.2114,-18.4125,Zircon,U-Th-Pb,86
+923,Tres_Ranchos-078,Brazil,-47.6775,-18.2613,Phlogopite,Ar-Ar,86
+924,K7A,Canada,-115.72512,56.85007,Perovskite,U-Th-Pb,86
+925,Benfontein,South Africa,24.83591,-28.81856,Perovskite,U-Th-Pb,86
+926,Benfontein,South Africa,24.835909,-28.818557,Phlogopite / Biotite,Rb-Sr,86
+927,Bodabeep,South Africa,18.390183,-29.8522,Perovskite,U-Th-Pb,86
+928,Erasmushope,South Africa,25.155,-29.2261,Phlogopite / Biotite,Rb-Sr,86
+929,Jagersfontein,South Africa,25.419,-29.7623,Phlogopite / Biotite,Rb-Sr,86
+930,Leicester,South Africa,24.6528,-28.3708,Phlogopite / Biotite,Rb-Sr,86
+931,Tres_Ranchos-082,Brazil,-47.7208,-18.2458,Phlogopite / Biotite,Ar-Ar,85.6
+932,Joana-30,Brazil,-46.9175,-20.0194,Phlogopite,Ar-Ar,85.4
+933,Quoxo_River-03,Botswana,24.1073,-22.537201,Perovskite,U-Th-Pb,85.2
+934,Khutse-01,Botswana,24.3908,-23.3042,Phlogopite / Biotite,Rb-Sr,85
+935,Limpeza-18,Brazil,-46.7964,-18.48,Phlogopite,Rb-Sr,85
+936,Paranaiba-01,Brazil,-46.1377,-19,Phlogopite,Rb-Sr,85
+937,Rio_Verde-03,Brazil,-51.1675,-17.3433,Perovskite,U-Th-Pb,85
+938,Goedgevonden,South Africa,26.7556,-26.6736,Perovskite,U-Th-Pb,85
+939,Kaalvallei_Gr,South Africa,26.82881,-28.03544,Whole Rock + Mineral,Rb-Sr,85
+940,Vaal_Dam-01,South Africa,28.2781,-26.8914,Perovskite,U-Th-Pb,85
+941,Russell,South Africa,24.496472,-28.539299,Zircon,U-Th-Pb,84.8
+942,Japecanga-06,Brazil,-47.3533,-18.4125,Phlogopite,Rb-Sr,84.5
+943,Roodepan-01,South Africa,24.69779,-28.6551,Zircon,U-Th-Pb,84.5
+944,Phoenix-01,South Africa,24.780681,-28.5298,Zircon,U-Th-Pb,84.4
+945,Dourados-19,Brazil,-47.0613,-18.8633,Perovskite,U-Th-Pb,84.2
+946,Orapa_AK25,Botswana,25.421015,-21.317397,Zircon,U-Th-Pb,84
+947,Pantano,Brazil,-46.7963,-18.48,Perovskite,U-Th-Pb,84
+948,Santa_Rosa-04,Brazil,-47.2597,-18.6619,Phlogopite / Biotite,Rb-Sr,84
+949,Bultfontein-01,South Africa,24.7916,-28.7693,Phlogopite / Biotite,Rb-Sr,84
+950,Dutoitspan-01,South Africa,24.7989,-28.7604,Zircon,U-Th-Pb,84
+951,Lemes,Brazil,-47.55,-18.12,Perovskite,U-Th-Pb,84
+952,Nxau-Nxau,Botswana,21.14181,-18.94705,Perovskite,U-Th-Pb,83.8
+953,Rio_Verde-03,Brazil,-51.1675,-17.3433,Phlogopite,Rb-Sr,83
+954,De_Beers,South Africa,24.7764,-28.7389,Perovskite,U-Th-Pb,83
+955,Free_State_Saaiplaas,South Africa,26.83615,-28.03539,Perovskite,U-Th-Pb,82.1
+956,Go137,Botswana,24.6916,-22.572,Perovskite,U-Th-Pb,82
+957,Pantano,Brazil,-46.7963,-18.48,Perovskite,U-Th-Pb,82
+958,Abbotsford_Gr,South Africa,28.832998,-30.467002,Perovskite,U-Th-Pb,82
+959,Beyersfontein,South Africa,22.5394,-31.0342,Zircon,U-Th-Pb,82
+960,Tres_Ranchos-004,Brazil,-47.8214,-18.3139,Phlogopite,Rb-Sr,81.6
+961,Andriesfontein,South Africa,24.610365,-30.959664,Perovskite,U-Th-Pb,81.5
+962,Goedehoop,South Africa,24.41236,-30.82807,Perovskite,U-Th-Pb,81.5
+963,Nxau-Nxau,Botswana,21.13107,-18.94417,Perovskite,U-Th-Pb,81.4
+964,Tres_Ranchos-027,Brazil,-47.8238,-18.44,Perovskite,U-Th-Pb,81.1
+965,K252,Canada,-115.658053,56.830363,Phlogopite / Biotite,Rb-Sr,81
+966,Emtilombo,South Africa,31.5417,-28.85,Phlogopite / Biotite,Rb-Sr,81
+967,Klein_Arendskraal,South Africa,24.6186,-30.3317,Phlogopite / Biotite,Rb-Sr,81
+968,Koppieskraal-02,South Africa,18.460185,-29.947795,Perovskite,U-Th-Pb,81
+969,Wesselton,South Africa,24.8298,-28.7697,Phlogopite / Biotite,Rb-Sr,81
+970,Quoxo_River-02,Botswana,24.1747,-22.845699,Perovskite,U-Th-Pb,80.3
+971,Alpha-09,Brazil,-46.7675,-18.5222,Perovskite,U-Th-Pb,80.1
+972,Esperanca-01,Brazil,-45.9516,-19.9805,Zircon,U-Th-Pb,80
+973,Joana-05,Brazil,-46.9,-20.0538,Zircon,U-Th-Pb,80
+974,Finlay,Canada,-109.81582,64.78504,Kelyphite after Garnet,Ar-Ar,80
+975,Mckenzies_Post-01,South Africa,22.2806,-26.4683,Zircon,U-Th-Pb,80
+976,Tembani_Ranch,South Africa,31.7478,-28.6339,Phlogopite / Biotite,Rb-Sr,80
+977,Indaia,Brazil,-47.46667,-18.56667,Perovskite,U-Th-Pb,80
+978,Limpeza-18,Brazil,-46.7964,-18.48,Perovskite,U-Th-Pb,79.9
+979,Isuli,Tanzania,33.7666,-5.2833,Perovskite,U-Th-Pb,79.6
+980,Paranaiba-14,Brazil,-46.2377,-18.8577,Perovskite,U-Th-Pb,79.2
+981,Alpha-06,Brazil,-46.8041,-18.5188,Phlogopite,Rb-Sr,79
+982,Joana-06,Brazil,-46.9014,-20.0527,Zircon,U-Th-Pb,79
+983,Erasmushope,South Africa,25.155,-29.2261,Phlogopite / Biotite,Rb-Sr,79
+984,Malaquias,Brazil,-46.31667,-18.45,Perovskite,U-Th-Pb,79
+985,Joana-02,Brazil,-46.8988,-20.0544,Perovskite,U-Th-Pb,78.9
+986,Hoedkop,South Africa,18.693296,-29.287533,Perovskite,U-Th-Pb,78.8
+987,407_437_PK16_1,Brazil,,,Phlogopite,Rb-Sr,78.4
+988,Biesjes_Fontein-01,South Africa,17.9658,-30.9842,Perovskite,U-Th-Pb,78.4
+989,Molopo_M1,Botswana,22.175,-26.2042,Zircon,U-Th-Pb,78
+990,Pantano,Brazil,-46.7963,-18.48,Zircon,U-Th-Pb,78
+991,Berseba_Reserve-06,Namibia,17.5725,-25.7192,Whole Rock + Mineral,Rb-Sr,78
+992,Vetlaagte,South Africa,24.0922,-30.6614,Perovskite,U-Th-Pb,78
+993,Legend,Canada,-112.87312,57.19045,Phlogopite,Rb-Sr,77.6
+994,Swartheuvel_Gr,South Africa,18.4319,-29.8611,Whole Rock,K-Ar,77
+995,Green_Mountain,USA,-105.3011,39.9794,Apatite,Fission Track,77
+996,Dourados-19,Brazil,-47.0613,-18.8633,Perovskite,U-Th-Pb,76.9
+997,Omega-17,Brazil,-46.8238,-18.5941,Perovskite,U-Th-Pb,76.5
+998,Hebron_Gr,South Africa,22.56,-31.265,Perovskite,U-Th-Pb,76.4
+999,Anis_Kuibub,Namibia,17.8147,-24.9806,Phlogopite / Biotite,Rb-Sr,76
+1000,Jericho-01,Namibia,19.7819,-28.3153,Phlogopite / Biotite,Rb-Sr,76
+1001,Hardie,South Africa,20.7889,-32.5128,Whole Rock,K-Ar,76
+1002,Valkyrie,Canada,-113.30698,57.307,Perovskite,U-Th-Pb,75.8
+1003,Morester-02,South Africa,26.632943,-26.625521,Perovskite,U-Th-Pb,75.4
+1004,Tres_Ranchos-081,Brazil,-47.7197,-18.2488,Perovskite,U-Th-Pb,75.2
+1005,Mountain_Lake-01,Canada,-117.71285,55.45415,Apatite,Fission Track,75
+1006,Hartebeesfontein,South Africa,29.319029,-24.222083,Phlogopite / Biotite,Rb-Sr,75
+1007,Saltpetrekop,South Africa,20.8428,-32.4731,Phlogopite / Biotite,K-Ar,75
+1008,Kudo,Canada,-110.15695,64.8282,Perovskite,U-Th-Pb,74.7
+1009,Nouzees-01,South Africa,19.526421,-29.211341,Perovskite,U-Th-Pb,74.1
+1010,Sucesso-08,Brazil,-46.8033,-18.6766,Phlogopite,Rb-Sr,74
+1011,Anne,Canada,-109.89258,64.7037,Clinopyroxene,Ar-Ar,74
+1012,Bahradih-01,India,82.201109,20.215745,Clinopyroxene,Ar-Ar,74
+1013,Kodomali,India,82.239649,20.189455,Clinopyroxene,Ar-Ar,74
+1014,Payalikhand_West,India,82.3333,20.1667,Clinopyroxene,Ar-Ar,74
+1015,Britstown_Gr,South Africa,23.5006,-30.59,Whole Rock + Mineral,Rb-Sr,74
+1016,Hebron_Gr,South Africa,22.56,-31.265,Whole Rock + Mineral,Rb-Sr,74
+1017,C13,Canada,-109.853,64.41037,Perovskite,U-Th-Pb,73.9
+1018,Kang_KE1,Botswana,23.95,-24.5042,Perovskite,U-Th-Pb,73.1
+1019,Hardy_Lake-02,Canada,-109.97901,64.85546,Kelyphite after Garnet,Ar-Ar,73
+1020,Gibeon_Reserve-03,Namibia,17.8011,-24.9931,Whole Rock + Mineral,Rb-Sr,73
+1021,Lekkerfontein,South Africa,24.636269,-30.346097,Perovskite,U-Th-Pb,73
+1022,Xena,Canada,-113.04445,57.27128,Phlogopite,Rb-Sr,72.6
+1023,Dragon,Canada,-113.47853,57.32986,Phlogopite,Rb-Sr,72.4
+1024,Drew,Canada,-109.79504,64.72735,Kelyphite after Garnet,Ar-Ar,72
+1025,Berseba_Reserve-01,Namibia,17.5581,-25.6856,Whole Rock + Mineral,Rb-Sr,72
+1026,Berseba_Reserve-10,Namibia,17.5364,-25.6744,Whole Rock + Mineral,Rb-Sr,72
+1027,Hanaus-01,Namibia,17.7089,-25.2392,Whole Rock + Mineral,Rb-Sr,72
+1028,Rietfontein,South Africa,20.0383,-26.7456,Zircon,U-Th-Pb,72
+1029,Hardy_Lake-01,Canada,-109.94964,64.82602,Kelyphite after Garnet,Ar-Ar,71
+1030,Mbujimayi-01,Congo,23.6076,-6.1671,Zircon,U-Th-Pb,71
+1031,Phoenix,Canada,-113.47844,57.35248,Phlogopite,Rb-Sr,70.9
+1032,Mbujimayi-01,Congo,23.6076,-6.1671,Baddeleyite,U-Th-Pb,70
+1033,Mbujimayi-04,Congo,23.5904,-6.1671,Kelyphite after Garnet,Ar-Ar,70
+1034,Mbujimayi-05,Congo,23.5877,-6.1671,Kelyphite after Garnet,Ar-Ar,70
+1035,Tshibwe,Congo,23.3635,-6.2869,Phlogopite / Biotite,Ar-Ar,70
+1036,Mirante-01,Brazil,-50.1891,-27.8,Phlogopite,Ar-Ar,69.4
+1037,Jaeger,Canada,-110.039867,70.792246,Perovskite,U-Th-Pb,69.1
+1038,Riembreek,South Africa,18.4247,-30.1194,Zircon,U-Th-Pb,69
+1039,Caribou_West,Canada,-110.16388,64.81908,Perovskite,U-Th-Pb,68.2
+1040,Sutherland_Commonage,South Africa,20.6447,-32.3897,Perovskite,U-Th-Pb,68.2
+1041,193_174_X001,Congo,25.100396,-6.438724,Phlogopite / Biotite,Rb-Sr,68
+1042,Bok_Puts_Gr,South Africa,18.4628,-30.1872,Zircon,U-Th-Pb,68
+1043,Lushof_Gr,South Africa,23.0164,-30.7983,Zircon,U-Th-Pb,68
+1044,X289,Tanzania,33.7295,-3.5508,Perovskite,U-Th-Pb,67.72
+1045,Kirk,Canada,-110.54142,64.6963,Perovskite,U-Th-Pb,67.5
+1046,Bahradih-01,India,82.19933,20.215,Phlogopite,Ar-Ar,67
+1047,Deutsche_Erde-01,Namibia,17.7403,-25.4811,Zircon,U-Th-Pb,67
+1048,Sutherland_Commonage,South Africa,20.6447,-32.3897,Perovskite,U-Th-Pb,66.2
+1049,Sutherland_Commonage,South Africa,20.6447,-32.3897,Whole Rock + Mineral,Rb-Sr,66
+1050,Bahradih-01,India,82.19933,20.215,Perovskite,U-Th-Pb,65
+1051,X015,Tanzania,32.9695,-3.9128,Phlogopite,Ar-Ar,65
+1052,Husky,Canada,-110.66019,64.84696,Perovskite,U-Th-Pb,64.1
+1053,BM2,Canada,-115.100229,56.784168,Perovskite,U-Th-Pb,64
+1054,Kodomali,India,82.23787,20.18945,Phlogopite,Ar-Ar,64
+1055,Rietkuil-02,Namibia,17.5997,-25.0817,Whole Rock,Rb-Sr,64
+1056,Robertson,South Africa,19.9931,-33.8783,Whole Rock,K-Ar,64
+1057,King,Canada,-110.910387,64.906798,Perovskite,U-Th-Pb,63.9
+1058,Springbok,Canada,-110.18075,64.83597,Perovskite,U-Th-Pb,63.9
+1059,Melkfontein,South Africa,29.0769,-30.5003,Zircon,U-Th-Pb,63
+1060,Spiegel_River,South Africa,21.0647,-34.0378,Whole Rock,K-Ar,63
+1061,Kodomali,India,82.23787,20.18945,Perovskite,U-Th-Pb,62
+1062,Platbakkies,South Africa,18.4808,-30.28,Zircon,Fission Track,62
+1063,Glory,Canada,-110.105179,64.535788,Phlogopite,Rb-Sr,61.3
+1064,Rufus,Canada,-111.09908,64.64795,Phlogopite,Rb-Sr,61.1
+1065,Mukorob-01,Namibia,18.1622,-25.4861,Zircon,U-Th-Pb,61
+1066,Stolzenfels-01,Namibia,19.675,-28.4889,Perovskite,U-Th-Pb,60.7
+1067,Biesjes_Fontein-01,South Africa,17.9658,-30.9842,Perovskite,U-Th-Pb,60.1
+1068,K19,Canada,-115.846466,56.686029,Phlogopite / Biotite,Rb-Sr,60
+1069,K1A,Canada,-115.903407,56.659858,Phlogopite / Biotite,Rb-Sr,60
+1070,Negezi-02,Tanzania,33.6514,-3.6367,Perovskite,U-Th-Pb,60
+1071,Sultan,Tanzania,33.4173,-3.7074,Clinopyroxene,Ar-Ar,60
+1072,X286,Tanzania,33.7182,-3.5472,Perovskite,U-Th-Pb,60
+1073,Cobra,Canada,-110.981788,64.890201,Phlogopite,Rb-Sr,59.7
+1074,Rattler,Canada,-110.978715,64.895415,Phlogopite,Rb-Sr,59.7
+1075,Antelope,Canada,-110.2092,64.82316,Phlogopite,Rb-Sr,59.5
+1076,Spioenkop,South Africa,28.2878,-28.6397,Whole Rock,K-Ar,59.3
+1077,Uitkoms-04,Namibia,16.4111,-24.8694,Phlogopite / Biotite,Rb-Sr,59
+1078,Rooster,Canada,-111.114774,64.652869,Phlogopite,Rb-Sr,58.7
+1079,Crab,Canada,-110.46828,64.73994,Phlogopite,Rb-Sr,58.5
+1080,Shark,Canada,-110.10473,64.549476,Phlogopite,Rb-Sr,58.4
+1081,Panther,Canada,-110.538778,64.85443,Phlogopite,Rb-Sr,58.3
+1082,X315,Tanzania,33.4719,-3.6139,Perovskite,U-Th-Pb,57
+1083,A154_North,Canada,-110.232524,64.504234,Phlogopite,Rb-Sr,56
+1084,Misery,Canada,-110.172967,64.560803,Phlogopite,Rb-Sr,56
+1085,North_Paul,Canada,-110.30897,64.717,Phlogopite / Biotite,Rb-Sr,56
+1086,Biesjes_Fontein-01,South Africa,17.9658,-30.9842,Whole Rock,K-Ar,56
+1087,Piranha,Canada,-110.2357,64.5114,Phlogopite,Rb-Sr,55.8
+1088,A21,Canada,-110.290123,64.470622,Phlogopite,Rb-Sr,55.7
+1089,A154_South,Canada,-110.23556,64.49888,Phlogopite,Rb-Sr,55.5
+1090,Lynx,Canada,-110.222152,64.549817,Phlogopite,Rb-Sr,55.3
+1091,A418,Canada,-110.235139,64.491861,Phlogopite,Rb-Sr,55.2
+1092,Zaris-01,Namibia,16.4058,-24.9058,Phlogopite / Biotite,Rb-Sr,55
+1093,Cardinal,Canada,-110.046406,64.592467,Phlogopite,Rb-Sr,54.8
+1094,Bison,Canada,-110.11896,64.73351,Phlogopite,Rb-Sr,54.7
+1095,Biesjes_Fontein-01,South Africa,17.9658,-30.9842,Perovskite,U-Th-Pb,54.7
+1096,Kap_Kap,South Africa,18.4269,-30.2192,Zircon,U-Th-Pb,54
+1097,80K1,Tanzania,33.235,-4.139,Zircon,Fission Track,54
+1098,Usongo,Tanzania,33.235,-4.139,Zircon,U-Th-Pb,54
+1099,Koala_Lake,Canada,-110.59875,64.71792,Phlogopite,Rb-Sr,53.3
+1100,Koala_North,Canada,-110.6031,64.7173,Phlogopite,Rb-Sr,53.3
+1101,Beartooth,Canada,-110.5867,64.7352,Phlogopite,Rb-Sr,53.1
+1102,Panda_Lake,Canada,-110.58425,64.72438,Phlogopite,Rb-Sr,53
+1103,Zach,Canada,-110.376076,64.676697,Phlogopite,Rb-Sr,52.8
+1104,Point_Lake,Canada,-110.14136,64.58625,Phlogopite,Rb-Sr,52.1
+1105,Ranch_Lake,Canada,-111.51267,65.27664,Phlogopite,Rb-Sr,52.1
+1106,Leslie_Lake,Canada,-110.66637,64.68186,Whole Rock + Mineral,Rb-Sr,52
+1107,Mwadui,Tanzania,33.6077,-3.5145,Zircon,Fission Track,52
+1108,Zortman-01,USA,-108.5175,47.9153,Phlogopite,K-Ar,52
+1109,Mostertsvlei-02,South Africa,18.14217,-30.778347,Zircon,U-Th-Pb,51.9
+1110,Falcon,Canada,-110.5051,64.78104,Phlogopite,Rb-Sr,51.5
+1111,Yellow_Water_Rerservoir-02,USA,-108.4783,46.9236,Phlogopite,Ar-Ar,51.4
+1112,Grizzly,Canada,-110.55127,64.72333,Phlogopite,Rb-Sr,51.1
+1113,Loya-01,Tanzania,33.75,-4.75,Zircon,U-Th-Pb,51
+1114,X051,Tanzania,33.5468,-4.0922,Perovskite,U-Th-Pb,51
+1115,Burnt_Wagon,USA,-108.9638,47.8888,Phlogopite / Biotite,K-Ar,51
+1116,Snoose_Creek-03,USA,-108.5628,46.9842,Phlogopite,Ar-Ar,50.3
+1117,Winnet_Sill_N,USA,-108.5867,47.0075,Phlogopite,Ar-Ar,50.2
+1118,Teigen-09,USA,-108.5714,47.0961,Phlogopite,Ar-Ar,50
+1119,Willy_Nilly,Canada,-110.25105,64.75179,Phlogopite,Rb-Sr,48
+1120,Haystack_Butte,USA,-110.2217,47.6375,Phlogopite / Biotite,K-Ar,48
+1121,Williams-01,USA,-108.6908,47.8539,Phlogopite / Biotite,K-Ar,48
+1122,Gazelle,Canada,-110.6556,64.7224,Phlogopite,Rb-Sr,47.9
+1123,Caribou,Canada,-110.12602,64.81724,Phlogopite,Rb-Sr,47.8
+1124,X073,Tanzania,33.4244,-4.065,Perovskite,U-Th-Pb,47.25
+1125,Blarangetti-02,Tanzania,34.2667,-5.0833,Zircon,Ar-Ar,46
+1126,Aaron,Canada,-110.345396,64.717961,Phlogopite,Rb-Sr,45.2
+1127,Kikhomango,Tanzania,34.525,-5.2233,Perovskite,U-Th-Pb,43.9
+1128,Tengo,Congo,27.5667,-10.1167,Phlogopite,Ar-Ar,35
+1129,Msipashi,Congo,27.9917,-10.475,Perovskite,U-Th-Pb,33
+1130,Kambeli,Congo,27.975,-10.4917,Perovskite,U-Th-Pb,29
+1131,Mparinga-02,Tanzania,33.4775,-4.8175,Zircon,U-Th-Pb,27
+1132,Tengo,Congo,27.5667,-10.1167,Phlogopite,Ar-Ar,25
+1133,Igwisi Hills,Tanzania,31.9167,-4.8667,Olivine,He-Exposure,0.012
+Supplementary file A extended: Emplacement ages of magmatic Group-2 kimberlites (orangeites) from southern Africa (n=55).,,,,,,,
+No.,Kimberlite Occurrence,Country,Longitude,Latitude,Geochronology Method (minerals etc),Geochronology Method (isotope system),"Age (recommended, in Ma)"
+1,Dokolwayo-02,Swaziland,31.6381,-26.1353,Phlogopite / Biotite,Rb-Sr,203
+2,Silvery_Home_Gr,South Africa,22.2601,-31.5127,Perovskite,U-Th-Pb,183
+3,Rusland-01,South Africa,29.1931,-24.2639,Perovskite,U-Th-Pb,181
+4,Droogfontein-01,South Africa,22.2692,-31.6474,Perovskite,U-Th-Pb,168
+5,Dullstroom-02,South Africa,30.1067,-25.5322,Phlogopite / Biotite,Rb-Sr,165
+6,Melton_Wold,South Africa,22.7397,-31.5019,Perovskite,U-Th-Pb,162.5
+7,Voorspoed-01,South Africa,27.2036,-27.3989,Phlogopite,Ar-Ar,158.6
+8,Stieniesrus,South Africa,26.7024,-28.3147,Perovskite,U-Th-Pb,147
+9,Lace,South Africa,27.1278,-27.4433,Whole Rock + Mineral,Rb-Sr,145
+10,Swartruggens_01,South Africa,26.6525,-25.5917,Phlogopite,Ar-Ar,145
+11,Swartruggens_01,South Africa,26.6525,-25.5917,Whole Rock + Mineral,Rb-Sr,144
+12,Impala_Platinum_Mines,South Africa,27.2167,-25.6167,Whole Rock + Mineral,Rb-Sr,141
+13,Stieniesrus,South Africa,26.7024,-28.3147,Phlogopite,Ar-Ar,140
+14,Dundee-58,South Africa,27.1955,-29.3404,Perovskite,U-Th-Pb,138
+15,Stieniesrus,South Africa,26.7024,-28.3147,Whole Rock + Mineral,Rb-Sr,135
+16,Stieniesrus,South Africa,26.7024,-28.3147,Phlogopite,Ar-Ar,135
+17,Salpetrepan-01,South Africa,24.5467,-29.2458,Phlogopite,Ar-Ar,134
+18,Lace,South Africa,27.1278,-27.4433,Phlogopite,Ar-Ar,133.6
+19,Besterskraal_N,South Africa,27.0597,-27.4489,Phlogopite,Ar-Ar,133
+20,Blaauwbosch,South Africa,25.4574,-28.5573,Phlogopite / Biotite,Rb-Sr,133
+21,Voorspoed-01,South Africa,27.2036,-27.3989,Phlogopite,Ar-Ar,132
+22,New_Elands,South Africa,25.4942,-28.51,Phlogopite / Biotite,Rb-Sr,128
+23,Roberts_Victor,South Africa,25.5596,-28.4912,Phlogopite / Biotite,Rb-Sr,128
+24,Roberts_Victor,South Africa,25.5596,-28.4912,Phlogopite / Biotite,Rb-Sr,128
+25,Finsch,South Africa,23.445,-28.385,Phlogopite,Ar-Ar,127
+26,Finsch,South Africa,23.4445,-28.3854,Perovskite,U-Th-Pb,126.1
+27,X007,South Africa,23.9504,-27.9425,Perovskite,U-Th-Pb,126
+28,Lace,South Africa,27.1278,-27.4433,Perovskite,U-Th-Pb,125
+29,Rowden,South Africa,25.0266,-28.6169,Perovskite,U-Th-Pb,125
+30,Sanddrift,South Africa,22.9329,-29.5107,Whole Rock + Mineral,Rb-Sr,125
+31,Zoet_En_Zuur,South Africa,25.4931,-28.5158,Phlogopite,K-Ar,125
+32,Blaauwbosch,South Africa,25.4574,-28.5573,Whole Rock + Mineral,Rb-Sr,124
+33,Roberts_Victor,South Africa,25.5596,-28.4912,Phlogopite / Biotite,Rb-Sr,124
+34,Star_GR,South Africa,26.7951,-28.3183,Phlogopite,K-Ar,124
+35,New_Elands,South Africa,25.4942,-28.51,Phlogopite / Biotite,Rb-Sr,123
+36,X035,South Africa,23.6953,-28.3621,Whole Rock + Mineral,Rb-Sr,122
+37,X045,South Africa,23.9167,-28.1611,Whole Rock + Mineral,Rb-Sr,122
+38,Makganyene,South Africa,22.9197,-28.1522,Whole Rock + Mineral,Rb-Sr,121
+39,Witberg_East,South Africa,22.3456,-29.1857,Perovskite,U-Th-Pb,121
+40,New_Elands,South Africa,25.4942,-28.51,Phlogopite,Ar-Ar,120
+41,Poortjie,South Africa,24.2908,-28.0139,Phlogopite / Biotite,Rb-Sr,120
+42,Aarons_Prospect,South Africa,24.5859,-28.6465,Phlogopite,Ar-Ar,119
+43,Bellsbank_Gr,South Africa,24.4017,-28.0913,Whole Rock + Mineral,Rb-Sr,119
+44,Postmas-02,South Africa,23.1086,-28.2772,Phlogopite,Ar-Ar,119
+45,X165,South Africa,23.6437,-28.1821,Phlogopite,Ar-Ar,119
+46,Finsch,South Africa,23.4445,-28.3854,Whole Rock + Mineral,Rb-Sr,118
+47,Witberg_East,South Africa,22.3456,-29.1857,Whole Rock + Mineral,Rb-Sr,118
+48,X045,South Africa,23.919,-28.161,Phlogopite,Ar-Ar,118
+49,Mullersvlei,South Africa,26.8309,-28.3126,Perovskite,U-Th-Pb,117
+50,Bellsbank_Gr,South Africa,24.4017,-28.0913,Perovskite,U-Th-Pb,114.7
+51,Bellsbank_Gr,South Africa,24.4017,-28.0913,Whole Rock + Mineral,Rb-Sr,114
+52,Frank_Smith_Gr,South Africa,24.5151,-28.2457,Whole Rock + Mineral,Rb-Sr,114
+53,Newlands_Gr,South Africa,24.3981,-28.3506,Whole Rock + Mineral,Rb-Sr,114
+54,Doornkloof_Sover,South Africa,24.5061,-28.2112,Phlogopite / Biotite,Rb-Sr,113
+55,Frank_Smith_Gr,South Africa,24.5151,-28.2457,Zircon,U-Th-Pb,111

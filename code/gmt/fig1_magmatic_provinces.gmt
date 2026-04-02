@@ -1,0 +1,216 @@
+#!/usr/bin/env bash
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/gmt_utils.gmt"
+source "$SCRIPT_DIR/SA_subs.gmt"
+source "$SCRIPT_DIR/GMT_subs.gmt"
+
+USAGE () {
+cat << EOM
+program: `basename $0`
+author: Bruna Melo 2023
+purpose: geo and tectonic SA map
+    synthax: `basename $0` +<options>
+
+    options:
+    -h      ~> prints this help
+    -R      ~> def [south_atlantic]; region to plot
+    -O      ~> def [mag_locations]; output map name
+    -l      ~> plot LIP contour [line; fill]
+    -f      ~> plot LIP basalt thicknesss
+    -d      ~> plot dykes
+    -s      ~> select mag data inside lip contour
+    -t      ~> [def 200 Ma]; plot hotspot tracks with max age
+    -m      ~> [def 200 Ma]; plot magmatism data
+    -B      ~> baselayer [topo/svel/contour]
+    -Q      ~> resolution
+EOM
+}
+
+#===============================================================#
+#-- set defaults & input values
+#===============================================================#
+region="south_atlantic"
+out="mag_locations"
+liprovince="no"
+lipsel="no"
+hottracks="no"
+flowdepth="no"
+dykes="no"
+SA_mag="no"
+#intraplate="no"
+maxage="200"
+base="topo"
+res=0.05
+depth=110
+s=10
+sol="$REPO_ROOT/data/seismic_model"
+folder="$REPO_ROOT/data"
+tag="    "
+
+#-- set options
+while getopts hR:O:l:st:fdm:B:Q: OPT; do
+    case "${OPT}" in
+        h) USAGE; exit;;
+        R) region=`echo ${OPTARG} | tr '[:upper:]' '[:lower:]'`;;
+        O) out=`echo ${OPTARG}`;;
+        l) liprovince=`echo ${OPTARG}`;;
+        s) lipsel="yes";;
+        t) hottracks="yes"; maxage=`echo ${OPTARG}`;;
+        f) flowdepth="yes";;
+        d) dykes="yes";;
+        m) SA_mag="yes"; maxage=`echo ${OPTARG}`;;
+        B) base=`echo ${OPTARG}`;;
+        Q) res=`echo ${OPTARG}`;;
+        \?) echo "Option "$OPT" not recognized...";echo ""; echo ""; USAGE; exit;;
+    esac
+done
+
+#-- set maps
+SET_REGION "1.5"
+TICKS on
+coastline=-W0.2,black
+platepen=-W1p,green
+gmt makecpt -T0/200/25 -Cjet -I -D > ages.cpt.$tmp
+
+#===============================================================#
+#-- begin map
+#===============================================================#
+
+gmt begin $out pdf
+  case $base in 
+    topo)
+      cpt=$scales/meyers.cpt
+      illu=""
+      ingrd="@earth_relief_01m -I+a0"
+      ;;
+    svel)
+      cpt=`gmt makecpt -T-${s}/${s}/0.01 -D -Z -C$tomocpt`
+      AVG_DVS $depth ${sol} m.out.$tmp ${s}
+      ingrd=m.out.$tmp
+      illu=""
+      ;;
+    contour)
+      cpt=`gmt makecpt -D -Cgold,white,lightblue,cornflowerblue,blue,purple -T-10,-1,2,5.5,6.5,7.5,10`
+      gmt grdsample illu_cut.grd -I${res} $Rres -Gillum.grd.$tmp -fig
+      illu=""
+      AVG_DVS $depth ${sol} m.out.$tmp ${s}
+      ingrd=m.out.$tmp
+  esac
+      #random stuff for legend
+  echo "-60 -15" | gmt plot -W0.1 -St0.4 -Gwhite -l"Mafic\n Alkaline\nIgneous\nRocks" $R $J $B
+  gmt grdimage $ingrd $illu $R $J $B -C$cpt
+  gmt coast $coastline -A3000 -Dh
+  PLOT_PLATES
+  #gmt psscale -DJMR+w4c/0.15c -S+x"dVs [%]" -C$cpt -L
+  #echo "$depth km depth" | gmt text $R -F+f12p+cTR -Gwhite -D-0.2 -W0.1p
+  #echo "ref: ${ref} km/s" | gmt text $R -F+f10p+cTR -D-0.2/-1
+
+  #OVERLAYS#
+  #------------------------------------------------------------------------------------------#
+  if [ ${liprovince} == "no" ]; then
+    echo $tag"~~skip LIPs"
+  else
+    echo $tag"~~overlay LIPs and Oceanic Plateaus"
+    gmt gmtselect $contours/CPRM/oceanic_features.gmt -R"-70/-5/-56/13.5" | gmt plot $R -W0.5p,red -Gred@60 -l"Seamounts"
+    case ${liprovince} in
+      #fill) atrb="-W1p,gray30 -Ggray30";;
+      fill) atrb="-Gsienna -W0.5p,sienna";;
+      line) atrb="-W1p,red";;
+    esac
+    i=0
+    for lip in camp.txt serra_geral_zalan1987.txt; do
+      if [ $i == 0 ]; then
+        gmt plot $contours/magmatism/$lip $atrb -l"Continental\nFlood\nBasalts"
+      else
+        gmt plot $contours/magmatism/$lip $atrb
+      fi
+      ((i++))
+    done
+    j="0"
+    for pat in somuncura_Kay2007.txt Triple_Junction_Kay2007.txt \
+      Payenia_Kay2007.txt Pali_Aike_Kay2007.txt \
+      Canquel_Kay2007.txt; do
+      if [ $j == "0" ]; then
+        gmt plot $contours/magmatism/$pat -Gchocolate -W1p,chocolate -l"Patagonia\nIgneous\nProvinces"
+      else
+        gmt plot $contours/magmatism/$pat -Gchocolate -W1p,chocolate
+      fi
+      ((j++))
+    done
+    echo "-27.7806 5.3337" | gmt plot -Sd0.3 -W0.5p -Gyellow
+    awk '{print $1,$2,$3}' ages.txt | gmt text -F+f6p,AvantGarde-Demi,black -Gwhite
+    gmt plot -Sd0.3 -W0.5p -Gyellow $folder/hotspots/hotspots_whittaker2015.xy -l"Hotspots"
+    awk '{print $1,$2,$3}' $folder/hotspots/hotspot_catalogue.xy | gmt text -F+f8p,Helvetica-Bold,white
+    awk '{print $1,$2,$3}' lip_names.txt | gmt text -F+f8p,Helvetica-Bold
+  fi
+  #------------------------------------------------------------------------------------------#
+  if [ $flowdepth == "yes" ]; then
+    echo $tag"~~overlay LIPs lava flow thickness"
+    i=0
+    for lip in camp.txt serra_geral_zalan1987.txt \
+      somuncura_Kay2007.txt Triple_Junction_Kay2007.txt \
+      Payenia_Kay2007.txt Pali_Aike_Kay2007.txt \
+      Canquel_Kay2007.txt; do
+          if [ $i == 0 ]; then
+            gmt plot $contours/magmatism/$lip -W2p,red -l"LIPs"
+          else
+            gmt plot $contours/magmatism/$lip -W2p,red
+          fi
+          ((i++))
+    done
+    gmt contour $folder/flood_basalts/parana_contour_zalan1987.txt -W1p,red -C"501,900,1300,1500" -A"900,1500," -l"Basalt Thickness"
+    gmt contour $folder/flood_basalts/camp_demin_all.txt -W1p,red -C"301,500,700" -A"500,700,"
+  fi
+  #------------------------------------------------------------------------------------------#
+  if [ $dykes == "yes" ]; then
+    gmt plot $folder/dikes/dikes_all_pessano2021.txt -W1p -l"Dykes"
+    gmt plot $folder/dikes/dikes_camp_pessano2021.txt -W0.8p,green -l"Dykes CAMP"
+    gmt plot $folder/dikes/dikes_equamp_pessano2021.txt -W0.8p,yellow -l"Dykes EQUAMP"
+    gmt plot $folder/dikes/dikes_parana_pessano2021.txt -W0.8p,cyan -l"Dykes Paraná"
+  fi
+  #------------------------------------------------------------------------------------------#
+  if [ $SA_mag == "yes" ]; then  
+    #gmt makecpt -Cred,green,blue,purple -T0,66,250,540,2500 > mag.cpt.$tmp
+    echo $tag"~~overlay SA magmatism locations"
+    if [ ${lipsel} == "overwrite" ]; then
+      echo $tag$tag"~~overwrite locations inside LIPs"
+      #select data points inside and around polygon with age dif from lip
+      awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d50k -fg > in_pol.txt
+      awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -fg >> in_pol.txt
+      awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt gmtselect -L$contour_dir/camp_outline.txt+d50k -fg >> in_pol.txt
+      awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt gmtselect -F$contour_dir/camp_outline.txt -fg >> in_pol.txt
+      gmt plot in_pol.txt -St5p -W0.4p -Cages.cpt.$tmp
+      #select all data points outside the LIP polygons and 10km around
+      awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt gmtselect -F$contour_dir/camp_outline.txt -If -fg | gmt gmtselect -L$contour_dir/camp_outline.txt+d10k -Il -fg | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d10k -Il -fg | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -If -fg | gmt plot -St5p -W0.4p -Cages.cpt.$tmp
+    elif [ ${lipsel} == "yes" ]; then
+      echo $tag$tag"~~plot select mag locations outside LIPs"
+      #awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | \
+      #  gmt plot -fg -St5p -W0.4p -Gblack
+      gmt plot in_pol.txt -St5p -W0.4p -Cages.cpt.$tmp
+      #select all data points outside the LIP polygons and 10km around
+      awk  -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt |  gmt gmtselect -F$contour_dir/camp_outline.txt -If -fg |  gmt gmtselect -L$contour_dir/camp_outline.txt+d10k -Il -fg | gmt gmtselect -L$contour_dir/serra_geral_outline.txt+d10k -Il -fg | gmt gmtselect -F$contour_dir/serra_geral_outline.txt -If -fg | gmt plot -St5p -W0.4p -Cages.cpt.$tmp
+    else
+      awk -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' $folder/magmatism/igneous_rocks_all.txt | gmt plot -St5p -W0.4p -fg -Cages.cpt.$tmp
+    fi
+    gmt psscale -DjTR+w4/0.2c+h -Cages.cpt.$tmp -F+gwhite+p -Bx50+l"Ages [Ma]"
+  fi
+  #------------------------------------------------------------------------------------------#
+  if [ $hottracks == "yes" ]; then
+    echo $tag"~~overlay hotspots and hotspot tracks"
+    ii=-1
+    minage=200
+    for tr in "$folder/motion_paths/motion_path_output_Muller2016.xy"; do
+      ((ii++))
+      awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2}' $tr | gmt plot -W0.8p,black,-
+      awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+    done
+    minage=130
+    for tr in "$folder/motion_paths/motion_path_output_Muller2016.xy"; do
+      ((ii++))
+      awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2}' $tr | gmt plot -W0.8p,black
+      awk -v ma=$minage -v count=$ii '($3<ma) {print $1,$2, $3}' $tr | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+    done
+  fi
+  #------------------------------------------------------------------------------------------#
+  gmt legend -DjBR+l1.5 -F+gwhite+p1p --FONT_ANNOT=8p
+gmt end show

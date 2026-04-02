@@ -1,0 +1,6 @@
+pygmt>=0.9
+gplately>=1.0
+xarray>=2022.1
+numpy>=1.21
+matplotlib>=3.5
+plate-model-manager>=1.0
