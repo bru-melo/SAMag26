@@ -1,0 +1,143 @@
+#!/usr/local/bin/zsh
+# Figure 4 — Cross-section model comparison (SACI-24, SPiRaL, UU-P07, GLAD-m25, GLAD-m35)
+# Bruna Melo, 2023–2026
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%x}}")" && pwd)"
+source "$SCRIPT_DIR/config.gmt"
+
+overwrite="1"
+modeldir="$MODELS"  # See README for download instructions
+hot="$DATA/hotspots/hotspots_whittaker2015.xy"
+hotlabel="$DATA/hotspots/hotspot_labels.xy"
+tomocpt="$TOMOCPT"
+#cs1="-95 -3 -5 -3" #Fernando Hotspot 
+#echo "-95 -3\n-5 -3" > line
+cs1="-92 -15 -7 -15" #Trindade Hotspot
+echo "-92 -15\n-7 -15" > line
+
+emulate bash
+models="SACI-24 SPiRaL UU-P07 GLAD-m35"
+scale="4.0 1.5 0.5 1.0"
+maxd="800 2890 2890 2890"
+label="f"
+
+function PLOT_ver () {
+  scl=$1  #color scale
+  zbot=$2 #max depth
+  #coords=$3 #input coordinates
+
+  echo $cs1 > cs.$tmp
+  coords=cs.$tmp
+
+  zinc=1
+  zmin=10
+  rmin=$(echo "6371-$zmin"| bc -l)
+  rmax=$(echo "6371-$zbot"| bc -l)
+  lon1=$(awk '{print $1}' $coords)
+  lat1=$(awk '{print $2}' $coords)
+  lon2=$(awk '{print $3}' $coords)
+  lat2=$(awk '{print $4}' $coords)
+  cat line
+
+  echo "    ~> $sol vs cross section for depths: $zmin/$zbot from ($lon1,$lat1) to ($lon2,$lat2)"
+  vgrid="csgrids/$sol.$lon1.$lat1.$lon2.$lat2.$label.grd"
+  R=-R$lon1/$lon2/$rmax/$rmin
+  
+  #overwrite options for the grids; to make it faster 
+  if [ $overwrite == "0" ] ; then
+    if [ -s $vgrid ]; then
+      echo "    ~> grd file exists, skip"
+    fi
+  elif (( $overwrite == "1" )) || (( ! -s $vgrid )); then
+      echo "    ~> create cross section grid"
+      case ${sol} in
+        SACI-24)
+          dv=$modeldir/${sol}/${sol}-radius.nc
+          gmt grdinterpolate $dv -Gcs.grd.$tmp -E$lon1/$lat1/$lon2/$lat2+i100 -T$rmax/$rmin/$zinc -fg
+          gmt grdedit $R cs.grd.$tmp
+          gmt grdsample -I0.1/0.5 cs.grd.$tmp -G$vgrid
+          ;;
+        SPiRaL)
+          dv=$modeldir/${sol}/${sol}-radius.nc
+          gmt grdinterpolate $dv -Gcs.grd.$tmp -E$lon1/$lat1/$lon2/$lat2+i100 -T$rmax/6300/$zinc -fg
+          gmt grdedit -R$lon1/$lon2/$rmax/6300  cs.grd.$tmp
+          gmt grdsample -I0.1/0.5 cs.grd.$tmp -G$vgrid
+          ;;
+        UU-P07)
+          infile=$modeldir/${sol}/SubMachine_Cross_Section_$label.txt
+          awk 'pi=atan2(0, -1) {print atan2($2,$1)*180/pi, atan2($3,sqrt(($1^2)+($2^2)))*180/pi,6371-sqrt(($1^2)+($2^2)+($3^2)),sqrt(($1^2)+($2^2)+($3^2)),$4}' $infile | \
+            awk '{print $1, $4, $5}' | \
+            gmt xyz2grd $R -I2/50 -Gcs.grd.$tmp
+          gmt grdsample -I0.1/0.5 cs.grd.$tmp -G$vgrid
+          ;;
+        # GLAD-m25)
+        #   dv=$modeldir/${sol}/GLAD-m25-vsv-radius.nc
+        #   gmt grdinterpolate $dv -Gcs.grd.$tmp -E$lon1/$lat1/$lon2/$lat2+i100 -T$rmax/$rmin/$zinc -fg
+        #   gmt grdedit $R cs.grd.$tmp
+        #   gmt grdsample -I0.1/0.5 cs.grd.$tmp -G$vgrid
+        #   ;;
+        GLAD-m35)
+          dv=$modeldir/${sol}/GLAD-m35-vsv-radius.nc
+          gmt grdinterpolate $dv -Gcs.grd.$tmp -E$lon1/$lat1/$lon2/$lat2+i100 -T$rmax/$rmin/$zinc -fg
+          gmt grdedit $R cs.grd.$tmp
+          gmt grdsample -I0.1/0.5 cs.grd.$tmp -G$vgrid
+          ;;
+      esac
+  fi
+  
+  clon="-50.5"
+  J=-Jp"0.0011+z+a+t"$clon
+  gmt makecpt -T-$scl/$scl/0.01 -D -Z -C$tomocpt
+  gmt grdimage $vgrid -C ${R} $J -B
+
+  #plot circles every 1000km
+  gmt project -C$lon1/$lat1 -E$lon2/$lat2 -Q -G1000k > distpoints.dat.$tmp
+  awk -v r=$rmin '{print $1, r}' distpoints.dat.$tmp | gmt plot -Sc0.15 -Gwhite -W0.2p  -N ${R} ${J}
+  
+  #plot discontinuities 
+  gmt project -C$lon1/$lat1 -E$lon2/$lat2 -Q -G10k > disc.dat.$tmp
+  awk  '{print $1, 6371-410}' disc.dat.$tmp | gmt plot -W0.5p,-- ${R} ${J}
+  awk  '{print $1, 6371-660}' disc.dat.$tmp | gmt plot -W0.5p,-- ${R} ${J}
+  awk  '{print $1, 6371-1000}' disc.dat.$tmp | gmt plot -W0.5p,-- ${R} ${J}
+
+  #project mid ocean ridge
+  gmt select ridge -R-95/-5/-56/14 -Lline+d0.4d -fg | \
+    awk -v r=$rmin '{print $1, r}' | \
+    gmt plot -St0.2 -Ggreen -W0.2p $R $J -N
+ #plot hotspot locations with labels
+  gmt select $hot -R-95/-5/-56/14 -Lline+d7d -fg | \
+    awk -v r=$rmin '($1 != ">") {print $1, r}' | \
+    gmt plot -Sd0.3 -Gorange -W0.2p $R $J -N
+  gmt select $hot -R-95/-5/-56/14 -Lline+d3d -fg | \
+    awk -v r=$rmin '($1 != ">") {print $1, r}' | \
+    gmt plot -Sd0.3 -Gyellow -W0.2p $R $J -N
+  #gmt select $hotlabel -Lline+d3d -fg |  \
+  #  awk -v r=$rmin '{print $1+3, r+400, $3}' | gmt text -F+f6p -N $R $J
+  echo "$sol" | gmt text -F+f10p,+cTL -D0/-0.2 -N $R $J
+  echo "-$scl/$scl" | gmt text -F+f6p,+cTR -W1p -D0/-0.5 -N $R $J
+}
+
+######set map options########
+out=cs_comparison_$label
+
+mods=(${models[@]})
+lenx=${#mods[@]}
+scs=(${scale[@]})
+md=(${maxd[@]})
+
+gmt begin $out png
+  #gmt subplot begin ${lenx}x1 -Ff8c/16c -Aa+gwhite+jBL+p0.1p -SCt -SRr
+  gmt subplot begin ${lenx}x1 -Ff8c/16c  -SCt -SRr
+  for ((i=0;i<${lenx};++i)); do
+    sol=${mods[${i}]}
+    gmt subplot set
+    PLOT_ver ${scs[${i}]} ${md[${i}]}
+  done
+  gmt psscale -DjBC+w2/0.2c+e+m -Bx10+s"dVs [%]" $R $J
+  echo "+scale [%dVs]" | gmt text -F+cBR+f6p -D-3/0 -N $R $J
+  echo "-scale" | gmt text -F+cBL+f6p -D3.5/0 -N $R $J
+  #gmt psscale -DjBC+w4/0.2+o3/-1.2c+e+m -Bx1+l"dVs [%]"
+  gmt subplot end
+gmt end show
+
+rm *.$tmp

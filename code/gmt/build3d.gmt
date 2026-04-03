@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+# build3d.gmt — Convert depth-based absolute-velocity NetCDF models
+#               to radius-based dV% perturbation NetCDFs.
+#
+# This script takes a 3D tomographic model in (lon, lat, depth) with
+# absolute velocities [km/s] and produces a (lon, lat, radius) grid
+# with dV% perturbations relative to the lateral mean at each depth.
+#
+# The output format matches SACI-24-radius.nc, enabling cross-section
+# plotting with gmt grdinterpolate in fig4_model_comparison.gmt.
+#
+# Usage:
+#   bash build3d.gmt -i <input.nc> -v <variable> -o <output.nc> [-d "depths"]
+#
+# Examples:
+#   bash build3d.gmt -i glad-m25-vp-0.0-n4.nc -v vpv -o GLAD-m25-vpv-radius.nc
+#   bash build3d.gmt -i glad-m25-vs-0.0-n4.nc -v vsv -o GLAD-m25-vsv-radius.nc
+#   bash build3d.gmt -i SPiRaL.nc -v vsv -o SPiRaL-vsv-radius.nc
+#   bash build3d.gmt -i SPiRaL.nc -v vpv -o SPiRaL-vpv-radius.nc -d "71 115 150 ..."
+#
+# Bruna Melo, 2026
+
+set -e
+
+#===============================================================#
+#-- defaults
+#===============================================================#
+infile=""
+var=""
+outfile=""
+# Default depths: key mantle levels from surface to CMB
+deps="10 20 36 56 80 110 150 200 260 330 410 485 585 660 800 1000 1200 1400 1600 1800 2000 2200 2400 2600 2800 2890"
+zinc=10     # radius interpolation increment [km]
+cleanup=1   # remove intermediate grids
+
+#-- parse options
+while getopts hi:v:o:d:z: OPT; do
+  case "${OPT}" in
+    h) cat <<EOF
+Usage: $(basename $0) -i <input.nc> -v <variable> -o <output.nc> [options]
+
+Required:
+  -i <file>     Input 3D NetCDF (lon, lat, depth) with absolute velocities
+  -v <var>      NetCDF variable name (e.g., vpv, vsv, vph, vsh)
+  -o <file>     Output radius-based dV% NetCDF
+
+Optional:
+  -d "d1 d2.."  Space-separated depth levels [km] (default: standard mantle depths)
+  -z <inc>      Radius interpolation increment [km] (default: 10)
+  -h            Print this help
+EOF
+       exit 0;;
+    i) infile=${OPTARG};;
+    v) var=${OPTARG};;
+    o) outfile=${OPTARG};;
+    d) deps=${OPTARG};;
+    z) zinc=${OPTARG};;
+    \?) exit 1;;
+  esac
+done
+
+#-- validate
+if [ -z "$infile" ] || [ -z "$var" ] || [ -z "$outfile" ]; then
+  echo "Error: -i, -v, and -o are required. Use -h for help."
+  exit 1
+fi
+if [ ! -f "$infile" ]; then
+  echo "Error: input file '$infile' not found."
+  exit 1
+fi
+
+#-- temp suffix
+tmp="$$_$(date +%Y%m%d%H%M%S)"
+
+echo "=== build3d ==="
+echo "  input:    $infile ($var)"
+echo "  output:   $outfile"
+echo "  depths:   $(echo $deps | wc -w | tr -d ' ') levels"
+echo ""
+
+#===============================================================#
+#-- extract depth slices and convert to dV%
+#===============================================================#
+> radius.$tmp
+> input.$tmp
+
+for d in ${deps}; do
+  r=$(echo "6371 - ${d}" | bc -l | awk '{printf "%.1f", $0}')
+  echo "  depth=${d} km  radius=${r} km"
+  echo "$r" >> radius.$tmp
+
+  # Extract 2D slice at this depth from the 3D NetCDF
+  gmt grdinterpolate "${infile}?${var}" -T${d} -Fl -Gslice.${d}.grd.$tmp
+
+  # Compute lateral mean as 1D reference
+  ref=$(gmt grdinfo slice.${d}.grd.$tmp -L2 | awk '/mean/ {print $NF}')
+  echo "    ref = ${ref} km/s"
+
+  # Convert absolute velocity to perturbation: dV% = (V/ref - 1) * 100
+  gmt grdmath slice.${d}.grd.$tmp ${ref} DIV 1 SUB 100 MUL = dv.${r}.grd.$tmp
+
+  echo "dv.${r}.grd.$tmp" >> input.$tmp
+  rm -f slice.${d}.grd.$tmp
+done
+
+#===============================================================#
+#-- assemble into 3D radius-based grid
+#===============================================================#
+rmin=$(sort -n radius.$tmp | head -1)
+rmax=$(sort -n radius.$tmp | tail -1)
+sort -n radius.$tmp > radius_sorted.$tmp
+
+echo ""
+echo "  Interpolating 3D grid (radius ${rmin}–${rmax} km, step ${zinc} km)..."
+
+gmt grdinterpolate $(sort input.$tmp) \
+  -Zradius_sorted.$tmp \
+  -T${rmin}/${rmax}/${zinc} \
+  -G"${outfile}"
+
+echo "  Output: ${outfile} ($(du -h "$outfile" | awk '{print $1}'))"
+
+#-- clean up
+if [ $cleanup -eq 1 ]; then
+  rm -f dv.*.grd.$tmp radius.$tmp radius_sorted.$tmp input.$tmp
+fi
+
+echo "Done."

@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+# config.gmt — paths, GMT defaults, region definitions, utilities
+# Source this first in every figure script.
+#
+# Bruna Melo, 2023–2026
+
+#------------------------------------------------#
+#-- Repository root (auto-detected)
+#------------------------------------------------#
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/../.." && pwd)"
+
+#------------------------------------------------#
+#-- Paths (defined once, used everywhere)
+#------------------------------------------------#
+DATA="$REPO_ROOT/data"
+SACI24="$DATA/tomography_models/SACI-24"
+MODELS="$DATA/tomography_models"
+AK135="$SACI24/ak135_ref_velocities.txt"
+CONTOURS="$DATA/contours"
+CPT="$REPO_ROOT/code/gmt/cpt"
+TOMOCPT="$CPT/bry-bp2_ELv5.cpt"
+BIRD="$DATA/plate_boundaries/bird2003.txt"
+PLATE="$DATA/plate_boundaries/nuvel1.txt"
+
+#------------------------------------------------#
+#-- Temp-file suffix (unique per process)
+#------------------------------------------------#
+tmp="$$_$(date +%Y%m%d%H%M%S)"
+trap 'rm -f ./*${tmp}' 0 1 2 15
+
+#------------------------------------------------#
+#-- GMT Defaults
+#------------------------------------------------#
+gmt set FONT_LABEL           8p
+gmt set FONT_TAG             8p
+gmt set FONT_ANNOT_PRIMARY   8p
+gmt set FONT_ANNOT_SECONDARY 8p
+gmt set FORMAT_GEO_MAP       D
+gmt set MAP_FRAME_TYPE       plain
+gmt set PS_MEDIA             A4
+gmt set MAP_FRAME_PEN        1p
+gmt set PS_LINE_JOIN         ROUND
+gmt set PS_LINE_CAP          ROUND
+
+tag="    "
+
+#------------------------------------------------#
+#-- Region presets
+#   Sets $J, $R, $B, $fs from the global $region
+#------------------------------------------------#
+SET_REGION() {
+  if [ ! -z "$1" ]; then
+    case $1 in
+      1)   fs="9";  echo "-set figure size to $1 column";;
+      1.5) fs="14"; echo "-set figure size to $1 columns";;
+      2)   fs="19"; echo "-set figure size to $1 columns";;
+      *)   fs=$1;   echo "-set figure size to $1 cm";;
+    esac
+  else
+    fs="14"
+  fi
+
+  case ${region} in
+    amazonia)        J="-JQ-60/-17/$fs";  R="-R-72/-40/-20/10";     B="-Ba10";;
+    amazonia2)       J="-JQ-60/-17/$fs";  R="-R-75/-45/-21/10";     B="-Ba10";;
+    brasil)          J="-JQ-60/-17/$fs";  R="-R-75/-34/-36/10";     B="-Ba10";;
+    brasiliano)      J="-JQ-60/-17/$fs";  R="-R-61/-34/-35/-3";     B="-Ba10";;
+    brasiliano2)     J="-JQ-60/-17/$fs";  R="-R-58/-34/-29/-3";     B="-Ba10";;
+    sfc)             J="-JQ-60/-17/$fs";  R="-R-52/-35/-25/-5";     B="-Ba5";;
+    cratons)         J="-JQ-60/-17/$fs";  R="-R-75/-32/-39/10";     B="-Ba10";;
+    global)          J="-JN-60/16/$fs";   R="-Rg";                  B="-Bwsne";;
+    latin_america)   J="-JQ-70/-17/$fs";  R="-R-120/-25/-60/30";    B="-Bwsne";;
+    parana0)         J="-JQ-60/-17/$fs";  R="-R-61/-43/-35/-13";    B="-Ba5";;
+    parana)          J="-JQ-60/-17/$fs";  R="-R-58/-45/-29/-14";    B="-Ba5";;
+    parnaiba)        J="-JQ-60/-17/$fs";  R="-R-53/-38/-15/2";     B="-Ba5";;
+    rlp)             J="-JQ-60/-17/$fs";  R="-R-69/-48/-44/-22";    B="-Ba5";;
+    rlp2)            J="-JQ-60/-17/$fs";  R="-R-67/-48/-44/-22";    B="-Ba5";;
+    sa_slab)         J="-JQ-70/-17/$fs";  R="-R-90/-55/-55.5/13.5"; B="-Ba10";;
+    south_america)   J="-JQ-60/-17/$fs";  R="-R-95/-23/-56/14";    B="-Ba15";;
+    south_america2)  J="-JQ-60/-17/$fs";  R="-R-95/-30/-56/14";    B="-Ba10";;
+    south_atlantic)  J="-JQ-60/-17/$fs";  R="-R-95/-5/-56/14";     B="-Ba10";;
+  esac
+}
+
+#------------------------------------------------#
+#-- Tick marks on/off
+#------------------------------------------------#
+TICKS() {
+  if [ "${1}" == "on" ] || [ "${1}" == "ON" ]; then
+    gmt set MAP_TICK_LENGTH 0.1c
+  elif [ "${1}" == "off" ] || [ "${1}" == "OFF" ]; then
+    gmt set MAP_TICK_LENGTH 0c
+  fi
+}

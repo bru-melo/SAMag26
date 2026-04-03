@@ -9,3 +9,9 @@ plate-model-repo/
 figures/
 *.grd
 *.$tmp
+
+# Tomography model data files (download separately; see README)
+data/tomography_models/
+
+# Generated figures in code dir
+code/gmt/*.png

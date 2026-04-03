@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# seismic.gmt — SACI-24 tomographic model processing functions
+# Requires: config.gmt sourced first (provides $SACI24, $AK135, $TOMOCPT, $tmp, $res)
+#
+# Bruna Melo, 2021–2026
+
+#------------------------------------------------#
+#-- Convert a single depth-slice ASCII file to
+#   a GMT grid with dVs [%] values.
+#   Usage: DVS_GRID <depth> <model_dir> <output.grd>
+#------------------------------------------------#
+DVS_GRID() {
+  local depth=$1
+  local model_dir=$2
+  local outgrd=$3
+  local dvs="dvsd$(printf '%04d' "$depth")"
+
+  awk '{if($3=="NaN") print $1,$2,$3; else print $1,$2,$3/$4*100}' \
+    "${model_dir}/${dvs}" | gmt xyz2grd -I0.75 -Rg -G"$outgrd"
+}
+
+#------------------------------------------------#
+#-- Average dVs over one or more depths.
+#   Usage: AVG_DVS <"d1 d2 ..."> <model_dir> <output.grd> [resolution]
+#   Default resolution is $res (set by caller).
+#------------------------------------------------#
+AVG_DVS() {
+  local depths=$1
+  local model_dir=$2
+  local outgrd=$3
+  local outres=${4:-$res}
+  local ii=0
+
+  for d in ${depths}; do
+    echo "${tag}--${ii}) average dVs at ${d} km"
+    DVS_GRID "$d" "$model_dir" "m.${d}.grd.$tmp"
+
+    if [ $ii -gt 0 ]; then
+      gmt grdmath "m.${d}.grd.$tmp" m.grd.$tmp ADD 2 DIV = m.grd.$tmp
+    else
+      cp "m.${d}.grd.$tmp" m.grd.$tmp
+    fi
+    ii=$(( ii + 1 ))
+  done
+
+  gmt grdsample m.grd.$tmp -I${outres} -G"$outgrd"
+}
+
+#------------------------------------------------#
+#-- Plot a single dVs depth panel (3x3 subplot).
+#   Usage: PLOT_DVS <depth> <saturation> <bar_interval>
+#   Expects: $sol, $ak135, $res, $tomocpt, $R, $B, $coastline, $tmp
+#------------------------------------------------#
+PLOT_DVS() {
+  local d=$1
+  local s=$2
+  local b=$3
+
+  echo "${tag}--extract grid at $d km and plot"
+
+  local ref=$(awk -v a=${d} '($1==a) {print $2}' "$AK135" | awk '{printf "%.2f", $0}')
+  local dvs="dvsd$(printf '%04d' "$d")"
+
+  awk '{if($3=="NaN") print $1,$2,$3; else print $1,$2,$3/$4*100}' \
+    "${SACI24}/${dvs}" > m.txt.$tmp
+  gmt xyz2grd m.txt.$tmp -Rg -I0.75 -Gm.grd.$tmp
+  gmt grdsample m.grd.$tmp -I$res -Gm.grd.res.$tmp
+
+  gmt makecpt -T-${s}/${s}/0.01 -D -Z -C$TOMOCPT
+  gmt grdimage m.grd.res.$tmp -Q $R -JQ? $B
+  gmt coast $coastline -A3000 -Dl
+  PLOT_PLATES 1.5p,green
+
+  echo "$d km" | gmt text -F+cTL+f8p,Helvetica-Bold -D0/0.5 -N
+  echo "[ref: ${ref} km/s]" | gmt text -F+cTR+f8p -D0/0.5 -N
+  echo "-${s}/${s}" | gmt text -F+cBR+f8p -Gwhite -W1p -D-0.04/0.08 -N
+
+  if [ $i = "7" ]; then
+    TICKS off
+    gmt psscale -DjBC+o0/-1+e+m -Bx10+s"dVs [%]"
+    echo "+scale [%dVs]" | gmt text -F+cBR+f8p -D0.1/-1.4 -N
+    echo "-scale" | gmt text -F+cBL+f8p -D0/-1.4 -N
+    TICKS on
+  fi
+}

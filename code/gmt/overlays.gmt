@@ -1,0 +1,255 @@
+#!/usr/bin/env bash
+# overlays.gmt — geologic map overlay functions
+# Requires: config.gmt sourced first (provides $DATA, $CONTOURS, $BIRD, $PLATE, $tmp)
+#
+# Bruna Melo, 2023–2026
+
+#============================================================#
+#  PLATE BOUNDARIES
+#============================================================#
+
+PLOT_PLATES() {
+  local pen=${1:-1p,green}
+  gmt plot -W${pen} "$BIRD"
+}
+
+#============================================================#
+#  HOTSPOTS
+#============================================================#
+
+# Plot hotspot locations (yellow diamonds)
+HOTSPOTS() {
+  gmt plot -Sd0.4 -W0.7p -Gyellow "$DATA/hotspots/hotspots_whittaker2015.xy" -l"Hotspots"
+}
+
+# Plot a hotspot track with age-coloured dots
+# Usage: HOT <track_file> <legend_name> <line_colour>
+# Expects: ages.cpt.$tmp to exist
+HOT() {
+  local model=$1
+  local modname=$2
+  local line=$3
+  echo "${tag}~~overlay hotspots and hotspot tracks"
+
+  local ii=-1 minage
+
+  # First pass: full track (dashed)
+  minage=200
+  for tr in $model; do
+    ((ii++))
+    awk -v ma=$minage '($3<ma) {print $1,$2}' "$tr" | gmt plot -W${line}",..  "
+    awk -v ma=$minage '($3<ma) {print $1,$2,$3}' "$tr" | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+
+  # Second pass: recent track (solid, with legend)
+  minage=130
+  for tr in $model; do
+    ((ii++))
+    awk -v ma=$minage '($3<ma) {print $1,$2}' "$tr" | gmt plot -W${line} -l"$modname"
+    awk -v ma=$minage '($3<ma) {print $1,$2,$3}' "$tr" | gmt plot -Sc0.1 -Cages.cpt.$tmp -W0.1p
+  done
+}
+
+#============================================================#
+#  LARGE IGNEOUS PROVINCES
+#============================================================#
+
+# LIP outlines (CAMP + Serra Geral)
+# Usage: LIP <fill|line>
+LIP() {
+  local style=$1
+  echo "${tag}~~overlay LIPs and Oceanic Plateaus"
+
+  gmt gmtselect "$CONTOURS/oceanic_features.gmt" -R"-70/-5/-56/13.5" \
+    | gmt plot $R -W0.5p,red -GP300/7:Bred27F- -l"Seamounts"
+
+  local atrb
+  case ${style} in
+    fill) atrb="-GP300/7:Bgray27F- -W1p";;
+    line) atrb="-W2p";;
+  esac
+
+  local i=0
+  for lip in camp_outline.txt serra_geral_outline.txt; do
+    if [ $i == 0 ]; then
+      gmt plot "$CONTOURS/$lip" $atrb -l"Flood\nBasalt\nProvinces"
+    else
+      gmt plot "$CONTOURS/$lip" $atrb
+    fi
+    ((i++))
+  done
+}
+
+# Patagonian igneous provinces (Kay 2007)
+# Usage: PATAGONIA <fill|line>
+PATAGONIA() {
+  local style=$1
+  local atrb
+  case ${style} in
+    fill) atrb="-Gchocolate -W1p,chocolate";;
+    line) atrb="-W2p";;
+  esac
+
+  local i=0
+  for lip in somuncura_kay2007.txt triple_junction_kay2007.txt \
+    payenia_kay2007.txt pali_aike_kay2007.txt \
+    canquel_kay2007.txt; do
+    if [ $i == 0 ]; then
+      gmt plot "$CONTOURS/$lip" $atrb -l"Patagonia\nIgneous\nProvinces"
+    else
+      gmt plot "$CONTOURS/$lip" $atrb
+    fi
+    ((i++))
+  done
+}
+
+# LIP + Patagonian outlines (red, for flow-thickness overlays)
+FLOWTHICK() {
+  echo "${tag}~~overlay LIPs lava flow thickness"
+  local i=0
+  for lip in camp_outline.txt serra_geral_outline.txt \
+    somuncura_kay2007.txt triple_junction_kay2007.txt \
+    payenia_kay2007.txt pali_aike_kay2007.txt \
+    canquel_kay2007.txt; do
+    if [ $i == 0 ]; then
+      gmt plot "$CONTOURS/$lip" -W2p,red -l"LIPs"
+    else
+      gmt plot "$CONTOURS/$lip" -W2p,red
+    fi
+    ((i++))
+  done
+  gmt contour "$DATA/flood_basalts/parana_contour_zalan1987.txt" \
+    -W1p,red -C"501,900,1300,1500" -A"900,1500," -l"Basalt Thickness"
+  gmt contour "$DATA/flood_basalts/camp_demin_all.txt" \
+    -W1p,red -C"301,500,700" -A"500,700,"
+}
+
+# LIP age labels and province names
+LABEL() {
+  awk '{print $1,$2,$3}' "$CONTOURS/lip_ages.txt" \
+    | gmt text -F+f6p,AvantGarde-Demi,black -Gwhite
+  awk '{print $1,$2,$3}' "$DATA/hotspots/hotspot_catalogue.xy" \
+    | gmt text -F+f8p,Helvetica-Bold,white
+  awk '{print $1,$2,$3}' "$CONTOURS/lip_names.txt" \
+    | gmt text -F+f8p,Helvetica-Bold
+}
+
+#============================================================#
+#  DIKE SWARMS
+#============================================================#
+
+DYKE() {
+  gmt plot "$DATA/dikes/dikes_all_pessano2021.txt" -W1p -l"Dykes"
+  gmt plot "$DATA/dikes/dikes_camp_pessano2021.txt" -W0.8p,green -l"Dykes CAMP"
+  gmt plot "$DATA/dikes/dikes_equamp_pessano2021.txt" -W0.8p,yellow -l"Dykes EQUAMP"
+  gmt plot "$DATA/dikes/dikes_parana_pessano2021.txt" -W0.8p,cyan -l"Dykes Paraná"
+}
+
+#============================================================#
+#  MAGMATISM DATA
+#============================================================#
+
+# Plot magmatism locations, optionally filtering by LIP polygons.
+# Usage: MAG <overwrite|yes|all> <max_age> <symbol> <pen>
+# Expects: ages.cpt.$tmp to exist
+MAG() {
+  local lipsel=$1
+  local maxage=$2
+  local sym=$3
+  local lin=$4
+  echo "${tag}~~overlay SA magmatism locations"
+
+  local magfile="$DATA/magmatism/igneous_rocks_all.txt"
+  local camp="$CONTOURS/camp_outline.txt"
+  local sg="$CONTOURS/serra_geral_outline.txt"
+
+  if [ "${lipsel}" == "overwrite" ]; then
+    echo "${tag}${tag}~~overwrite locations inside LIPs"
+    awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -L${sg}+d50k -fg > in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<100) || ($3>150) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -F${sg} -fg >> in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -L${camp}+d50k -fg >> in_pol.txt
+    awk -v ma=$maxage '($3<ma) && ($3<150) || ($3>350) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -F${camp} -fg >> in_pol.txt
+    gmt plot in_pol.txt $sym -W0.4p -Cages.cpt.$tmp
+    awk -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -F${camp} -If -fg \
+      | gmt gmtselect -L${camp}+d10k -Il -fg \
+      | gmt gmtselect -L${sg}+d10k -Il -fg \
+      | gmt gmtselect -F${sg} -If -fg \
+      | gmt plot $sym -W0.4p -Cages.cpt.$tmp
+
+  elif [ "${lipsel}" == "yes" ]; then
+    echo "${tag}${tag}~~plot select mag locations outside LIPs"
+    gmt plot in_pol.txt $sym -W0.4p -Cages.cpt.$tmp
+    awk -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' "$magfile" \
+      | gmt gmtselect -F${camp} -If -fg \
+      | gmt gmtselect -L${camp}+d10k -Il -fg \
+      | gmt gmtselect -L${sg}+d10k -Il -fg \
+      | gmt gmtselect -F${sg} -If -fg \
+      | gmt plot $sym -W0.4p -Cages.cpt.$tmp
+
+  else
+    # "all" or any other value: plot everything
+    awk -v ma=$maxage '($3<ma) && ($3!=0) {print $1,$2,$3}' "$magfile" \
+      | gmt plot $sym -W0.4p -fg -Cages.cpt.$tmp
+  fi
+}
+
+#============================================================#
+#  CRATONS
+#============================================================#
+
+CRATON() {
+  local pen=$1
+  local fill=$2
+  echo "${tag}--Add cratons"
+
+  local i=0
+  for craton in "$CONTOURS/cratons/Sao_Luiz_Craton2.txt" \
+    "$CONTOURS/cratons/outer_layer.txt" \
+    "$CONTOURS/cratons/SFC_bru.gmt" \
+    "$CONTOURS/cratons/Luiz_Alves_Craton.txt" \
+    "$CONTOURS/cratons/Sao_Luiz_Craton.txt" \
+    "$CONTOURS/cratons/Sao_Luiz_Craton2.txt"; do
+    if [ "$fill" == "empty" ]; then
+      gmt plot "$craton" -W${pen}
+    else
+      gmt plot "$craton" -W${pen} -G$fill
+    fi
+    ((i++))
+  done
+}
+
+INFCRATON() {
+  local pen=$1
+  local fill=$2
+  echo "${tag}--Add inferred cratons"
+
+  local i=0
+  for craton in "$CONTOURS/cratons/Parnaiba_block.txt" \
+    "$CONTOURS/cratons/Paranapanema.txt" \
+    "$CONTOURS/cratons/Rio_de_la_Plata_Craton.txt"; do
+    if [ "$fill" != "empty" ]; then
+      gmt plot "$craton" -W${pen} -G$fill
+    else
+      gmt plot "$craton" -W${pen}
+    fi
+    ((i++))
+  done
+}
+
+#============================================================#
+#  ANDES PROVINCES
+#============================================================#
+
+ANDES_PROVINCES() {
+  gmt plot "$CONTOURS/andes/Altiplano.xy"              -W0.5p -Gpalegreen4
+  gmt plot "$CONTOURS/andes/Eastern_Cordillera.xy"     -W0.5p -Ggold
+  gmt plot "$CONTOURS/andes/Interandes.xy"             -W0.5p -Glightblue
+  gmt plot "$CONTOURS/andes/Patagonian_Cordillera.xy"  -W0.5p -Gpurple
+  gmt plot "$CONTOURS/andes/Puna.xy"                   -W0.5p -Gred
+  gmt plot "$CONTOURS/andes/Sierras_Pampeanas.xy"      -W0.5p -Ggreen
+}
